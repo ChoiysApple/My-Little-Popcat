@@ -9,13 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var popcatImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print("ready")
     }
 
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        print("Touch Down")
+        popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        print("Touch Up")
+        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+    }
+        
 }
 

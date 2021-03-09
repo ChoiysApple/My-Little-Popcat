@@ -25,12 +25,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BgColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Dr2-Yn-Uf5" secondAttribute="trailing" constant="80" id="61m-zM-PW6"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICr-ao-fQY"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="vYS-Lb-CQa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
