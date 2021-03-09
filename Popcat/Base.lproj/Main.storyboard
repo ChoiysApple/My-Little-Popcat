@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -27,10 +27,37 @@
                         <color key="backgroundColor" name="BgColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Dr2-Yn-Uf5" secondAttribute="bottom" constant="-20" id="1zG-kl-ghQ">
+                                <variation key="heightClass=compact" constant="40"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="Dr2-Yn-Uf5" secondAttribute="trailing" constant="80" id="61m-zM-PW6"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICr-ao-fQY"/>
+                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="QSd-bn-B7i">
+                                <variation key="heightClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvR-uC-Hua"/>
+                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="obC-TS-0ah"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="vYS-Lb-CQa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1zG-kl-ghQ"/>
+                                <exclude reference="QSd-bn-B7i"/>
+                                <exclude reference="cvR-uC-Hua"/>
+                                <exclude reference="obC-TS-0ah"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="1zG-kl-ghQ"/>
+                                <exclude reference="61m-zM-PW6"/>
+                                <exclude reference="ICr-ao-fQY"/>
+                                <include reference="QSd-bn-B7i"/>
+                                <include reference="cvR-uC-Hua"/>
+                                <exclude reference="obC-TS-0ah"/>
+                                <exclude reference="vYS-Lb-CQa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
