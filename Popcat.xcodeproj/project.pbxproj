@@ -14,6 +14,7 @@
 		7D795D0125F5FD54006C9469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795CFF25F5FD54006C9469 /* Main.storyboard */; };
 		7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0225F5FD54006C9469 /* Assets.xcassets */; };
 		7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */; };
+		7D87DA4825F751380011ABDA /* touchEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* touchEventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7D795D0225F5FD54006C9469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D795D0525F5FD54006C9469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D795D0725F5FD54006C9469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D87DA4725F751380011ABDA /* touchEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchEventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */,
 				7D795D0725F5FD54006C9469 /* Info.plist */,
 				7D2027C225F7296000B33C57 /* Constants.swift */,
+				7D87DA4725F751380011ABDA /* touchEventController.swift */,
 			);
 			path = Popcat;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				7D795CFE25F5FD54006C9469 /* ViewController.swift in Sources */,
 				7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */,
 				7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */,
+				7D87DA4825F751380011ABDA /* touchEventController.swift in Sources */,
 				7D2027C325F7296000B33C57 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Popcat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Popcat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

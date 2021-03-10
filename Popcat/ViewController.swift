@@ -10,37 +10,38 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
     
-    var popSoundEffect: AVAudioPlayer?
+    var touchEvent = touchEventController()     // this class plays audio file
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        touchEvent.delegate = self
     }
 
+    //MARK: - touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
-        popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
-        
-        let popSound = NSDataAsset(name: audioFileName.popOriginal)?.data
-        
-        do {
-            popSoundEffect = try AVAudioPlayer(data: popSound!)
-            popSoundEffect?.play()
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-        
+        touchEvent.touchDownAction()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
-        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        touchEvent.touchUpAction()
     }
         
 }
 
+//MARK:- Change image through Delegate
+extension ViewController: touchEventDelegate {
+    func touchDownImage() {
+        popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
+    }
+    
+    func touchUpImage() {
+        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+    }
+    
+    
+}

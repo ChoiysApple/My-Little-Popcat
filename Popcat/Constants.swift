@@ -12,3 +12,8 @@ struct audioFileName {
     static let popOriginal = "popcat_original_sound"
     static let muyaho = "muyaho"
 }
+
+struct imageFileName {
+    static let originalOpen = "popcat_opened"
+    static let originalClosed = "popcat_closed"
+}
