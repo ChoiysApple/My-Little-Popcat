@@ -14,14 +14,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var popcatImage: UIImageView!
     
     var touchEvent = touchEventController()     // this class plays audio file
+    let imageDelay = 0.2
+    var timer = Timer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         touchEvent.delegate = self
     }
 
+
+        
+}
+
+//MARK:- Change image through Delegate
+extension ViewController: touchEventDelegate {
+    
     //MARK: - touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchEvent.touchDownAction()
@@ -30,18 +41,23 @@ class ViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchEvent.touchUpAction()
     }
-        
-}
-
-//MARK:- Change image through Delegate
-extension ViewController: touchEventDelegate {
+    
+    
     func touchDownImage() {
-        popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
+        timer.invalidate()
+        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
+            self.popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
+        }
     }
     
     func touchUpImage() {
-        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        timer = Timer.scheduledTimer(withTimeInterval: imageDelay, repeats: false) { timer in
+            self.popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        }
     }
+    
+    
     
     
 }

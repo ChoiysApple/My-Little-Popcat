@@ -18,6 +18,8 @@ class touchEventController {
     
     var delegate: touchEventDelegate?
     var popSoundEffect: AVAudioPlayer?
+
+
     
     
     func touchDownAction() {
@@ -36,10 +38,7 @@ class touchEventController {
     }
     
     func touchUpAction() {
-        let time = DispatchTime.now() + .milliseconds(80)
-        DispatchQueue.main.asyncAfter(deadline: time) {
-            self.delegate?.touchUpImage()
-        }
+        delegate?.touchUpImage()
     }
     
     
