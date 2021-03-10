@@ -10,7 +10,6 @@ import Foundation
 struct audioFileName {
     
     static let popOriginal = "popcat_original_sound"
-    static let muyaho = "muyaho"
 }
 
 struct imageFileName {
