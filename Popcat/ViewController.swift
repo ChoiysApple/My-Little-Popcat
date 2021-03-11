@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var popcatImage: UIImageView!
     
     var touchEvent = touchEventController()     // this class plays audio file
-    let imageDelay = 0.2
+    let imageDelay = 0.15
     var timer = Timer()
     
     

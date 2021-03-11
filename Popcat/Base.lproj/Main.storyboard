@@ -58,20 +58,12 @@
                                 <exclude reference="vYS-Lb-CQa"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="oKt-LO-0sC" appends="YES" id="pv0-Uo-th5"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="oKt-LO-0sC">
-                    <connections>
-                        <action selector="longPressed:" destination="BYZ-38-t0r" id="8nq-Tl-hR0"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-196" y="99"/>
         </scene>
