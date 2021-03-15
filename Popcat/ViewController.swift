@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         touchEvent.delegate = self
     }
         
+    @IBAction func swipeUpGesture(_ sender: Any) {
+        performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
+    }
 }
 
 //MARK:- Change image through Delegate
@@ -54,5 +57,4 @@ extension ViewController: touchEventDelegate {
     }
     
 }
-
 

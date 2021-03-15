@@ -16,3 +16,7 @@ struct imageFileName {
     static let originalOpen = "popcat_opened"
     static let originalClosed = "popcat_closed"
 }
+
+struct Identifier {
+    static let settingSegue = "mainToSettings"
+}

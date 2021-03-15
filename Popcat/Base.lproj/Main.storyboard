@@ -65,19 +65,24 @@
                     </view>
                     <connections>
                         <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
+                        <segue destination="nrZ-NO-NY9" kind="presentation" identifier="mainToSettings" id="gJe-gH-66X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="up" id="v5o-CI-sLY"/>
+                <swipeGestureRecognizer direction="up" id="v5o-CI-sLY">
+                    <connections>
+                        <action selector="swipeUpGesture:" destination="BYZ-38-t0r" id="IZI-1S-k9C"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="98.4375"/>
+            <point key="canvasLocation" x="-164" y="98"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="zKz-ye-YOC">
             <objects>
                 <viewController id="nrZ-NO-NY9" customClass="SettingViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5O-AR-9wn" customClass="Se">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="44i-p3-HQe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
