@@ -19,7 +19,6 @@ class touchEventController {
     var delegate: touchEventDelegate?
     var popSoundEffect: AVAudioPlayer?
 
-
     
     
     func touchDownAction() {
