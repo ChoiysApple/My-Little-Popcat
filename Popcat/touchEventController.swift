@@ -10,7 +10,7 @@ import AVFoundation
 import UIKit
 
 protocol touchEventDelegate {
-    func touchDownImage()
+    func touchDownImage(count: Int)
     func touchUpImage()
 }
 
@@ -18,12 +18,12 @@ class touchEventController {
     
     var delegate: touchEventDelegate?
     var popSoundEffect: AVAudioPlayer?
-
     
     
     func touchDownAction() {
-        let popSound = NSDataAsset(name: audioFileName.popOriginal)?.data
         
+        // play sound
+        let popSound = NSDataAsset(name: audioFileName.popOriginal)?.data
         do {
             popSoundEffect = try AVAudioPlayer(data: popSound!)
             popSoundEffect?.play()
@@ -32,8 +32,12 @@ class touchEventController {
             fatalError(error.localizedDescription)
         }
         
-        delegate?.touchDownImage()
-        
+        // update popcount
+        var storedCount = UserDefaults.standard.integer(forKey: UserDataKey.popCount)
+        storedCount += 1
+        UserDefaults.standard.set(storedCount, forKey: UserDataKey.popCount)
+        print(storedCount)
+        delegate?.touchDownImage(count: storedCount)
     }
     
     func touchUpAction() {

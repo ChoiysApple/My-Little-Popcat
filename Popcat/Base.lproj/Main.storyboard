@@ -23,6 +23,12 @@
                                     <constraint firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="height" id="J9s-ah-3NE"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
+                                <rect key="frame" x="164.66666666666666" y="237" width="84.666666666666657" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BgColor"/>
@@ -36,7 +42,10 @@
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="QSd-bn-B7i">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
+                            <constraint firstItem="ayo-go-8WJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UYb-au-xby"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvR-uC-Hua"/>
+                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="ayo-go-8WJ" secondAttribute="bottom" constant="40" id="k2J-TE-qg7"/>
+                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="width" secondItem="ayo-go-8WJ" secondAttribute="width" multiplier="3" id="mJb-a5-Oma"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="obC-TS-0ah"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="vYS-Lb-CQa"/>
                         </constraints>
@@ -64,6 +73,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="countLabel" destination="ayo-go-8WJ" id="Tt3-Oj-NjD"/>
                         <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
                         <segue destination="nrZ-NO-NY9" kind="presentation" identifier="mainToSettings" id="gJe-gH-66X"/>
                     </connections>
@@ -75,13 +85,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-164" y="98"/>
+            <point key="canvasLocation" x="-165.21739130434784" y="97.767857142857139"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="zKz-ye-YOC">
             <objects>
                 <viewController id="nrZ-NO-NY9" customClass="SettingViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W5O-AR-9wn" customClass="Se">
+                    <view key="view" contentMode="scaleToFill" id="W5O-AR-9wn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="44i-p3-HQe"/>
@@ -97,6 +107,9 @@
         <image name="popcat_closed" width="655" height="655"/>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

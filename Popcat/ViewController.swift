@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
+    @IBOutlet weak var countLabel: UILabel!
     
     var touchEvent = touchEventController()     // this class plays audio file
     let imageDelay = 0.15
@@ -20,7 +21,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         touchEvent.delegate = self
     }
         
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
 //MARK:- Change image through Delegate
 extension ViewController: touchEventDelegate {
     
-    //MARK: - touch events
+    //MARK: touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchEvent.touchDownAction()
     }
@@ -42,9 +44,10 @@ extension ViewController: touchEventDelegate {
     }
     
     
-    func touchDownImage() {
+    func touchDownImage(count: Int) {
         timer.invalidate()
         popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        countLabel.text = String(count)
         timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
             self.popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
         }
