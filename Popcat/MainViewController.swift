@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
@@ -21,28 +21,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
+        
         touchEvent.delegate = self
     }
         
-    @IBAction func swipeUpGesture(_ sender: Any) {
-        performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
-    }
+
 }
 
 //MARK:- Change image through Delegate
-extension ViewController: touchEventDelegate {
-    
-    //MARK: touch events
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchEvent.touchDownAction()
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchEvent.touchUpAction()
-    }
-    
+extension MainViewController: touchEventDelegate {
+
     
     func touchDownImage(count: Int) {
         timer.invalidate()
@@ -59,5 +48,23 @@ extension ViewController: touchEventDelegate {
         }
     }
     
+}
+
+//MARK:- UI touch events
+extension MainViewController {
+    
+    // touch events
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touchEvent.touchDownAction()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touchEvent.touchUpAction()
+    }
+    
+    // Gesture events
+    @IBAction func swipeUpGesture(_ sender: Any) {
+        performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
+    }
 }
 
