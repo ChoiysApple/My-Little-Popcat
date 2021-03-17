@@ -16,6 +16,7 @@
 		7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */; };
 		7D87DA4825F751380011ABDA /* touchEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* touchEventController.swift */; };
 		7D94516F26008CD300668BB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94516E26008CD300668BB1 /* SettingsViewController.swift */; };
+		7DA2D5D02601EA6A00B4EB0B /* settingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2D5CF2601EA6A00B4EB0B /* settingDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7D795D0725F5FD54006C9469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D87DA4725F751380011ABDA /* touchEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchEventController.swift; sourceTree = "<group>"; };
 		7D94516E26008CD300668BB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7DA2D5CF2601EA6A00B4EB0B /* settingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				7D2027C225F7296000B33C57 /* Constants.swift */,
 				7D87DA4725F751380011ABDA /* touchEventController.swift */,
 				7D94516E26008CD300668BB1 /* SettingsViewController.swift */,
+				7DA2D5CF2601EA6A00B4EB0B /* settingDataManager.swift */,
 			);
 			path = Popcat;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */,
 				7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */,
 				7D87DA4825F751380011ABDA /* touchEventController.swift in Sources */,
+				7DA2D5D02601EA6A00B4EB0B /* settingDataManager.swift in Sources */,
 				7D2027C325F7296000B33C57 /* Constants.swift in Sources */,
 				7D94516F26008CD300668BB1 /* SettingsViewController.swift in Sources */,
 			);

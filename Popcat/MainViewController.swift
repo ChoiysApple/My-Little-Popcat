@@ -14,25 +14,29 @@ class MainViewController: UIViewController {
     @IBOutlet weak var popcatImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
     
-    var touchEvent = touchEventController()     // this class plays audio file
+    var touchEvent = touchEventController()
+    var settingManager = SettingDataManager()
+    
     let imageDelay = 0.15
     var timer = Timer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("viewdidload")
+        // initialize countlabel value
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         
         touchEvent.delegate = self
+        settingManager.delegate = self
     }
-        
 
 }
 
-//MARK:- Change image through Delegate
+//MARK:- touch Event Delegate
 extension MainViewController: touchEventDelegate {
 
-    
     func touchDownImage(count: Int) {
         timer.invalidate()
         popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
@@ -68,3 +72,12 @@ extension MainViewController {
     }
 }
 
+//MARK:- Apply changed settings
+extension MainViewController: updateSettingDelegate {
+    
+    func updateViewSettings() {
+        print("Setting delegate")
+        countLabel.isHidden = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+    }
+}

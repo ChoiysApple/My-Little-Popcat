@@ -19,6 +19,7 @@ struct imageFileName {
 
 struct Identifier {
     static let settingSegue = "mainToSettings"
+    static let mainViewController = "MainViewController"
 }
 
 struct UserDataKey {

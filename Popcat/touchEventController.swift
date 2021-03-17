@@ -19,7 +19,6 @@ class touchEventController {
     var delegate: touchEventDelegate?
     var popSoundEffect: AVAudioPlayer?
     
-    
     func touchDownAction() {
         
         // play sound
@@ -36,13 +35,11 @@ class touchEventController {
         var storedCount = UserDefaults.standard.integer(forKey: UserDataKey.popCount)
         storedCount += 1
         UserDefaults.standard.set(storedCount, forKey: UserDataKey.popCount)
-        print(storedCount)
         delegate?.touchDownImage(count: storedCount)
     }
     
     func touchUpAction() {
         delegate?.touchUpImage()
     }
-    
     
 }
