@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
         let isLabelVisible = self.popCountSwitch.isOn
         UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
         
-        self.dismiss(animated: true)
+        self.dismiss(animated: false)
     
     }
 }

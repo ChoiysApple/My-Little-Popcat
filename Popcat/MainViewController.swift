@@ -23,9 +23,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("viewdidload")
         // initialize countlabel value
-        countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
+        
         
         touchEvent.delegate = self
     }
@@ -40,6 +39,7 @@ class MainViewController: UIViewController {
         countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        timer.invalidate()
     }
 
 }
