@@ -38,6 +38,7 @@ class MainViewController: UIViewController {
     
     func updateViewSettings() {
         countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
     }
 
@@ -77,6 +78,8 @@ extension MainViewController {
     
     // Gesture events
     @IBAction func swipeUpGesture(_ sender: Any) {
+        let currentCount = UserDefaults.standard.integer(forKey: UserDataKey.popCount)
+        UserDefaults.standard.set(currentCount-1, forKey: UserDataKey.popCount)
         performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
     }
 }
