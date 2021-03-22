@@ -9,28 +9,22 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var manager = SettingDataManager()
+    @IBOutlet weak var popCountSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let switchState = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        popCountSwitch.setOn(switchState, animated: false)
     }
 
-    @IBAction func popCountVisiabilitySwitch(_ sender: UISwitch) {
-        let isLabelVisible = sender.isOn
-        UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
-    }
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
+
+        let isLabelVisible = self.popCountSwitch.isOn
+        UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
         
-        self.dismiss(animated: true){
-            
-            if let vc = self.storyboard!.instantiateViewController(withIdentifier: Identifier.mainViewController) as? MainViewController{
-                    vc.updateSettings()
-               }
-//            print("dismissed")
-//            self.manager.updateSettings()
-        }
+        self.dismiss(animated: true)
     
     }
 }

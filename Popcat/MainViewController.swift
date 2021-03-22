@@ -15,7 +15,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     
     var touchEvent = touchEventController()
-    var settingManager = SettingDataManager()
     
     let imageDelay = 0.15
     var timer = Timer()
@@ -29,7 +28,17 @@ class MainViewController: UIViewController {
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         
         touchEvent.delegate = self
-        settingManager.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        updateViewSettings()
+    }
+    
+    func updateViewSettings() {
+        countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
     }
 
 }
@@ -72,12 +81,4 @@ extension MainViewController {
     }
 }
 
-//MARK:- Apply changed settings
-extension MainViewController: updateSettingDelegate {
-    
-    func updateViewSettings() {
-        print("Setting delegate")
-        countLabel.isHidden = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
-        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
-    }
-}
+
