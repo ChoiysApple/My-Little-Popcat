@@ -17,3 +17,4 @@
 
 ### Realese
 * 1.0 Basic feature
+* 1.1 Settings & tap counter (On Progress)
