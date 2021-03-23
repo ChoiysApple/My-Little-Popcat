@@ -23,7 +23,7 @@ struct Identifier {
 }
 
 struct UserDataKey {
-    static let isFirstLaunch = "first_launch"
+    static let isNotFirstLaunch = "not_first_launch"
     static let popCount = "pop_count"
     static let popCountVisibility = "count_label_visibility"
     static let touchDownImage = "touchdown_image"

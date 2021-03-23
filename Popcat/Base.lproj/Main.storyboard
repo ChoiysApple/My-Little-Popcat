@@ -29,6 +29,27 @@
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzH-iR-VZs">
+                                <rect key="frame" x="20" y="692" width="388" height="180"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U5Z-nP-4Np">
+                                        <rect key="frame" x="20" y="21.333333333333371" width="77" height="146"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="Color"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe up for Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-k6-l6x">
+                                        <rect key="frame" x="105" y="79.333333333333371" width="228" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="aXh-iQ-WoV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BgColor"/>
@@ -38,7 +59,9 @@
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="Dr2-Yn-Uf5" secondAttribute="trailing" constant="80" id="61m-zM-PW6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzH-iR-VZs" secondAttribute="trailing" constant="20" id="Ghc-1K-951"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICr-ao-fQY"/>
+                            <constraint firstItem="yzH-iR-VZs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QCq-QL-T9z"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="QSd-bn-B7i">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
@@ -48,6 +71,7 @@
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="width" secondItem="ayo-go-8WJ" secondAttribute="width" multiplier="3" id="mJb-a5-Oma"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="obC-TS-0ah"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="vYS-Lb-CQa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yzH-iR-VZs" secondAttribute="bottom" constant="20" id="yCY-dA-5zy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -75,6 +99,7 @@
                     <connections>
                         <outlet property="countLabel" destination="ayo-go-8WJ" id="Tt3-Oj-NjD"/>
                         <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
+                        <outlet property="tutorialView" destination="yzH-iR-VZs" id="bqX-qe-9RS"/>
                         <segue destination="nrZ-NO-NY9" kind="presentation" identifier="mainToSettings" modalPresentationStyle="fullScreen" id="gJe-gH-66X"/>
                     </connections>
                 </viewController>
@@ -85,7 +110,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-165.21739130434784" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-165.42056074766353" y="97.192224622030238"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="zKz-ye-YOC">
@@ -169,6 +194,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="popcat_closed" width="655" height="655"/>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
