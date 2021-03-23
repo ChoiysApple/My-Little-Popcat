@@ -58,7 +58,6 @@ extension MainViewController: touchEventDelegate {
             isNotFirstLaunch = true
             DispatchQueue.main.async {
                 self.tutorialView.isHidden = true
-                self.tutorialView.alpha = 0.0
             }
                 
             UserDefaults.standard.set(true, forKey: UserDataKey.isNotFirstLaunch)
