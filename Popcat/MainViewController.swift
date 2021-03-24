@@ -13,18 +13,23 @@ class MainViewController: UIViewController {
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var tutorialView: UIView!
     
     var touchEvent = touchEventController()
     
     let imageDelay = 0.15
     var timer = Timer()
+    var isNotFirstLaunch = UserDefaults.standard.bool(forKey: UserDataKey.isNotFirstLaunch)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // initialize countlabel value
-        
+        print(isNotFirstLaunch)
+        if !isNotFirstLaunch {
+            tutorialView.isHidden = false
+            UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
+        }
         
         touchEvent.delegate = self
     }
@@ -48,6 +53,16 @@ class MainViewController: UIViewController {
 extension MainViewController: touchEventDelegate {
 
     func touchDownImage(count: Int) {
+        
+        if !isNotFirstLaunch {
+            isNotFirstLaunch = true
+            DispatchQueue.main.async {
+                self.tutorialView.isHidden = true
+            }
+                
+            UserDefaults.standard.set(true, forKey: UserDataKey.isNotFirstLaunch)
+        }
+        
         timer.invalidate()
         popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
         countLabel.text = String(count)
