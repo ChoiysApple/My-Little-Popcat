@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,23 +14,23 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popcat_closed" translatesAutoresizingMaskIntoConstraints="NO" id="Dr2-Yn-Uf5">
-                                <rect key="frame" x="80" y="334" width="268" height="268"/>
+                                <rect key="frame" x="80" y="326" width="254" height="254"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="height" id="J9s-ah-3NE"/>
                                 </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
-                                <rect key="frame" x="169.33333333333334" y="245" width="89.333333333333343" height="49"/>
+                                <rect key="frame" x="164.66666666666666" y="237" width="84.666666666666657" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzH-iR-VZs">
-                                <rect key="frame" x="20" y="692" width="388" height="180"/>
+                                <rect key="frame" x="20" y="662" width="374" height="180"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U5Z-nP-4Np">
                                         <rect key="frame" x="20" y="21.333333333333371" width="77" height="146"/>
@@ -67,6 +67,7 @@
                             </constraint>
                             <constraint firstItem="ayo-go-8WJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UYb-au-xby"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvR-uC-Hua"/>
+                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cxD-FJ-Phy"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="ayo-go-8WJ" secondAttribute="bottom" constant="40" id="k2J-TE-qg7"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="width" secondItem="ayo-go-8WJ" secondAttribute="width" multiplier="3" id="mJb-a5-Oma"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="obC-TS-0ah"/>
@@ -78,6 +79,7 @@
                                 <exclude reference="1zG-kl-ghQ"/>
                                 <exclude reference="QSd-bn-B7i"/>
                                 <exclude reference="cvR-uC-Hua"/>
+                                <exclude reference="cxD-FJ-Phy"/>
                                 <exclude reference="obC-TS-0ah"/>
                             </mask>
                         </variation>
@@ -89,6 +91,13 @@
                                 <include reference="QSd-bn-B7i"/>
                                 <include reference="cvR-uC-Hua"/>
                                 <exclude reference="obC-TS-0ah"/>
+                                <exclude reference="vYS-Lb-CQa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="61m-zM-PW6"/>
+                                <include reference="cxD-FJ-Phy"/>
                                 <exclude reference="vYS-Lb-CQa"/>
                             </mask>
                         </variation>
@@ -117,7 +126,7 @@
             <objects>
                 <viewController id="nrZ-NO-NY9" customClass="SettingsViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5O-AR-9wn">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings 🐈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-R4-Pqr">
@@ -127,7 +136,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3t7-hl-btQ">
-                                <rect key="frame" x="0.0" y="126.66666666666669" width="428" height="51"/>
+                                <rect key="frame" x="0.0" y="126.66666666666669" width="414" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Pop count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-8s-Ghh">
                                         <rect key="frame" x="10" y="9.9999999999999858" width="143" height="31"/>
@@ -136,7 +145,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yui-If-X1D">
-                                        <rect key="frame" x="359" y="9.9999999999999858" width="51" height="31"/>
+                                        <rect key="frame" x="345" y="9.9999999999999858" width="51" height="31"/>
                                         <color key="tintColor" red="0.45375967029999997" green="0.28686437009999999" blue="0.26273727419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </switch>
                                 </subviews>
@@ -152,7 +161,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-ii-5Ki">
-                                <rect key="frame" x="20" y="808.33333333333337" width="388" height="63.666666666666629"/>
+                                <rect key="frame" x="20" y="778.33333333333337" width="374" height="63.666666666666629"/>
                                 <color key="backgroundColor" red="0.45375967029999997" green="0.28686437009999999" blue="0.26273727419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <state key="normal" title="Done">
