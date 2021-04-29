@@ -29,7 +29,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(isNotFirstLaunch)
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
             UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
