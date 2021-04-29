@@ -15,6 +15,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var tutorialView: UIView!
     
+    //MARK: touchEventImage
+    var touchDownImageSource: UIImage?
+    var touchUpImageSource: UIImage?
+    
     var touchEvent = touchEventController()
     
     let imageDelay = 0.15
@@ -40,10 +44,13 @@ class MainViewController: UIViewController {
         updateViewSettings()
     }
     
+    // apply
     func updateViewSettings() {
         countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
-        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        touchUpImageSource = #imageLiteral(resourceName: "popcat_closed")
+        touchDownImageSource = #imageLiteral(resourceName: "popcat_opened")
+        popcatImage.image = touchUpImageSource
         timer.invalidate()
     }
 
@@ -64,16 +71,16 @@ extension MainViewController: touchEventDelegate {
         }
         
         timer.invalidate()
-        popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+        popcatImage.image = touchUpImageSource
         countLabel.text = String(count)
         timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
-            self.popcatImage.image = #imageLiteral(resourceName: "popcat_opened")
+            self.popcatImage.image = self.touchDownImageSource
         }
     }
     
     func touchUpImage() {
         timer = Timer.scheduledTimer(withTimeInterval: imageDelay, repeats: false) { timer in
-            self.popcatImage.image = #imageLiteral(resourceName: "popcat_closed")
+            self.popcatImage.image = self.touchUpImageSource
         }
     }
     
