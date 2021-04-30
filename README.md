@@ -1,5 +1,5 @@
 # [<img src="https://user-images.githubusercontent.com/43776784/115346794-9985c780-a1eb-11eb-9639-06257a10aa3b.png" width="40%">](https://testflight.apple.com/join/HJakiRWd)
- pop pop pop pop pop pop pop pop pop pop pop poppop pop pop pop pop pop pop pop
+ pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
  
 
 
@@ -23,3 +23,4 @@
 ### Version Release
 * 1.0 Basic feature
 * 1.1 Settings & tap counter
+  * 1.1.1 Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
