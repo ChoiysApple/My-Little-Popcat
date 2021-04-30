@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,8 +23,8 @@
                                     <constraint firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="height" id="J9s-ah-3NE"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
-                                <rect key="frame" x="164.66666666666666" y="237" width="84.666666666666657" height="49"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
+                                <rect key="frame" x="0.0" y="237" width="414" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                             <constraint firstAttribute="bottom" secondItem="Dr2-Yn-Uf5" secondAttribute="bottom" constant="-20" id="1zG-kl-ghQ">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayo-go-8WJ" secondAttribute="trailing" id="2E0-l5-YEk"/>
                             <constraint firstAttribute="trailing" secondItem="Dr2-Yn-Uf5" secondAttribute="trailing" constant="80" id="61m-zM-PW6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzH-iR-VZs" secondAttribute="trailing" constant="20" id="Ghc-1K-951"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICr-ao-fQY"/>
@@ -68,8 +69,8 @@
                             <constraint firstItem="ayo-go-8WJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UYb-au-xby"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvR-uC-Hua"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cxD-FJ-Phy"/>
+                            <constraint firstItem="ayo-go-8WJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ibf-uc-j00"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="ayo-go-8WJ" secondAttribute="bottom" constant="40" id="k2J-TE-qg7"/>
-                            <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="width" secondItem="ayo-go-8WJ" secondAttribute="width" multiplier="3" id="mJb-a5-Oma"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="obC-TS-0ah"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="vYS-Lb-CQa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yzH-iR-VZs" secondAttribute="bottom" constant="20" id="yCY-dA-5zy"/>
