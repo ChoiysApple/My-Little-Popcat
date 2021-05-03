@@ -122,16 +122,16 @@
             </objects>
             <point key="canvasLocation" x="-165.42056074766353" y="97.192224622030238"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Cat Tower Veiw Controller-->
         <scene sceneID="zKz-ye-YOC">
             <objects>
-                <viewController id="nrZ-NO-NY9" customClass="SettingsViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nrZ-NO-NY9" customClass="CatTowerVeiwController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5O-AR-9wn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings 🐈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-R4-Pqr">
-                                <rect key="frame" x="20" y="64" width="204" height="42.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Tower 🐈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-R4-Pqr">
+                                <rect key="frame" x="19.999999999999986" y="64" width="234.66666666666663" height="42.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                                 <rect key="frame" x="0.0" y="126.66666666666669" width="414" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Pop count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-8s-Ghh">
-                                        <rect key="frame" x="10" y="9.9999999999999858" width="143" height="31"/>
+                                        <rect key="frame" x="20" y="9.9999999999999858" width="143" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
-                                    <constraint firstItem="Hdz-8s-Ghh" firstAttribute="leading" secondItem="3t7-hl-btQ" secondAttribute="leading" constant="10" id="FEv-oK-zxQ"/>
+                                    <constraint firstItem="Hdz-8s-Ghh" firstAttribute="leading" secondItem="3t7-hl-btQ" secondAttribute="leading" constant="20" id="FEv-oK-zxQ"/>
                                     <constraint firstItem="yui-If-X1D" firstAttribute="centerY" secondItem="3t7-hl-btQ" secondAttribute="centerY" id="GIv-AF-hNi"/>
                                     <constraint firstAttribute="trailing" secondItem="yui-If-X1D" secondAttribute="trailing" constant="20" id="Kwp-ci-D5e"/>
                                     <constraint firstAttribute="bottom" secondItem="Hdz-8s-Ghh" secondAttribute="bottom" constant="10" id="W9g-sO-hHR"/>
@@ -177,6 +177,19 @@
                                     <action selector="doneButtonClicked:" destination="nrZ-NO-NY9" eventType="touchUpInside" id="QLQ-e1-8eg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-jm-b2a">
+                                <rect key="frame" x="351.66666666666669" y="64" width="42.333333333333314" height="42.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1ph-jm-b2a" secondAttribute="height" id="mUL-C3-ecY"/>
+                                </constraints>
+                                <color key="tintColor" name="Color"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cuW-wY-uA7" kind="show" id="uXf-xl-VdU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="44i-p3-HQe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,9 +199,12 @@
                             <constraint firstItem="3t7-hl-btQ" firstAttribute="top" secondItem="N5W-R4-Pqr" secondAttribute="bottom" constant="20" id="Dtp-na-qSV"/>
                             <constraint firstItem="9gh-ii-5Ki" firstAttribute="height" secondItem="N5W-R4-Pqr" secondAttribute="height" multiplier="1.5" id="MeV-GE-4Rh"/>
                             <constraint firstItem="44i-p3-HQe" firstAttribute="trailing" secondItem="3t7-hl-btQ" secondAttribute="trailing" id="Oar-aG-Zxk"/>
+                            <constraint firstItem="1ph-jm-b2a" firstAttribute="height" secondItem="N5W-R4-Pqr" secondAttribute="height" id="cqt-ig-p3G"/>
                             <constraint firstItem="3t7-hl-btQ" firstAttribute="height" secondItem="N5W-R4-Pqr" secondAttribute="height" multiplier="1.2" id="lPP-xt-ANO"/>
                             <constraint firstItem="N5W-R4-Pqr" firstAttribute="leading" secondItem="44i-p3-HQe" secondAttribute="leading" constant="20" id="oTm-5t-lTh"/>
+                            <constraint firstItem="1ph-jm-b2a" firstAttribute="centerY" secondItem="N5W-R4-Pqr" secondAttribute="centerY" id="oij-3v-jEh"/>
                             <constraint firstItem="N5W-R4-Pqr" firstAttribute="top" secondItem="44i-p3-HQe" secondAttribute="top" constant="20" id="uGO-Cw-SVc"/>
+                            <constraint firstItem="44i-p3-HQe" firstAttribute="trailing" secondItem="1ph-jm-b2a" secondAttribute="trailing" constant="20" id="uTz-BQ-rR5"/>
                             <constraint firstItem="3t7-hl-btQ" firstAttribute="leading" secondItem="44i-p3-HQe" secondAttribute="leading" id="zD9-MM-yEU"/>
                             <constraint firstItem="9gh-ii-5Ki" firstAttribute="leading" secondItem="44i-p3-HQe" secondAttribute="leading" constant="20" id="zpq-or-a9A"/>
                         </constraints>
@@ -202,9 +218,26 @@
             </objects>
             <point key="canvasLocation" x="728" y="98"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="31C-yh-SNK">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="cuW-wY-uA7" customClass="SettingsViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l07-BM-Mza">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="680-h0-gg3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S7Z-Ez-tmB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4y-iG-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="97"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="popcat_closed" width="655" height="655"/>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

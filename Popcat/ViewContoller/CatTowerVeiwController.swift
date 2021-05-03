@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class CatTowerVeiwController: UIViewController {
 
     @IBOutlet weak var popCountSwitch: UISwitch!
     

@@ -15,7 +15,10 @@
 		7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0225F5FD54006C9469 /* Assets.xcassets */; };
 		7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */; };
 		7D87DA4825F751380011ABDA /* touchEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* touchEventController.swift */; };
-		7D94516F26008CD300668BB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94516E26008CD300668BB1 /* SettingsViewController.swift */; };
+		7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */; };
+		7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB1416C263FC24600205D48 /* SettingsViewController.swift */; };
+		7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD780BC263FB92700732C58 /* CatTowerCell.swift */; };
+		7DD780BF263FB92700732C58 /* CatTowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD780BD263FB92700732C58 /* CatTowerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		7D795D0525F5FD54006C9469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D795D0725F5FD54006C9469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D87DA4725F751380011ABDA /* touchEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchEventController.swift; sourceTree = "<group>"; };
-		7D94516E26008CD300668BB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTowerVeiwController.swift; sourceTree = "<group>"; };
+		7DB1416C263FC24600205D48 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7DD780BC263FB92700732C58 /* CatTowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTowerCell.swift; sourceTree = "<group>"; };
+		7DD780BD263FB92700732C58 /* CatTowerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatTowerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +68,29 @@
 		7D795CF825F5FD53006C9469 /* Popcat */ = {
 			isa = PBXGroup;
 			children = (
+				7DB1416F263FC29100205D48 /* ViewContoller */,
 				7D795CF925F5FD54006C9469 /* AppDelegate.swift */,
 				7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */,
-				7D795CFD25F5FD54006C9469 /* MainViewController.swift */,
 				7D795CFF25F5FD54006C9469 /* Main.storyboard */,
+				7DD780BC263FB92700732C58 /* CatTowerCell.swift */,
+				7DD780BD263FB92700732C58 /* CatTowerCell.xib */,
 				7D795D0225F5FD54006C9469 /* Assets.xcassets */,
 				7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */,
 				7D795D0725F5FD54006C9469 /* Info.plist */,
 				7D2027C225F7296000B33C57 /* Constants.swift */,
 				7D87DA4725F751380011ABDA /* touchEventController.swift */,
-				7D94516E26008CD300668BB1 /* SettingsViewController.swift */,
 			);
 			path = Popcat;
+			sourceTree = "<group>";
+		};
+		7DB1416F263FC29100205D48 /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				7D795CFD25F5FD54006C9469 /* MainViewController.swift */,
+				7DB1416C263FC24600205D48 /* SettingsViewController.swift */,
+				7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */,
+			);
+			path = ViewContoller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +152,7 @@
 			files = (
 				7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */,
 				7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */,
+				7DD780BF263FB92700732C58 /* CatTowerCell.xib in Resources */,
 				7D795D0125F5FD54006C9469 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +169,9 @@
 				7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */,
 				7D87DA4825F751380011ABDA /* touchEventController.swift in Sources */,
 				7D2027C325F7296000B33C57 /* Constants.swift in Sources */,
-				7D94516F26008CD300668BB1 /* SettingsViewController.swift in Sources */,
+				7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */,
+				7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */,
+				7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
