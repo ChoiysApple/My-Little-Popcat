@@ -10,12 +10,15 @@ import UIKit
 class CatTowerVeiwController: UIViewController {
 
     @IBOutlet weak var popCountSwitch: UISwitch!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let switchState = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         popCountSwitch.setOn(switchState, animated: false)
+        
+        collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
     }
 
     
@@ -27,4 +30,19 @@ class CatTowerVeiwController: UIViewController {
         self.dismiss(animated: false)
     
     }
+}
+
+extension CatTowerVeiwController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UICollectionViewCell
+                
+        return cell
+    }
+    
+    
 }

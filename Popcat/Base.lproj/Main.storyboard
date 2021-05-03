@@ -168,7 +168,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-ii-5Ki">
                                 <rect key="frame" x="20" y="778.33333333333337" width="374" height="63.666666666666629"/>
-                                <color key="backgroundColor" red="0.45375967029999997" green="0.28686437009999999" blue="0.26273727419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,7 +205,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wb1-Vt-VV3">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wb1-Vt-VV3">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OQF-NX-gvw">
@@ -248,6 +248,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eiX-zI-yUg"/>
                     <connections>
+                        <outlet property="collectionView" destination="Cqj-A6-7E6" id="lno-ST-a32"/>
                         <outlet property="popCountSwitch" destination="yui-If-X1D" id="wNg-0L-IoD"/>
                     </connections>
                 </viewController>
@@ -276,6 +277,9 @@
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="popcat_closed" width="655" height="655"/>
+        <namedColor name="AccentColor">
+            <color red="0.45490196078431372" green="0.28627450980392155" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
