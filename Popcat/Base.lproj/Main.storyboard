@@ -205,7 +205,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wb1-Vt-VV3">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="wb1-Vt-VV3">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OQF-NX-gvw">
@@ -278,7 +278,7 @@
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="popcat_closed" width="655" height="655"/>
         <namedColor name="AccentColor">
-            <color red="0.45490196078431372" green="0.28627450980392155" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45500001311302185" green="0.28600001335144043" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

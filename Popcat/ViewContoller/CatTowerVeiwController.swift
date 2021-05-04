@@ -32,15 +32,18 @@ class CatTowerVeiwController: UIViewController {
     }
 }
 
-extension CatTowerVeiwController: UICollectionViewDataSource {
+extension CatTowerVeiwController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UICollectionViewCell
-                
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
+        
+//        cell.cellImage.image = #imageLiteral(resourceName: "popcat_closed")
+        cell.cellName.text = "Popcat"
+        
         return cell
     }
     
