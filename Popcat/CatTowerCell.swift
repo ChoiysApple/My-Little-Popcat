@@ -16,7 +16,4 @@ class CatTowerCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-
-    
 }
