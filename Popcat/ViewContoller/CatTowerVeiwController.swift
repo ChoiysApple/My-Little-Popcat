@@ -28,6 +28,7 @@ class CatTowerVeiwController: UIViewController {
         let isLabelVisible = self.popCountSwitch.isOn
         UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
         
+        
         self.dismiss(animated: false)
     
     }
@@ -44,6 +45,9 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
         
         cell.cellImage.image = #imageLiteral(resourceName: "popcat_closed")
         cell.cellName.text = "Popcat"
+        print(cell.cellName.frame.size.height)
+        print(cell.cellName.frame.size.width)
+
         
         return cell
     }

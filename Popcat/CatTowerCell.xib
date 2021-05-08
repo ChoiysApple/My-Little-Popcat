@@ -21,6 +21,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-Sn-Era">
                         <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-EY-R0R">
+                                <rect key="frame" x="35" y="20" width="152" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mpJ-EY-R0R" secondAttribute="height" id="KEN-ct-3Fh"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzA-q1-qwM">
                                 <rect key="frame" x="10" y="192" width="202" height="25"/>
                                 <attributedString key="attributedText">
@@ -34,12 +40,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-EY-R0R">
-                                <rect key="frame" x="35" y="20" width="152" height="152"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mpJ-EY-R0R" secondAttribute="height" id="KEN-ct-3Fh"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
