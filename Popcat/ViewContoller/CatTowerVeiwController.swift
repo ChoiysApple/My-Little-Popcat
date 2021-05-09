@@ -28,6 +28,7 @@ class CatTowerVeiwController: UIViewController {
         let isLabelVisible = self.popCountSwitch.isOn
         UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
         
+
         
         self.dismiss(animated: false)
     
@@ -45,10 +46,7 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
         
         cell.cellImage.image = #imageLiteral(resourceName: "popcat_closed")
         cell.cellName.text = "Popcat"
-        print(cell.cellName.frame.size.height)
-        print(cell.cellName.frame.size.width)
 
-        
         return cell
     }
     
@@ -76,6 +74,15 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
         flowLayout.minimumLineSpacing = halfWidth * 0.1
         
         self.collectionView.collectionViewLayout = flowLayout
+    }
+}
+
+extension CatTowerVeiwController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell: CatTowerCell = collectionView.cellForItem(at: indexPath) as! CatTowerCell
+        
+        print(cell.cellName.frame.size.height)
+        print(cell.cellName.frame.size.width)
     }
 }
 
