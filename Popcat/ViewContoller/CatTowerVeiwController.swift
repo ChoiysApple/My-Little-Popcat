@@ -79,8 +79,6 @@ extension CatTowerVeiwController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell: CatTowerCell = collectionView.cellForItem(at: indexPath) as! CatTowerCell
         
-        print(cell.cellName.frame.size.height)
-        print(cell.cellName.frame.size.width)
     }
 }
 
