@@ -60,18 +60,16 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
         let numberOfItemsPerRow: CGFloat = 2.0
     
         let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow
-        return CGSize(width: width, height: width)
+        return CGSize(width: width * 0.95, height: width * 0.95)
     }
     
     
     private func setupFlowLayout(numberOfCells: CGFloat) {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 10, right: 20)
 
-        let halfWidth = UIScreen.main.bounds.width / numberOfCells
-        flowLayout.itemSize = CGSize(width: halfWidth * 0.8 , height: halfWidth * 0.8)
-        flowLayout.minimumInteritemSpacing = 0
-        flowLayout.minimumLineSpacing = halfWidth * 0.1
+        flowLayout.minimumInteritemSpacing = 20
+        flowLayout.minimumLineSpacing = 20
         
         self.collectionView.collectionViewLayout = flowLayout
     }
