@@ -8,7 +8,6 @@
 import Foundation
 
 struct audioFileName {
-    
     static let popOriginal = "popcat_original_sound"
 }
 
@@ -31,3 +30,9 @@ struct UserDataKey {
     static let popSound = "pop_sound"
     static let background = "background"
 }
+
+let AssetData = [
+    ["catName": "Pop Cat", "closedImageName": "popcat_closed", "openedImageName": "popcat_opened"],
+    ["catName": "Original Cat", "closedImageName": "originalcat_closed", "openedImageName": "originalcat_opened"],
+    ["catName": "Hood Cat", "closedImageName": "popcat_closed", "openedImageName": "hoodcat_opened"],
+]

@@ -19,7 +19,7 @@ class CatTowerVeiwController: UIViewController {
         popCountSwitch.setOn(switchState, animated: false)
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        setupFlowLayout(numberOfCells: 2.0)
+        setupFlowLayout()
     }
 
     
@@ -64,7 +64,7 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
     }
     
     
-    private func setupFlowLayout(numberOfCells: CGFloat) {
+    private func setupFlowLayout() {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 10, right: 20)
 
