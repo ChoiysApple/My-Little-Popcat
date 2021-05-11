@@ -61,10 +61,8 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
         cell.cellName.text = catData["catName"]
         
         if currentCatName == catData["catName"] {
-            print("cell: \(cell.cellName.text)")
             cell.cellView.layer.borderWidth = 1.5
         } else {
-            print("current: \(currentCatName)")
             cell.cellView.layer.borderWidth = 0.5
         }
 
