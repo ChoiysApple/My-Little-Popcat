@@ -44,8 +44,12 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
         
-        cell.cellImage.image = #imageLiteral(resourceName: "popcat_closed")
-        cell.cellName.text = "Popcat"
+        
+        let catData = AssetData[indexPath.row]
+//        let imageURL = createLocalUrl(forImageNamed: catData["mainImageName"] ?? "popcat_closed")
+        
+        cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
+        cell.cellName.text = catData["catName"]
 
         return cell
     }
@@ -79,6 +83,6 @@ extension CatTowerVeiwController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell: CatTowerCell = collectionView.cellForItem(at: indexPath) as! CatTowerCell
         
+        print(cell.cellName.text)
     }
 }
-
