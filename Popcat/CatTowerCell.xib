@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="222" id="KGk-i7-Jjw" customClass="CatTowerCell" customModule="Popcat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-Sn-Era">
+                        <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzA-q1-qwM">
+                                <rect key="frame" x="89" y="192" width="44.5" height="25"/>
+                                <color key="tintColor" name="Color"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" name="Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-EY-R0R">
+                                <rect key="frame" x="25" y="10" width="172" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mpJ-EY-R0R" secondAttribute="height" id="KEN-ct-3Fh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="hzA-q1-qwM" firstAttribute="top" secondItem="mpJ-EY-R0R" secondAttribute="bottom" constant="10" id="0QC-Qm-aBi"/>
+                            <constraint firstItem="mpJ-EY-R0R" firstAttribute="top" secondItem="SbT-Sn-Era" secondAttribute="top" constant="10" id="3Yq-zg-s1R"/>
+                            <constraint firstItem="hzA-q1-qwM" firstAttribute="centerX" secondItem="SbT-Sn-Era" secondAttribute="centerX" id="I1I-9A-yhe"/>
+                            <constraint firstItem="mpJ-EY-R0R" firstAttribute="centerX" secondItem="SbT-Sn-Era" secondAttribute="centerX" id="Uys-ub-IQi"/>
+                            <constraint firstAttribute="width" secondItem="SbT-Sn-Era" secondAttribute="height" id="mlq-34-9hi"/>
+                            <constraint firstAttribute="bottom" secondItem="hzA-q1-qwM" secondAttribute="bottom" constant="5" id="xBP-gB-Oz4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer. borderUIColor">
+                                <color key="value" systemColor="opaqueSeparatorColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" name="BgColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SbT-Sn-Era" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0WH-uC-KzU"/>
+                    <constraint firstAttribute="trailing" secondItem="SbT-Sn-Era" secondAttribute="trailing" id="Bzr-fK-F6J"/>
+                    <constraint firstItem="SbT-Sn-Era" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EL4-fn-7Af"/>
+                    <constraint firstAttribute="bottom" secondItem="SbT-Sn-Era" secondAttribute="bottom" id="o8k-iD-jcT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellImage" destination="mpJ-EY-R0R" id="MP5-HY-Ieg"/>
+                <outlet property="cellName" destination="hzA-q1-qwM" id="7BQ-HC-hZV"/>
+                <outlet property="cellView" destination="SbT-Sn-Era" id="y3V-wO-YzH"/>
+            </connections>
+            <point key="canvasLocation" x="53.623188405797109" y="150.66964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
