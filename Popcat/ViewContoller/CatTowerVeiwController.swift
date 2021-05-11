@@ -38,15 +38,12 @@ class CatTowerVeiwController: UIViewController {
 extension CatTowerVeiwController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return AssetData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
-        
-        
         let catData = AssetData[indexPath.row]
-//        let imageURL = createLocalUrl(forImageNamed: catData["mainImageName"] ?? "popcat_closed")
         
         cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
         cell.cellName.text = catData["catName"]
