@@ -31,11 +31,12 @@ class MainViewController: UIViewController {
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
             UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
-            UserDefaults.standard.set(AssetData[0]["catname"], forKey: UserDataKey.currentCatName)
-            UserDefaults.standard.set(AssetData[0]["closedImageName"], forKey: UserDataKey.touchDownImage)
-            UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchUpImage)
+            UserDefaults.standard.set(AssetData[0]["catName"], forKey: UserDataKey.currentCatName)
+            UserDefaults.standard.set(AssetData[0]["closedImageName"], forKey: UserDataKey.touchUpImage)
+            UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchDownImage)
         }
         
+        print(UserDefaults.standard.string(forKey: UserDataKey.currentCatName))
         touchEvent.delegate = self
     }
     

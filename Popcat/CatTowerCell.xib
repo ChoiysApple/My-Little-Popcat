@@ -83,6 +83,7 @@
             <connections>
                 <outlet property="cellImage" destination="mpJ-EY-R0R" id="MP5-HY-Ieg"/>
                 <outlet property="cellName" destination="hzA-q1-qwM" id="7BQ-HC-hZV"/>
+                <outlet property="cellView" destination="SbT-Sn-Era" id="y3V-wO-YzH"/>
             </connections>
             <point key="canvasLocation" x="53.623188405797109" y="150.66964285714286"/>
         </tableViewCell>

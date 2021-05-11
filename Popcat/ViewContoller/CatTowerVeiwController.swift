@@ -13,7 +13,7 @@ class CatTowerVeiwController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var selectedCatData: [String:String]?
-    let currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
+    var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class CatTowerVeiwController: UIViewController {
         // Send cat option to UserDefaults
         if let changedCatData = selectedCatData {
             if changedCatData["catName"] != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
-                UserDefaults.standard.set(changedCatData["catname"], forKey: UserDataKey.currentCatName)
+                UserDefaults.standard.set(changedCatData["catName"], forKey: UserDataKey.currentCatName)
                 UserDefaults.standard.set(changedCatData["openedImageName"], forKey: UserDataKey.touchDownImage)
                 UserDefaults.standard.set(changedCatData["closedImageName"], forKey: UserDataKey.touchUpImage)
             }
@@ -59,6 +59,14 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
 
         cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
         cell.cellName.text = catData["catName"]
+        
+        if currentCatName == catData["catName"] {
+            print("cell: \(cell.cellName.text)")
+            cell.cellView.layer.borderWidth = 1.5
+        } else {
+            print("current: \(currentCatName)")
+            cell.cellView.layer.borderWidth = 0.5
+        }
 
         return cell
     }
@@ -91,6 +99,18 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
 extension CatTowerVeiwController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        selectedCatData = AssetData[indexPath.row]
+        let cell = collectionView.cellForItem(at: indexPath) as? CatTowerCell
+        
+        guard let selectedCatName = cell!.cellName.text else {
+            return
+        }
+        
+        if selectedCatName != currentCatName {
+            selectedCatData = AssetData[indexPath.row]
+            currentCatName = selectedCatName
+            collectionView.reloadData()
+        }
+
+        
     }
 }

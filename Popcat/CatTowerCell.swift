@@ -9,11 +9,13 @@ import UIKit
 
 class CatTowerCell: UICollectionViewCell {
 
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
 }
