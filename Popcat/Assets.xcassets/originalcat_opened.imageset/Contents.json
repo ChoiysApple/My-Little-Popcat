@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "popcat_original_opened.png",
+      "filename" : "originalCat_opened.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "popcat_original_opened@2x.png",
+      "filename" : "originalCat_opened@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "popcat_original_opened@3x.png",
+      "filename" : "originalCat_opened@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
