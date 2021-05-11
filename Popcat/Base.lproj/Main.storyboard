@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="height" id="J9s-ah-3NE"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
                                 <rect key="frame" x="0.0" y="229.66666666666666" width="414" height="56.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
@@ -75,6 +75,7 @@
                             <constraint firstAttribute="trailing" secondItem="Dr2-Yn-Uf5" secondAttribute="trailing" constant="80" id="61m-zM-PW6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzH-iR-VZs" secondAttribute="trailing" constant="20" id="Ghc-1K-951"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICr-ao-fQY"/>
+                            <constraint firstItem="ayo-go-8WJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="IGU-FY-knl"/>
                             <constraint firstItem="yzH-iR-VZs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QCq-QL-T9z"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="QSd-bn-B7i">
                                 <variation key="heightClass=compact" constant="40"/>
