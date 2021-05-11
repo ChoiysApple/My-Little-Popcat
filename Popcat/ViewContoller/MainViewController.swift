@@ -31,6 +31,9 @@ class MainViewController: UIViewController {
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
             UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
+            UserDefaults.standard.set(AssetData[0]["catname"], forKey: UserDataKey.currentCatName)
+            UserDefaults.standard.set(AssetData[0]["closedImageName"], forKey: UserDataKey.touchDownImage)
+            UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchUpImage)
         }
         
         touchEvent.delegate = self
@@ -40,16 +43,6 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         updateViewSettings()
-    }
-    
-    // apply
-    func updateViewSettings() {
-        countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
-        countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
-        touchUpImageSource = #imageLiteral(resourceName: "popcat_closed")
-        touchDownImageSource = #imageLiteral(resourceName: "popcat_opened")
-        popcatImage.image = touchUpImageSource
-        timer.invalidate()
     }
 
 }
@@ -104,4 +97,23 @@ extension MainViewController {
     }
 }
 
+//MARK:- Custom methods
+extension MainViewController {
+    
+    // apply current settings
+    func updateViewSettings() {
+        
+        countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
+        
+        let touchUpImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? "popcat_opened"
+        let touchDownImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? "popcat_closed"
+        touchUpImageSource = UIImage(named: touchUpImageName)
+        touchDownImageSource = UIImage(named: touchDownImageName)
+        popcatImage.image = touchUpImageSource
+        timer.invalidate()
+    }
+    
+    
+}
 

@@ -12,6 +12,9 @@ class CatTowerVeiwController: UIViewController {
     @IBOutlet weak var popCountSwitch: UISwitch!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var selectedCatData: [String:String]?
+    let currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,10 +28,19 @@ class CatTowerVeiwController: UIViewController {
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
 
+        // Send pop count visibility option  to UserDefaults
         let isLabelVisible = self.popCountSwitch.isOn
         UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
         
-
+        
+        // Send cat option to UserDefaults
+        if let changedCatData = selectedCatData {
+            if changedCatData["catName"] != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
+                UserDefaults.standard.set(changedCatData["catname"], forKey: UserDataKey.currentCatName)
+                UserDefaults.standard.set(changedCatData["openedImageName"], forKey: UserDataKey.touchDownImage)
+                UserDefaults.standard.set(changedCatData["closedImageName"], forKey: UserDataKey.touchUpImage)
+            }
+        }
         
         self.dismiss(animated: false)
     
@@ -44,7 +56,7 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
         let catData = AssetData[indexPath.row]
-        
+
         cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
         cell.cellName.text = catData["catName"]
 
@@ -78,8 +90,7 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
 
 extension CatTowerVeiwController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell: CatTowerCell = collectionView.cellForItem(at: indexPath) as! CatTowerCell
         
-        print(cell.cellName.text)
+        selectedCatData = AssetData[indexPath.row]
     }
 }
