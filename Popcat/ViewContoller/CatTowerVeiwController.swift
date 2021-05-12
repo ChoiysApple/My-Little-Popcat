@@ -24,6 +24,10 @@ class CatTowerVeiwController: UIViewController {
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView.reloadData()
+    }
 
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
@@ -108,7 +112,5 @@ extension CatTowerVeiwController: UICollectionViewDelegate {
             currentCatName = selectedCatName
             collectionView.reloadData()
         }
-
-        
     }
 }
