@@ -36,7 +36,6 @@ class MainViewController: UIViewController {
             UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchDownImage)
         }
         
-        print(UserDefaults.standard.string(forKey: UserDataKey.currentCatName))
         touchEvent.delegate = self
     }
     
