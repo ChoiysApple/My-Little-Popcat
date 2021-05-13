@@ -22,8 +22,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-Sn-Era">
                         <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hzA-q1-qwM">
-                                <rect key="frame" x="74.5" y="186.5" width="73.5" height="30.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-EY-R0R">
+                                <rect key="frame" x="33.5" y="10" width="155" height="155.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mpJ-EY-R0R" secondAttribute="height" id="KEN-ct-3Fh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hzA-q1-qwM">
+                                <rect key="frame" x="74.5" y="175.5" width="73.5" height="36.5"/>
                                 <color key="tintColor" name="Color"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
@@ -41,12 +47,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-EY-R0R">
-                                <rect key="frame" x="28" y="10" width="166.5" height="166.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mpJ-EY-R0R" secondAttribute="height" id="KEN-ct-3Fh"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
@@ -55,7 +55,7 @@
                             <constraint firstItem="hzA-q1-qwM" firstAttribute="centerX" secondItem="SbT-Sn-Era" secondAttribute="centerX" id="I1I-9A-yhe"/>
                             <constraint firstItem="mpJ-EY-R0R" firstAttribute="centerX" secondItem="SbT-Sn-Era" secondAttribute="centerX" id="Uys-ub-IQi"/>
                             <constraint firstAttribute="width" secondItem="SbT-Sn-Era" secondAttribute="height" id="mlq-34-9hi"/>
-                            <constraint firstAttribute="bottom" secondItem="hzA-q1-qwM" secondAttribute="bottom" constant="5" id="xBP-gB-Oz4"/>
+                            <constraint firstAttribute="bottom" secondItem="hzA-q1-qwM" secondAttribute="bottom" constant="10" id="xBP-gB-Oz4"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -78,7 +78,7 @@
                     <constraint firstAttribute="trailing" secondItem="SbT-Sn-Era" secondAttribute="trailing" id="Bzr-fK-F6J"/>
                     <constraint firstItem="SbT-Sn-Era" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EL4-fn-7Af"/>
                     <constraint firstAttribute="bottom" secondItem="SbT-Sn-Era" secondAttribute="bottom" id="o8k-iD-jcT"/>
-                    <constraint firstItem="mpJ-EY-R0R" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="vz0-Qm-MbK"/>
+                    <constraint firstItem="mpJ-EY-R0R" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="vz0-Qm-MbK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

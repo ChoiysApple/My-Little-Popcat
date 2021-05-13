@@ -15,27 +15,44 @@ class CatTowerVeiwController: UIViewController {
     var selectedCatData: [String:String]?
     var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
     
+    var numberOfColums: Int?
+    var cellContentSizeRatio: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Initialize Pop Count switch state
         let switchState = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         popCountSwitch.setOn(switchState, animated: false)
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
+        
+        let model = UIDevice.current.model
+        if model == "iPad" {
+            print("This is iPad")
+        }
+
+
     }
     
+    // Reload collectionView at orientation Changes
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView.reloadData()
     }
 
+    
+
+}
+
+//MARK: IBActions
+extension CatTowerVeiwController {
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
 
         // Send pop count visibility option  to UserDefaults
         let isLabelVisible = self.popCountSwitch.isOn
         UserDefaults.standard.set(isLabelVisible, forKey: UserDataKey.popCountVisibility)
-        
         
         // Send cat option to UserDefaults
         if let changedCatData = selectedCatData {
@@ -47,10 +64,10 @@ class CatTowerVeiwController: UIViewController {
         }
         
         self.dismiss(animated: false)
-    
     }
 }
 
+//MARK: CollectionView Data Source
 extension CatTowerVeiwController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -76,6 +93,7 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
 
 }
 
+//MARK: COllectionViewFlowLayout
 extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -83,7 +101,7 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
         let numberOfItemsPerRow: CGFloat = 2.0
     
         let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow
-        return CGSize(width: width * 0.95, height: width * 0.95)
+        return CGSize(width: width * 0.94, height: width * 0.94)
     }
     
     
@@ -98,6 +116,7 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+//MARK: CollectionViewDelegate
 extension CatTowerVeiwController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
