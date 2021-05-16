@@ -27,9 +27,6 @@ struct UserDataKey {
     static let background = "background"
 }
 
-struct collectionViewConstants {
-}
-
 let AssetData = [
     ["catName": "Pop Cat", "closedImageName": "popcat_closed", "openedImageName": "popcat_opened", "mainImageName": "popcat_closed"],
     ["catName": "Original Cat", "closedImageName": "originalcat_closed", "openedImageName": "originalcat_opened", "mainImageName": "originalcat_closed"],

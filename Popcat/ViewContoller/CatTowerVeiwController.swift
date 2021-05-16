@@ -27,13 +27,6 @@ class CatTowerVeiwController: UIViewController {
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
-        
-        let model = UIDevice.current.model
-        if model == "iPad" {
-            print("This is iPad")
-        }
-
-
     }
     
     // Reload collectionView at orientation Changes
@@ -98,10 +91,10 @@ extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let leftAndRightPaddings: CGFloat = 45.0
-        let numberOfItemsPerRow: CGFloat = 2.0
+        let numberOfItemsPerRow: CGFloat = numberOfCells
     
         let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow
-        return CGSize(width: width * 0.93, height: width * 0.93)
+        return CGSize(width: width * cellSizeRatio, height: width * cellSizeRatio)
     }
     
     

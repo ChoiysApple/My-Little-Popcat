@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     //MARK: touchEventImage
     var touchDownImageSource: UIImage?
     var touchUpImageSource: UIImage?
-    var touchEvent = touchEventController()
+    var touchEvent = touchEventManager()
     
     // Timer related
     let imageDelay = 0.15
