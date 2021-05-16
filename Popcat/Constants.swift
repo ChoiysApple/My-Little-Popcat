@@ -32,3 +32,5 @@ let AssetData = [
     ["catName": "Original Cat", "closedImageName": "originalcat_closed", "openedImageName": "originalcat_opened", "mainImageName": "originalcat_closed"],
     ["catName": "Hood Cat", "closedImageName": "hoodcat_closed", "openedImageName": "hoodcat_opened", "mainImageName": "hoodcat_opened"]
 ]
+
+
