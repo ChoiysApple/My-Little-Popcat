@@ -27,3 +27,4 @@
   * 1.1.1 Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
 * 1.2 Cat Tower - More cats are available
   * 1.2.1 Fix UI issue for iPad and 4-inch Display, Vary UI for Device and Orientation
+  * 1.2.2 Fix screen rotating issue on iPhone,Fix cat image distorting issue
