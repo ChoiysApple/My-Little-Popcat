@@ -15,8 +15,8 @@ class CatTowerVeiwController: UIViewController {
     var selectedCatData: [String:String]?
     var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
     
-    var numberOfColums: Int?
-    var cellContentSizeRatio: Int?
+    var numberOfColums: CGFloat?
+    var cellContentSizeRatio: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,15 @@ class CatTowerVeiwController: UIViewController {
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
+        
+        numberOfColums = numberOfCells
+        cellContentSizeRatio = cellSizeRatio
     }
     
     // Reload collectionView at orientation Changes
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView.reloadData()
     }
-
-    
 
 }
 
@@ -90,6 +91,7 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
 extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
         let leftAndRightPaddings: CGFloat = 45.0
         let numberOfItemsPerRow: CGFloat = numberOfCells
     

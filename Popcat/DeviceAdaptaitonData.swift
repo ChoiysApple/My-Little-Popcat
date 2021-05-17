@@ -23,7 +23,12 @@ public var numberOfCells: CGFloat {
     get {
         let model = UIDevice.current.model
         if model == "iPad" {
-            return 3.0
+            let size = UIScreen.main.bounds.size
+            if size.width < size.height {
+                return 3
+            } else {
+                return 4
+            }
         } else {
             return 2.0
         }
