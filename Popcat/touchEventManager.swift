@@ -14,7 +14,7 @@ protocol touchEventDelegate {
     func touchUpImage()
 }
 
-class touchEventController {
+class touchEventManager {
     
     var delegate: touchEventDelegate?
     var popSoundEffect: AVAudioPlayer?

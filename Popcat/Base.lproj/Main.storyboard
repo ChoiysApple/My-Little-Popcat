@@ -171,7 +171,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3t7-hl-btQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3t7-hl-btQ" userLabel="SwitchBG">
                                 <rect key="frame" x="0.0" y="126.66666666666669" width="390" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-8s-Ghh">
@@ -206,7 +206,7 @@
                                     <constraint firstItem="yui-If-X1D" firstAttribute="height" secondItem="Hdz-8s-Ghh" secondAttribute="height" id="vuC-wH-ehb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-pc-sUF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-pc-sUF" userLabel="ButtonBG">
                                 <rect key="frame" x="0.0" y="706.33333333333337" width="390" height="137.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>

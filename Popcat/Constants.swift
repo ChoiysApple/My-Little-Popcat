@@ -11,11 +11,6 @@ struct audioFileName {
     static let popOriginal = "popcat_original_sound"
 }
 
-struct imageFileName {
-    static let originalOpen = "popcat_opened"
-    static let originalClosed = "popcat_closed"
-}
-
 struct Identifier {
     static let settingSegue = "mainToSettings"
     static let mainViewController = "MainViewController"
@@ -35,5 +30,5 @@ struct UserDataKey {
 let AssetData = [
     ["catName": "Pop Cat", "closedImageName": "popcat_closed", "openedImageName": "popcat_opened", "mainImageName": "popcat_closed"],
     ["catName": "Original Cat", "closedImageName": "originalcat_closed", "openedImageName": "originalcat_opened", "mainImageName": "originalcat_closed"],
-    ["catName": "Hood Cat", "closedImageName": "hoodcat_closed", "openedImageName": "hoodcat_opened", "mainImageName": "hoodcat_opened"],
+    ["catName": "Hood Cat", "closedImageName": "hoodcat_closed", "openedImageName": "hoodcat_opened", "mainImageName": "hoodcat_opened"]
 ]
