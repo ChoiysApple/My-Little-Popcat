@@ -1,8 +1,9 @@
 {
   "data" : [
     {
-      "filename" : "popcat_original_sound.mp3",
-      "idiom" : "universal"
+      "filename" : "Pop-sound-effect.mp3",
+      "idiom" : "universal",
+      "universal-type-identifier" : "public.mp3"
     }
   ],
   "info" : {

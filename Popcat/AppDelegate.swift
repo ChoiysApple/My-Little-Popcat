@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFAudio
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+        // Get the singleton instance.
+       let audioSession = AVAudioSession.sharedInstance()
+       do {
+           // Set the audio session category, mode, and options.
+        try audioSession.setCategory(.ambient, options: .mixWithOthers)
+       } catch {
+           print("Failed to set audio session category.")
+       }
+       
+       // Other post-launch configuration.
+       return true
     }
 
     // MARK: UISceneSession Lifecycle
