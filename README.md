@@ -19,7 +19,8 @@
 * UserDefaults
 
 ### Resource 
-* [Cat image](https://setgis.net/pop_cat_meme.html)
+* [Cat image](https://setgis.net/pop_cat_meme.html) `Free Source`
+* [Pop sound Effect](https://orangefreesounds.com/pop-sound-effect/)`[Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)]`
 
 ### Version Release
 * 1.0 Basic feature
