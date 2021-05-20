@@ -17,7 +17,7 @@ protocol touchEventDelegate {
 class touchEventManager {
     
     var delegate: touchEventDelegate?
-    var popSoundEffect: AVAudioPlayer?
+    private var popSoundEffect: AVAudioPlayer?
     
     func touchDownAction() {
         

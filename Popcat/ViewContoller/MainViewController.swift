@@ -16,14 +16,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tutorialView: UIView!
     
     //MARK: touchEventImage
-    var touchDownImageSource: UIImage?
-    var touchUpImageSource: UIImage?
-    var touchEvent = touchEventManager()
+    private var touchDownImageSource: UIImage?
+    private var touchUpImageSource: UIImage?
+    private var touchEvent = touchEventManager()
     
     // Timer related
-    let imageDelay = 0.15
-    var timer = Timer()
-    var isNotFirstLaunch = UserDefaults.standard.bool(forKey: UserDataKey.isNotFirstLaunch)
+    private let imageDelay = 0.15
+    private var timer = Timer()
+    private var isNotFirstLaunch = UserDefaults.standard.bool(forKey: UserDataKey.isNotFirstLaunch)
     
     override func viewDidLoad() {
         super.viewDidLoad()

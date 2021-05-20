@@ -12,11 +12,11 @@ class CatTowerVeiwController: UIViewController {
     @IBOutlet weak var popCountSwitch: UISwitch!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var selectedCatData: [String:String]?
-    var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
+    private var selectedCatData: [String:String]?
+    private var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
     
-    var numberOfColums: CGFloat?
-    var cellContentSizeRatio: CGFloat?
+    private var numberOfColums: CGFloat?
+    private var cellContentSizeRatio: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
