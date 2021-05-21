@@ -14,7 +14,7 @@ class CatTowerVeiwController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // Variables for imageView
-    private var selectedCatData: [String:String]?
+    private var selectedCatData: AssetData?
     private var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
     
     // Variables for CollectionView Cell
@@ -53,11 +53,11 @@ extension CatTowerVeiwController {
         
         // Send cat option to UserDefaults
         if let changedCatData = selectedCatData {
-            if changedCatData["catName"] != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
-                UserDefaults.standard.set(changedCatData["catName"], forKey: UserDataKey.currentCatName)
-                UserDefaults.standard.set(changedCatData["openedImageName"], forKey: UserDataKey.touchDownImage)
-                UserDefaults.standard.set(changedCatData["closedImageName"], forKey: UserDataKey.touchUpImage)
-                UserDefaults.standard.set(changedCatData["audioSourceName"], forKey: UserDataKey.popSound)
+            if changedCatData.catName != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
+                UserDefaults.standard.set(changedCatData.catName, forKey: UserDataKey.currentCatName)
+                UserDefaults.standard.set(changedCatData.openedImageName, forKey: UserDataKey.touchDownImage)
+                UserDefaults.standard.set(changedCatData.closedImageName, forKey: UserDataKey.touchUpImage)
+                UserDefaults.standard.set(changedCatData.audioSourceName, forKey: UserDataKey.popSound)
             }
         }
         
@@ -69,18 +69,18 @@ extension CatTowerVeiwController {
 extension CatTowerVeiwController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AssetData.count
+        return AssetDataList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
-        let catData = AssetData[indexPath.row]
+        let catData = AssetDataList[indexPath.row]
 
-        cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
-        cell.cellName.text = catData["catName"]
+        cell.cellImage.image = UIImage(named: catData.mainImageName)
+        cell.cellName.text = catData.catName
         
-        // Make border of collectionView Cell
-        if currentCatName == catData["catName"] {
+        // Make border of CollectionView Cell
+        if currentCatName == catData.catName{
             cell.cellView.layer.borderWidth = 1.5
         } else {
             cell.cellView.layer.borderWidth = 0.5
@@ -127,7 +127,7 @@ extension CatTowerVeiwController: UICollectionViewDelegate {
         }
         
         if selectedCatName != currentCatName {
-            selectedCatData = AssetData[indexPath.row]
+            selectedCatData = AssetDataList[indexPath.row]
             currentCatName = selectedCatName
             collectionView.reloadData()
         }

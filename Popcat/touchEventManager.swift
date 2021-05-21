@@ -27,7 +27,7 @@ class touchEventManager {
     func touchDownAction() {
         
         // play sound
-        let popSound = NSDataAsset(name: popSoundSource ?? "popcat_original_sound")?.data
+        let popSound = NSDataAsset(name: popSoundSource ?? defaultAssetData.audioSourceName)?.data
         do {
             popSoundEffect = try AVAudioPlayer(data: popSound!)
             popSoundEffect?.play()

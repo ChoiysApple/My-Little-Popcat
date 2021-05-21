@@ -31,10 +31,10 @@ class MainViewController: UIViewController {
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
             UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
-            UserDefaults.standard.set(AssetData[0]["catName"], forKey: UserDataKey.currentCatName)
-            UserDefaults.standard.set(AssetData[0]["closedImageName"], forKey: UserDataKey.touchUpImage)
-            UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchDownImage)
-            UserDefaults.standard.set(AssetData[0]["audioSourceName"], forKey: UserDataKey.popSound)
+            UserDefaults.standard.set(defaultAssetData.catName, forKey: UserDataKey.currentCatName)
+            UserDefaults.standard.set(defaultAssetData.openedImageName, forKey: UserDataKey.touchDownImage)
+            UserDefaults.standard.set(defaultAssetData.closedImageName, forKey: UserDataKey.touchUpImage)
+            UserDefaults.standard.set(defaultAssetData.audioSourceName, forKey: UserDataKey.popSound)
         }
         
         touchEvent.delegate = self
@@ -106,13 +106,13 @@ extension MainViewController {
         countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         
-        let touchUpImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? "popcat_opened"
-        let touchDownImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? "popcat_closed"
+        let touchUpImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? defaultAssetData.openedImageName
+        let touchDownImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? defaultAssetData.closedImageName
         touchUpImageSource = UIImage(named: touchUpImageName)
         touchDownImageSource = UIImage(named: touchDownImageName)
         popcatImage.image = touchUpImageSource
         
-        touchEvent.setAudioSource(audioSource: UserDefaults.standard.string(forKey: UserDataKey.popSound) ?? "popcat_original_sound")
+        touchEvent.setAudioSource(audioSource: UserDefaults.standard.string(forKey: UserDataKey.popSound) ?? defaultAssetData.audioSourceName)
         timer.invalidate()
     }
     
