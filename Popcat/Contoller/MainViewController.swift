@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
             UserDefaults.standard.set(AssetData[0]["catName"], forKey: UserDataKey.currentCatName)
             UserDefaults.standard.set(AssetData[0]["closedImageName"], forKey: UserDataKey.touchUpImage)
             UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchDownImage)
+            UserDefaults.standard.set(AssetData[0]["audioSourceName"], forKey: UserDataKey.popSound)
         }
         
         touchEvent.delegate = self
@@ -102,7 +103,6 @@ extension MainViewController {
     
     // apply current settings
     func updateViewSettings() {
-        
         countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         
@@ -111,6 +111,8 @@ extension MainViewController {
         touchUpImageSource = UIImage(named: touchUpImageName)
         touchDownImageSource = UIImage(named: touchDownImageName)
         popcatImage.image = touchUpImageSource
+        
+        touchEvent.setAudioSource(audioSource: UserDefaults.standard.string(forKey: UserDataKey.popSound) ?? "popcat_original_sound")
         timer.invalidate()
     }
     

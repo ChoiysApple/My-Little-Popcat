@@ -70,12 +70,11 @@
 		7D795CF825F5FD53006C9469 /* Popcat */ = {
 			isa = PBXGroup;
 			children = (
-				7DB1416F263FC29100205D48 /* ViewContoller */,
+				7D8E1A39265771B100C590B7 /* View */,
+				7DB1416F263FC29100205D48 /* Contoller */,
 				7D795CF925F5FD54006C9469 /* AppDelegate.swift */,
 				7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */,
 				7D795CFF25F5FD54006C9469 /* Main.storyboard */,
-				7DD780BC263FB92700732C58 /* CatTowerCell.swift */,
-				7DD780BD263FB92700732C58 /* CatTowerCell.xib */,
 				7D795D0225F5FD54006C9469 /* Assets.xcassets */,
 				7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */,
 				7D795D0725F5FD54006C9469 /* Info.plist */,
@@ -86,14 +85,23 @@
 			path = Popcat;
 			sourceTree = "<group>";
 		};
-		7DB1416F263FC29100205D48 /* ViewContoller */ = {
+		7D8E1A39265771B100C590B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DD780BC263FB92700732C58 /* CatTowerCell.swift */,
+				7DD780BD263FB92700732C58 /* CatTowerCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7DB1416F263FC29100205D48 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
 				7D795CFD25F5FD54006C9469 /* MainViewController.swift */,
 				7DB1416C263FC24600205D48 /* SettingsViewController.swift */,
 				7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */,
 			);
-			path = ViewContoller;
+			path = Contoller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

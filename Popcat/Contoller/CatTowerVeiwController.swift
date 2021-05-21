@@ -9,12 +9,15 @@ import UIKit
 
 class CatTowerVeiwController: UIViewController {
 
+    //MARK: IBOutlets
     @IBOutlet weak var popCountSwitch: UISwitch!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // Variables for imageView
     private var selectedCatData: [String:String]?
     private var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
     
+    // Variables for CollectionView Cell
     private var numberOfColums: CGFloat?
     private var cellContentSizeRatio: CGFloat?
     
@@ -54,6 +57,7 @@ extension CatTowerVeiwController {
                 UserDefaults.standard.set(changedCatData["catName"], forKey: UserDataKey.currentCatName)
                 UserDefaults.standard.set(changedCatData["openedImageName"], forKey: UserDataKey.touchDownImage)
                 UserDefaults.standard.set(changedCatData["closedImageName"], forKey: UserDataKey.touchUpImage)
+                UserDefaults.standard.set(changedCatData["audioSourceName"], forKey: UserDataKey.popSound)
             }
         }
         
@@ -75,6 +79,7 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
         cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
         cell.cellName.text = catData["catName"]
         
+        // Make border of collectionView Cell
         if currentCatName == catData["catName"] {
             cell.cellView.layer.borderWidth = 1.5
         } else {
