@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AssetData {
+struct AssetData: Codable {
     var catName: String
     var closedImageName: String
     var openedImageName: String
