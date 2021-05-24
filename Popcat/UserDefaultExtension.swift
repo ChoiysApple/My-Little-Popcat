@@ -44,4 +44,3 @@ extension UserDefaults: ObjectSavable {
         }
     }
 }
-
