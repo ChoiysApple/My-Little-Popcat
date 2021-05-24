@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
             UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
+            
             UserDefaults.standard.set(defaultAssetData.catName, forKey: UserDataKey.currentCatName)
             UserDefaults.standard.set(defaultAssetData.openedImageName, forKey: UserDataKey.touchDownImage)
             UserDefaults.standard.set(defaultAssetData.closedImageName, forKey: UserDataKey.touchUpImage)
@@ -106,8 +107,8 @@ extension MainViewController {
         countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
         countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
         
-        let touchUpImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? defaultAssetData.openedImageName
-        let touchDownImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? defaultAssetData.closedImageName
+        let touchUpImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? defaultAssetData.closedImageName
+        let touchDownImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? defaultAssetData.openedImageName
         touchUpImageSource = UIImage(named: touchUpImageName)
         touchDownImageSource = UIImage(named: touchDownImageName)
         popcatImage.image = touchUpImageSource
