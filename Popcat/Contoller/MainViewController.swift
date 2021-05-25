@@ -32,10 +32,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         isNotFirstLaunch = dataManager.getIsInitialLaunch()
-        
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
-            dataManager.setIsInitialLaunch(isFirst: false)
+            dataManager.setIsInitialLaunch(isFirst: true)
             
             dataManager.setCatData(catData: defaultAssetData)
         }
