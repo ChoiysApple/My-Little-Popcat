@@ -23,5 +23,7 @@ struct UserDataKey {
     static let touchDownImage = "touchdown_image"
     static let touchUpImage = "touchup_image"
     static let popSound = "pop_sound"
+    static let mainImage = "main_image"
+    
     static let background = "background"
 }
