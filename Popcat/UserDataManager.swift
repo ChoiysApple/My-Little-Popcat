@@ -11,6 +11,7 @@ class UserDataManager {
     
     let userDefault = UserDefaults.standard
     
+    //MARK:- Setters
     func setCatData(catData: AssetData?) {
         
         let newData = catData ?? defaultAssetData
@@ -29,9 +30,12 @@ class UserDataManager {
         userDefault.set(popVisibility, forKey: UserDataKey.popCountVisibility)
     }
 
+    func setIsInitialLaunch(isFirst: Bool) {
+        userDefault.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
+    }
     
     
-    
+    //MARK:- Getters
     func getCatData() -> AssetData {
         let newCatName = userDefault.string(forKey: UserDataKey.currentCatData) ?? defaultAssetData.catName
         let newClosedImageName = userDefault.string(forKey: UserDataKey.touchUpImage) ?? defaultAssetData.closedImageName
@@ -48,6 +52,10 @@ class UserDataManager {
     
     func getPopVisibility() -> Bool {
         return userDefault.bool(forKey: UserDataKey.popCountVisibility)
+    }
+    
+    func getIsInitialLaunch() -> Bool {
+        return userDefault.bool(forKey: UserDataKey.isNotFirstLaunch)
     }
     
 }
