@@ -15,7 +15,10 @@ class CatTowerVeiwController: UIViewController {
     
     // Variables for imageView
     private var selectedCatData: AssetData?
+    private var currentCatData: AssetData?
     private var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
+    
+    private let dataManager = UserDataManager()
     
     // Variables for CollectionView Cell
     private var numberOfColums: CGFloat?
@@ -24,8 +27,10 @@ class CatTowerVeiwController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currentCatData = dataManager.getCatData()
+        
         // Initialize Pop Count switch state
-        let switchState = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        let switchState = dataManager.getPopVisibility()
         popCountSwitch.setOn(switchState, animated: false)
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -54,10 +59,7 @@ extension CatTowerVeiwController {
         // Send cat option to UserDefaults
         if let changedCatData = selectedCatData {
             if changedCatData.catName != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
-                UserDefaults.standard.set(changedCatData.catName, forKey: UserDataKey.currentCatName)
-                UserDefaults.standard.set(changedCatData.openedImageName, forKey: UserDataKey.touchDownImage)
-                UserDefaults.standard.set(changedCatData.closedImageName, forKey: UserDataKey.touchUpImage)
-                UserDefaults.standard.set(changedCatData.audioSourceName, forKey: UserDataKey.popSound)
+                dataManager.setCatData(catData: changedCatData)
             }
         }
         
