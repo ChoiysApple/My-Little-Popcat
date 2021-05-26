@@ -17,10 +17,6 @@ class CatTowerVeiwController: UIViewController {
     private var selectedCatData: AssetData?
     private var currentCatName = ""
     
-    // Variables for CollectionView Cell
-    private var numberOfColums: CGFloat?
-    private var cellContentSizeRatio: CGFloat?
-    
     private var dataManager = UserDataManager()
     
     override func viewDidLoad() {
@@ -32,9 +28,6 @@ class CatTowerVeiwController: UIViewController {
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
-        
-        numberOfColums = numberOfCells
-        cellContentSizeRatio = cellSizeRatio
         
         currentCatName = dataManager.getCatData().catName
     }
