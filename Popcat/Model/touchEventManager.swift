@@ -17,12 +17,17 @@ protocol touchEventDelegate {
 class touchEventManager {
     
     var delegate: touchEventDelegate?
-    var popSoundEffect: AVAudioPlayer?
+    private var popSoundEffect: AVAudioPlayer?
+    private var popSoundSource: String?
+    
+    func setAudioSource(audioSource: String) {
+        popSoundSource = audioSource
+    }
     
     func touchDownAction() {
         
         // play sound
-        let popSound = NSDataAsset(name: audioFileName.popOriginal)?.data
+        let popSound = NSDataAsset(name: popSoundSource ?? defaultAssetData.audioSourceName)?.data
         do {
             popSoundEffect = try AVAudioPlayer(data: popSound!)
             popSoundEffect?.play()

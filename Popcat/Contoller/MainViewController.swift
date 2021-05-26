@@ -16,24 +16,27 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tutorialView: UIView!
     
     //MARK: touchEventImage
-    var touchDownImageSource: UIImage?
-    var touchUpImageSource: UIImage?
-    var touchEvent = touchEventManager()
+    private var touchDownImageSource: UIImage?
+    private var touchUpImageSource: UIImage?
+    
+    //MARK: Helper Classes
+    private var touchEvent = touchEventManager()
+    private let dataManager = UserDataManager()
     
     // Timer related
-    let imageDelay = 0.15
-    var timer = Timer()
-    var isNotFirstLaunch = UserDefaults.standard.bool(forKey: UserDataKey.isNotFirstLaunch)
+    private let imageDelay = 0.15
+    private var timer = Timer()
+    private var isNotFirstLaunch = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        isNotFirstLaunch = dataManager.getIsInitialLaunch()
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
-            UserDefaults.standard.set(isNotFirstLaunch, forKey: UserDataKey.isNotFirstLaunch)
-            UserDefaults.standard.set(AssetData[0]["catName"], forKey: UserDataKey.currentCatName)
-            UserDefaults.standard.set(AssetData[0]["closedImageName"], forKey: UserDataKey.touchUpImage)
-            UserDefaults.standard.set(AssetData[0]["openedImageName"], forKey: UserDataKey.touchDownImage)
+            dataManager.setIsInitialLaunch(isFirst: true)
+            
+            dataManager.setCatData(catData: defaultAssetData)
         }
         
         touchEvent.delegate = self
@@ -57,8 +60,6 @@ extension MainViewController: touchEventDelegate {
             DispatchQueue.main.async {
                 self.tutorialView.isHidden = true
             }
-                
-            UserDefaults.standard.set(true, forKey: UserDataKey.isNotFirstLaunch)
         }
         
         timer.invalidate()
@@ -91,8 +92,8 @@ extension MainViewController {
     
     // Gesture events
     @IBAction func swipeUpGesture(_ sender: Any) {
-        let currentCount = UserDefaults.standard.integer(forKey: UserDataKey.popCount)
-        UserDefaults.standard.set(currentCount-1, forKey: UserDataKey.popCount)
+        let currentCount = dataManager.getPopCount()
+        dataManager.setPopCount(popCount: currentCount-1)
         performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
     }
 }
@@ -102,15 +103,15 @@ extension MainViewController {
     
     // apply current settings
     func updateViewSettings() {
+        countLabel.isHidden = !dataManager.getPopVisibility()
+        countLabel.text = String(dataManager.getPopCount())
         
-        countLabel.isHidden = !UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
-        countLabel.text = String(UserDefaults.standard.integer(forKey: UserDataKey.popCount))
-        
-        let touchUpImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? "popcat_opened"
-        let touchDownImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? "popcat_closed"
-        touchUpImageSource = UIImage(named: touchUpImageName)
-        touchDownImageSource = UIImage(named: touchDownImageName)
+        let catData = dataManager.getCatData()
+        touchUpImageSource = UIImage(named: catData.closedImageName)
+        touchDownImageSource = UIImage(named: catData.openedImageName)
         popcatImage.image = touchUpImageSource
+        
+        touchEvent.setAudioSource(audioSource: catData.audioSourceName)
         timer.invalidate()
     }
     

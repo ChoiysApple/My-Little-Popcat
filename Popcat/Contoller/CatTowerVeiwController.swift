@@ -9,27 +9,27 @@ import UIKit
 
 class CatTowerVeiwController: UIViewController {
 
+    //MARK: IBOutlets
     @IBOutlet weak var popCountSwitch: UISwitch!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var selectedCatData: [String:String]?
-    var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
+    // Variables for imageView
+    private var selectedCatData: AssetData?
+    private var currentCatName = ""
     
-    var numberOfColums: CGFloat?
-    var cellContentSizeRatio: CGFloat?
+    private var dataManager = UserDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Initialize Pop Count switch state
-        let switchState = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        let switchState = dataManager.getPopVisibility()
         popCountSwitch.setOn(switchState, animated: false)
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
         
-        numberOfColums = numberOfCells
-        cellContentSizeRatio = cellSizeRatio
+        currentCatName = dataManager.getCatData().catName
     }
     
     // Reload collectionView at orientation Changes
@@ -50,10 +50,9 @@ extension CatTowerVeiwController {
         
         // Send cat option to UserDefaults
         if let changedCatData = selectedCatData {
-            if changedCatData["catName"] != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
-                UserDefaults.standard.set(changedCatData["catName"], forKey: UserDataKey.currentCatName)
-                UserDefaults.standard.set(changedCatData["openedImageName"], forKey: UserDataKey.touchDownImage)
-                UserDefaults.standard.set(changedCatData["closedImageName"], forKey: UserDataKey.touchUpImage)
+            if changedCatData.catName != dataManager.getCatData().catName {
+                
+                dataManager.setCatData(catData: changedCatData)
             }
         }
         
@@ -65,17 +64,18 @@ extension CatTowerVeiwController {
 extension CatTowerVeiwController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AssetData.count
+        return AssetDataList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
-        let catData = AssetData[indexPath.row]
+        let catData = AssetDataList[indexPath.row]
 
-        cell.cellImage.image = UIImage(named: catData["mainImageName"] ?? "popcat_closed")
-        cell.cellName.text = catData["catName"]
+        cell.cellImage.image = UIImage(named: catData.mainImageName)
+        cell.cellName.text = catData.catName
         
-        if currentCatName == catData["catName"] {
+        // Make border of CollectionView Cell
+        if currentCatName == catData.catName{
             cell.cellView.layer.borderWidth = 1.5
         } else {
             cell.cellView.layer.borderWidth = 0.5
@@ -122,7 +122,7 @@ extension CatTowerVeiwController: UICollectionViewDelegate {
         }
         
         if selectedCatName != currentCatName {
-            selectedCatData = AssetData[indexPath.row]
+            selectedCatData = AssetDataList[indexPath.row]
             currentCatName = selectedCatName
             collectionView.reloadData()
         }
