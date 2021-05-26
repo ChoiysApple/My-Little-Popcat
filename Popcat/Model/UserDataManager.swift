@@ -16,7 +16,7 @@ class UserDataManager {
         do {
             try userDefaults.setObject(catData, forKey: UserDataKey.currentCatData)
         } catch {
-            print(error.localizedDescription)
+            print("\(String(describing: self)): \(error.localizedDescription)")
         }
         
     }
@@ -41,7 +41,7 @@ class UserDataManager {
         do {
             catData = try userDefaults.getObject(forKey: UserDataKey.currentCatData, castTo: AssetData.self)
         } catch {
-            print(error.localizedDescription)
+            print("\(String(describing: self)): \(error.localizedDescription)")
         }
         
         return catData
