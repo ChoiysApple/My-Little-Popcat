@@ -9,53 +9,52 @@ import Foundation
 
 class UserDataManager {
     
-    let userDefault = UserDefaults.standard
-    
     //MARK:- Setters
     func setCatData(catData: AssetData?) {
         
         let newData = catData ?? defaultAssetData
-        userDefault.set(newData.catName, forKey: UserDataKey.currentCatName)
-        userDefault.set(newData.openedImageName, forKey: UserDataKey.touchDownImage)
-        userDefault.set(newData.closedImageName, forKey: UserDataKey.touchUpImage)
-        userDefault.set(newData.mainImageName, forKey: UserDataKey.mainImage)
-        userDefault.set(newData.audioSourceName, forKey: UserDataKey.popSound)
+        UserDefaults.standard.set(newData.catName, forKey: UserDataKey.currentCatName)
+        UserDefaults.standard.set(newData.openedImageName, forKey: UserDataKey.touchDownImage)
+        UserDefaults.standard.set(newData.closedImageName, forKey: UserDataKey.touchUpImage)
+        UserDefaults.standard.set(newData.mainImageName, forKey: UserDataKey.mainImage)
+        UserDefaults.standard.set(newData.audioSourceName, forKey: UserDataKey.popSound)
     }
     
     func setPopCount(popCount: Int) {
-        userDefault.set(popCount, forKey: UserDataKey.popCount)
+        UserDefaults.standard.set(popCount, forKey: UserDataKey.popCount)
     }
     
     func setPopVisibility(popVisibility: Bool) {
-        userDefault.set(popVisibility, forKey: UserDataKey.popCountVisibility)
+        UserDefaults.standard.set(popVisibility, forKey: UserDataKey.popCountVisibility)
     }
 
     func setIsInitialLaunch(isFirst: Bool) {
-        userDefault.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
+        UserDefaults.standard.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
     }
     
     
     //MARK:- Getters
     func getCatData() -> AssetData {
-        let newCatName = userDefault.string(forKey: UserDataKey.currentCatData) ?? defaultAssetData.catName
-        let newClosedImageName = userDefault.string(forKey: UserDataKey.touchUpImage) ?? defaultAssetData.closedImageName
-        let newOpenedImageName = userDefault.string(forKey: UserDataKey.touchDownImage) ?? defaultAssetData.openedImageName
-        let newMainImageName = userDefault.string(forKey: UserDataKey.currentCatData) ?? defaultAssetData.mainImageName
-        let newAudioSourceName = userDefault.string(forKey: UserDataKey.currentCatData) ?? defaultAssetData.audioSourceName
+        
+        let newCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName) ?? defaultAssetData.catName
+        let newClosedImageName = UserDefaults.standard.string(forKey: UserDataKey.touchUpImage) ?? defaultAssetData.closedImageName
+        let newOpenedImageName = UserDefaults.standard.string(forKey: UserDataKey.touchDownImage) ?? defaultAssetData.openedImageName
+        let newMainImageName = UserDefaults.standard.string(forKey: UserDataKey.mainImage) ?? defaultAssetData.mainImageName
+        let newAudioSourceName = UserDefaults.standard.string(forKey: UserDataKey.popSound) ?? defaultAssetData.audioSourceName
         
         return AssetData(catName: newCatName, closedImageName: newClosedImageName, openedImageName: newOpenedImageName, mainImageName: newMainImageName, audioSourceName: newAudioSourceName)
     }
     
     func getPopCount() -> Int {
-        return userDefault.integer(forKey: UserDataKey.popCount)
+        return UserDefaults.standard.integer(forKey: UserDataKey.popCount)
     }
     
     func getPopVisibility() -> Bool {
-        return userDefault.bool(forKey: UserDataKey.popCountVisibility)
+        return UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
     }
     
     func getIsInitialLaunch() -> Bool {
-        return userDefault.bool(forKey: UserDataKey.isNotFirstLaunch)
+        return UserDefaults.standard.bool(forKey: UserDataKey.isNotFirstLaunch)
     }
     
 }

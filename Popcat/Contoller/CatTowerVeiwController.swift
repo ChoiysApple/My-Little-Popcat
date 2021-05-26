@@ -15,17 +15,19 @@ class CatTowerVeiwController: UIViewController {
     
     // Variables for imageView
     private var selectedCatData: AssetData?
-    private var currentCatName = UserDefaults.standard.string(forKey: UserDataKey.currentCatName)
+    private var currentCatName = ""
     
     // Variables for CollectionView Cell
     private var numberOfColums: CGFloat?
     private var cellContentSizeRatio: CGFloat?
     
+    private var dataManager = UserDataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Initialize Pop Count switch state
-        let switchState = UserDefaults.standard.bool(forKey: UserDataKey.popCountVisibility)
+        let switchState = dataManager.getPopVisibility()
         popCountSwitch.setOn(switchState, animated: false)
         
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -33,6 +35,8 @@ class CatTowerVeiwController: UIViewController {
         
         numberOfColums = numberOfCells
         cellContentSizeRatio = cellSizeRatio
+        
+        currentCatName = dataManager.getCatData().catName
     }
     
     // Reload collectionView at orientation Changes
@@ -53,11 +57,9 @@ extension CatTowerVeiwController {
         
         // Send cat option to UserDefaults
         if let changedCatData = selectedCatData {
-            if changedCatData.catName != UserDefaults.standard.string(forKey: UserDataKey.currentCatName) {
-                UserDefaults.standard.set(changedCatData.catName, forKey: UserDataKey.currentCatName)
-                UserDefaults.standard.set(changedCatData.openedImageName, forKey: UserDataKey.touchDownImage)
-                UserDefaults.standard.set(changedCatData.closedImageName, forKey: UserDataKey.touchUpImage)
-                UserDefaults.standard.set(changedCatData.audioSourceName, forKey: UserDataKey.popSound)
+            if changedCatData.catName != dataManager.getCatData().catName {
+                
+                dataManager.setCatData(catData: changedCatData)
             }
         }
         
