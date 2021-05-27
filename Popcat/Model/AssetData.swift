@@ -22,5 +22,3 @@ let AssetDataList = [
     AssetData.init(catName: "Original Cat", closedImageName: "originalcat_closed", openedImageName: "originalcat_opened", mainImageName: "originalcat_closed", audioSourceName: "popcat_original_sound"),
     AssetData.init(catName: "Hood Cat", closedImageName: "hoodcat_closed", openedImageName: "hoodcat_opened", mainImageName: "hoodcat_opened", audioSourceName: "popcat_original_sound")
 ]
-
-

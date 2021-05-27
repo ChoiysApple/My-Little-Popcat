@@ -22,10 +22,14 @@ class CatTowerVeiwController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Hide Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         // Initialize Pop Count switch state
         let switchState = dataManager.getPopVisibility()
         popCountSwitch.setOn(switchState, animated: false)
         
+        // CollectionView Settings
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
         
@@ -36,10 +40,18 @@ class CatTowerVeiwController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView.reloadData()
     }
+    
+    // Reload CollectionView at device Dark/Default mode changes
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        collectionView.reloadData()
+    }
+    
+    
 
 }
 
-//MARK: IBActions
+//MARK:- IBActions
 extension CatTowerVeiwController {
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
@@ -60,7 +72,7 @@ extension CatTowerVeiwController {
     }
 }
 
-//MARK: CollectionView Data Source
+//MARK:- CollectionView Data Source
 extension CatTowerVeiwController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,12 +86,14 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
         cell.cellImage.image = UIImage(named: catData.mainImageName)
         cell.cellName.text = catData.catName
         
-        // Make border of CollectionView Cell
+        // Make border of CollectionView Cell for selected Cell
         if currentCatName == catData.catName{
             cell.cellView.layer.borderWidth = 1.5
         } else {
             cell.cellView.layer.borderWidth = 0.5
         }
+        
+        cell.cellView.layer.borderColor = UIColor(named: "Color")?.cgColor
 
         return cell
     }
@@ -87,7 +101,7 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
 
 }
 
-//MARK: COllectionViewFlowLayout
+//MARK: CollectionViewFlowLayout
 extension CatTowerVeiwController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
