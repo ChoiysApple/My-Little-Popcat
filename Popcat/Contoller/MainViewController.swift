@@ -31,6 +31,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         isNotFirstLaunch = dataManager.getIsInitialLaunch()
         if !isNotFirstLaunch {
             tutorialView.isHidden = false
