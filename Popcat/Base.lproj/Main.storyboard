@@ -233,7 +233,7 @@
                                     <action selector="doneButtonClicked:" destination="nrZ-NO-NY9" eventType="touchUpInside" id="QLQ-e1-8eg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-jm-b2a">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-jm-b2a">
                                 <rect key="frame" x="327.66666666666669" y="108.00000000000001" width="42.333333333333314" height="42.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1ph-jm-b2a" secondAttribute="height" id="mUL-C3-ecY"/>

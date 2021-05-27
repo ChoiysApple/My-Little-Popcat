@@ -64,9 +64,6 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                 <real key="value" value="0.5"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="layer. borderUIColor">
-                                <color key="value" systemColor="opaqueSeparatorColor"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                 <color key="value" name="BgColor"/>
                             </userDefinedRuntimeAttribute>
@@ -97,9 +94,6 @@
         <namedColor name="Color">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

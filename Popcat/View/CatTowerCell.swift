@@ -16,6 +16,5 @@ class CatTowerCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
     }
 }
