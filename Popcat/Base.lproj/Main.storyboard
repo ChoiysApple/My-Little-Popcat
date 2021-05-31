@@ -207,7 +207,7 @@
                                     <constraint firstItem="yui-If-X1D" firstAttribute="height" secondItem="Hdz-8s-Ghh" secondAttribute="height" id="vuC-wH-ehb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-pc-sUF" userLabel="ButtonBG">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-pc-sUF" userLabel="ButtonBG">
                                 <rect key="frame" x="0.0" y="706.33333333333337" width="390" height="137.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -233,7 +233,7 @@
                                     <action selector="doneButtonClicked:" destination="nrZ-NO-NY9" eventType="touchUpInside" id="QLQ-e1-8eg"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-jm-b2a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-jm-b2a">
                                 <rect key="frame" x="327.66666666666669" y="108.00000000000001" width="42.333333333333314" height="42.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1ph-jm-b2a" secondAttribute="height" id="mUL-C3-ecY"/>
@@ -317,7 +317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj7-i8-fqT">
-                                <rect key="frame" x="20" y="108" width="350" height="55"/>
+                                <rect key="frame" x="20" y="108.00000000000001" width="350" height="54.666666666666671"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Settings ">
                                         <attributes>
