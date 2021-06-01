@@ -16,7 +16,7 @@
 		7D795D0125F5FD54006C9469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795CFF25F5FD54006C9469 /* Main.storyboard */; };
 		7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0225F5FD54006C9469 /* Assets.xcassets */; };
 		7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */; };
-		7D87DA4825F751380011ABDA /* touchEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* touchEventManager.swift */; };
+		7D87DA4825F751380011ABDA /* TouchEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* TouchEventManager.swift */; };
 		7D8E1A3B265788DE00C590B7 /* AssetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E1A3A265788DE00C590B7 /* AssetData.swift */; };
 		7D90496726608C6000A061E2 /* SettingsVolumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90496526608C6000A061E2 /* SettingsVolumeCell.swift */; };
 		7D90496826608C6000A061E2 /* SettingsVolumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D90496626608C6000A061E2 /* SettingsVolumeCell.xib */; };
@@ -39,7 +39,7 @@
 		7D795D0225F5FD54006C9469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D795D0525F5FD54006C9469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D795D0725F5FD54006C9469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D87DA4725F751380011ABDA /* touchEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchEventManager.swift; sourceTree = "<group>"; };
+		7D87DA4725F751380011ABDA /* TouchEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEventManager.swift; sourceTree = "<group>"; };
 		7D8E1A3A265788DE00C590B7 /* AssetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetData.swift; sourceTree = "<group>"; };
 		7D90496526608C6000A061E2 /* SettingsVolumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVolumeCell.swift; sourceTree = "<group>"; };
 		7D90496626608C6000A061E2 /* SettingsVolumeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVolumeCell.xib; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				7D27273B265B741800CEA32E /* UserDefaultExtension.swift */,
 				7D8E1A3A265788DE00C590B7 /* AssetData.swift */,
 				7D94828C265CD05C008BAC01 /* UserDataManager.swift */,
-				7D87DA4725F751380011ABDA /* touchEventManager.swift */,
+				7D87DA4725F751380011ABDA /* TouchEventManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				7D8E1A3B265788DE00C590B7 /* AssetData.swift in Sources */,
 				7D90496726608C6000A061E2 /* SettingsVolumeCell.swift in Sources */,
 				7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */,
-				7D87DA4825F751380011ABDA /* touchEventManager.swift in Sources */,
+				7D87DA4825F751380011ABDA /* TouchEventManager.swift in Sources */,
 				7D27273C265B741800CEA32E /* UserDefaultExtension.swift in Sources */,
 				7D2027C325F7296000B33C57 /* Constants.swift in Sources */,
 				7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */,
