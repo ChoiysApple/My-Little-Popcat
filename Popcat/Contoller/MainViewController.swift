@@ -85,11 +85,19 @@ extension MainViewController {
     
     // touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchEvent.touchDownAction()
+        
+        if let touch = touches.first, touch.view == self.view {
+            touchEvent.touchDownAction()
+        }
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchEvent.touchUpAction()
+        
+        if let touch = touches.first, touch.view == self.view {
+            touchEvent.touchUpAction()
+        }
+        
     }
     
     // Gesture events
