@@ -207,7 +207,7 @@
                                     <constraint firstItem="yui-If-X1D" firstAttribute="height" secondItem="Hdz-8s-Ghh" secondAttribute="height" id="vuC-wH-ehb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-pc-sUF" userLabel="ButtonBG">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-pc-sUF" userLabel="ButtonBG">
                                 <rect key="frame" x="0.0" y="706.33333333333337" width="390" height="137.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -316,8 +316,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj7-i8-fqT">
-                                <rect key="frame" x="20" y="108" width="350" height="55"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="200" verticalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A68-LN-OFK">
+                                <rect key="frame" x="20" y="116.33333333333331" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="A68-LN-OFK" secondAttribute="height" id="2NC-h6-aub"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="tintColor" name="Color"/>
+                                <state key="normal" title="Button">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="cuW-wY-uA7" eventType="touchDown" id="Yk3-IS-F4A"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZBe-rn-cBv">
+                                <rect key="frame" x="20" y="120.66666666666667" width="38" height="29.666666666666671"/>
+                                <color key="tintColor" name="Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZBe-rn-cBv" secondAttribute="height" id="QLE-a9-kdt"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="regular"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj7-i8-fqT">
+                                <rect key="frame" x="68" y="108.00000000000001" width="302" height="54.666666666666671"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Settings ">
                                         <attributes>
@@ -339,9 +361,14 @@
                         <viewLayoutGuide key="safeArea" id="680-h0-gg3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xj7-i8-fqT" firstAttribute="leading" secondItem="680-h0-gg3" secondAttribute="leading" constant="20" id="6sC-9c-kA9"/>
-                            <constraint firstItem="Xj7-i8-fqT" firstAttribute="top" secondItem="680-h0-gg3" secondAttribute="top" constant="20" id="my5-JU-DZh"/>
-                            <constraint firstItem="680-h0-gg3" firstAttribute="trailing" secondItem="Xj7-i8-fqT" secondAttribute="trailing" constant="20" id="rtf-fl-Oec"/>
+                            <constraint firstItem="Xj7-i8-fqT" firstAttribute="centerY" secondItem="A68-LN-OFK" secondAttribute="centerY" id="0Tk-Ol-fwJ"/>
+                            <constraint firstItem="ZBe-rn-cBv" firstAttribute="centerY" secondItem="A68-LN-OFK" secondAttribute="centerY" id="0dT-lR-rRn"/>
+                            <constraint firstItem="ZBe-rn-cBv" firstAttribute="height" secondItem="A68-LN-OFK" secondAttribute="height" id="3fX-ux-urF"/>
+                            <constraint firstItem="Xj7-i8-fqT" firstAttribute="top" secondItem="680-h0-gg3" secondAttribute="top" constant="20" id="KDF-Uo-WCg"/>
+                            <constraint firstItem="Xj7-i8-fqT" firstAttribute="leading" secondItem="A68-LN-OFK" secondAttribute="trailing" constant="10" id="TU9-RP-pef"/>
+                            <constraint firstItem="680-h0-gg3" firstAttribute="trailing" secondItem="Xj7-i8-fqT" secondAttribute="trailing" constant="20" id="mGy-tx-Jjb"/>
+                            <constraint firstItem="ZBe-rn-cBv" firstAttribute="centerX" secondItem="A68-LN-OFK" secondAttribute="centerX" id="siq-kH-UbP"/>
+                            <constraint firstItem="A68-LN-OFK" firstAttribute="leading" secondItem="680-h0-gg3" secondAttribute="leading" constant="20" id="ye5-9M-mhQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S7Z-Ez-tmB"/>
@@ -370,6 +397,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="popcat_closed" width="655" height="655"/>

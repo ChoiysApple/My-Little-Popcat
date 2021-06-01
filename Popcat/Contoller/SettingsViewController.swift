@@ -14,5 +14,11 @@ class SettingsViewController: UIViewController {
         
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
+    
+    @IBAction func backButtonClicked (_ sender: UIButton) {
+        
+        
+        navigationController?.popViewController(animated: true)
+    }
 
 }
