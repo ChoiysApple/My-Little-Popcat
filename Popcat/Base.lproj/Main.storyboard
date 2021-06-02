@@ -193,6 +193,7 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yui-If-X1D">
                                         <rect key="frame" x="321" y="10" width="51" height="31"/>
                                         <color key="tintColor" red="0.45375967029999997" green="0.28686437009999999" blue="0.26273727419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="onTintColor" name="AccentColor"/>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -357,6 +358,33 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-3b-nyv">
+                                <rect key="frame" x="-20" y="152.66666666666669" width="430" height="711.33333333333326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sqX-HE-jA8">
+                                        <rect key="frame" x="20" y="20" width="390" height="671.33333333333326"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="iqF-wV-5ow">
+                                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SettingsCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iqF-wV-5ow" id="EbK-pM-AGJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="cuW-wY-uA7" id="hxe-hz-laM"/>
+                                            <outlet property="delegate" destination="cuW-wY-uA7" id="ste-vq-QOL"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1IQ-H3-hrd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="3Kt-Ui-eRw"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="680-h0-gg3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -372,6 +400,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S7Z-Ez-tmB"/>
+                    <connections>
+                        <outlet property="tableView" destination="sqX-HE-jA8" id="Slv-ve-Y8C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4y-iG-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
