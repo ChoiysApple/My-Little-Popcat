@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(SettingsVolumeCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(UINib(nibName: "SettingsVolumeCell", bundle: nil), forCellReuseIdentifier: cellId)
         tableView.tableFooterView = UIView()
         
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
@@ -42,7 +42,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "  "
+        return "Volume of Poping sound"
     }
     
     
