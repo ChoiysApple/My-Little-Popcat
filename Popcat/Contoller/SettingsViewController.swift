@@ -12,12 +12,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let cellId = Identifier.SettingsTableViewCell
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "SettingsVolumeCell", bundle: nil), forCellReuseIdentifier: cellId)
+        self.tableView.register(SettingsVolumeCell.self, forCellReuseIdentifier: cellId)
         tableView.tableFooterView = UIView()
         
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
@@ -52,11 +52,9 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath) as! SettingsVolumeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SettingsVolumeCell
         
         return cell
     }
-    
-    
     
 }

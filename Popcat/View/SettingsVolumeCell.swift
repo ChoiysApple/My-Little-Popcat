@@ -9,18 +9,38 @@ import UIKit
 
 class SettingsVolumeCell: UITableViewCell {
 
-    @IBOutlet weak var volumeSlider: UISlider!
+    // MARK: - Properties
+    lazy var volumeSlider: UISlider = {
+        let volumeSlider = UISlider()
+        volumeSlider.minimumValueImage = UIImage(systemName: "speaker.fill")
+        volumeSlider.maximumValueImage = UIImage(systemName: "speaker.wave.3.fill")
+        volumeSlider.translatesAutoresizingMaskIntoConstraints = false
+        volumeSlider.addTarget(self, action: #selector(sliderActionHandler), for: .valueChanged)
+        return volumeSlider
+    }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    
+    // MARK: - Init
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        // Initialization code
+        self.contentView.isUserInteractionEnabled = true
+        addSubview(volumeSlider)
+        volumeSlider.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        volumeSlider.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
+        volumeSlider.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
+
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    //MARK: - IBAction
+    @objc func sliderActionHandler(sender: UISlider) {
+        print(sender.value)
     }
     
 }
