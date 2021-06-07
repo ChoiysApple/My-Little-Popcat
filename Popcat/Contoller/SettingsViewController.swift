@@ -30,21 +30,13 @@ class SettingsViewController: UIViewController {
 
 }
 
+//MARK: -UITableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     
     // Section
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Volume"
-    }
-    
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "Volume of Poping sound"
-    }
-    
     
     // Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,4 +49,31 @@ extension SettingsViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension SettingsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myLabel = UILabel()
+        myLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        myLabel.text = "Volume"
+        myLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let myLabel = UILabel()
+        myLabel.font = UIFont.boldSystemFont(ofSize: 10)
+        myLabel.text = "Volume"
+        myLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+        
+        return headerView
+    }
 }

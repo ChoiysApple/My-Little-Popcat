@@ -318,13 +318,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="200" verticalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A68-LN-OFK">
-                                <rect key="frame" x="20" y="116.33333333333331" width="38" height="38"/>
+                                <rect key="frame" x="20" y="120.33333333333331" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="A68-LN-OFK" secondAttribute="height" id="2NC-h6-aub"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" name="Color"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <connections>
@@ -332,7 +332,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZBe-rn-cBv">
-                                <rect key="frame" x="20" y="120.66666666666667" width="38" height="29.666666666666671"/>
+                                <rect key="frame" x="20" y="124.66666666666667" width="30" height="21.666666666666671"/>
                                 <color key="tintColor" name="Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZBe-rn-cBv" secondAttribute="height" id="QLE-a9-kdt"/>
@@ -340,7 +340,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="regular"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj7-i8-fqT">
-                                <rect key="frame" x="68" y="108.00000000000001" width="302" height="54.666666666666671"/>
+                                <rect key="frame" x="60" y="108.00000000000001" width="310" height="54.666666666666671"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Settings ">
                                         <attributes>

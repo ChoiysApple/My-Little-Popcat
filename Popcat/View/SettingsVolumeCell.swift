@@ -28,8 +28,8 @@ class SettingsVolumeCell: UITableViewCell {
         self.contentView.isUserInteractionEnabled = true
         addSubview(volumeSlider)
         volumeSlider.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        volumeSlider.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
-        volumeSlider.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
+        volumeSlider.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
+        volumeSlider.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
 
     }
     
