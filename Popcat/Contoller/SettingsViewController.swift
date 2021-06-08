@@ -54,26 +54,22 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let myLabel = UILabel()
-        myLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        myLabel.text = "Volume"
-        myLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        let headerView = UIView()
-        headerView.addSubview(myLabel)
         
-        return headerView
+        return tableViewSectionHeaderView(description: "Volume")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 50
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let myLabel = UILabel()
-        myLabel.font = UIFont.boldSystemFont(ofSize: 10)
-        myLabel.text = "Volume"
-        myLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        let headerView = UIView()
-        headerView.addSubview(myLabel)
         
-        return headerView
+        return tableViewSectionFooterView(description: "Volume settings")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return 40
     }
 }
