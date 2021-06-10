@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     private var touchUpImageSource: UIImage?
     
     //MARK: Helper Classes
-    private var touchEvent = TouchEventManager()
+    private var touchEvent = TouchEventManager(source: defaultAssetData.audioSourceName, volume: 1.0)
     private let dataManager = UserDataManager()
     
     // Timer related
@@ -39,15 +39,15 @@ class MainViewController: UIViewController {
             dataManager.setIsInitialLaunch(isFirst: true)
             
             dataManager.setCatData(catData: defaultAssetData)
+            dataManager.setPopSoundVolume(volume: 1.0)
         }
-        
-        touchEvent.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         updateViewSettings()
+        touchEvent.delegate = self
     }
 
 }
@@ -119,7 +119,9 @@ extension MainViewController {
         touchDownImageSource = UIImage(named: catData.openedImageName)
         popcatImage.image = touchUpImageSource
         
-        touchEvent.setAudioSource(audioSource: catData.audioSourceName)
+        let popSoundVolume = dataManager.getPopSoundVolume()
+        
+        touchEvent = TouchEventManager(source: catData.audioSourceName, volume: popSoundVolume)
         timer.invalidate()
     }
     

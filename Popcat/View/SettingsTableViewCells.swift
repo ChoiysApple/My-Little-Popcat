@@ -15,7 +15,12 @@ class SettingsVolumeCell: UITableViewCell {
         volumeSlider.minimumValueImage = UIImage(systemName: "speaker.fill")
         volumeSlider.maximumValueImage = UIImage(systemName: "speaker.wave.3.fill")
         volumeSlider.translatesAutoresizingMaskIntoConstraints = false
+        
+        let currentVolume = UserDataManager().getPopSoundVolume()
+        volumeSlider.value = currentVolume
+        
         volumeSlider.addTarget(self, action: #selector(sliderActionHandler), for: .valueChanged)
+        
         return volumeSlider
     }()
     
@@ -37,7 +42,8 @@ class SettingsVolumeCell: UITableViewCell {
     }
     
     @objc func sliderActionHandler(sender: UISlider) {
-        print(sender.value)
+        let volume = sender.value
+        UserDataManager().setPopSoundVolume(volume: volume)
     }
     
 }

@@ -33,6 +33,10 @@ class UserDataManager {
         userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
     }
     
+    func setPopSoundVolume(volume: Float){
+        userDefaults.set(volume, forKey: UserDataKey.popVolume)
+    }
+    
     
     //MARK:- Getters
     func getCatData() -> AssetData {
@@ -59,4 +63,7 @@ class UserDataManager {
         return userDefaults.bool(forKey: UserDataKey.isNotFirstLaunch)
     }
     
+    func getPopSoundVolume() -> Float{
+        return userDefaults.float(forKey: UserDataKey.popVolume)
+    }
 }
