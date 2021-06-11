@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.register(SettingsVolumeCell.self, forCellReuseIdentifier: cellId)
+
         tableView.tableFooterView = UIView()
         
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
@@ -35,18 +36,41 @@ extension SettingsViewController: UITableViewDataSource {
     
     // Section
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return SettingsSection.allCases.count
     }
     
     // Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let section = SettingsSection(rawValue: section) else {
+            return 0
+        }
+        
+        switch section {
+        case .volume: return VolumeOption.allCases.count
+        case .About: return AboutOption.allCases.count
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SettingsVolumeCell
         
-        return cell
+//        guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
+        
+        
+//        switch section {
+//        case .volume:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+//            return cell
+//        case .About:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+//            cell.textLabel?.text = AboutOption(rawValue: indexPath.row)!.description
+//            cell.textLabel?.textColor = .black
+//            cell.backgroundColor = .systemGray6
+//            return cell
+//        }
+        
+
+        return SettingsVolumeCell()
     }
     
 }
@@ -55,7 +79,11 @@ extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        return tableViewSectionHeaderView(description: "Volume")
+        guard let description = SettingsSection(rawValue: section)?.headerDescription else {
+            return tableViewSectionHeaderView(description: "")
+        }
+        
+        return tableViewSectionHeaderView(description: description)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -65,7 +93,12 @@ extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        return tableViewSectionFooterView(description: "Volume settings")
+        guard let description = SettingsSection(rawValue: section)?.footerDescription else {
+            return tableViewSectionHeaderView(description: "")
+        }
+        
+        return tableViewSectionFooterView(description: description)
+
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
