@@ -48,6 +48,36 @@ class SettingsVolumeCell: UITableViewCell {
     
 }
 
+//MARK: Info Cell
+class SettingsInfoOnlyCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        
+        self.textLabel?.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
+        self.textLabel?.textColor = .systemGray
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+//MARK: Disclosure cell
+class SettingsDiscolsureCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        
+        self.textLabel?.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
+        self.accessoryType = .disclosureIndicator
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 //MARK: - header view
 public func tableViewSectionHeaderView(description: String) -> UIView {
     let descriptionLabel = UILabel()
@@ -83,7 +113,6 @@ public func tableViewSectionFooterView(description: String) -> UIView {
     descriptionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -15).isActive = true
     descriptionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15).isActive = true
     descriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-    
     
     return contentView
 }
