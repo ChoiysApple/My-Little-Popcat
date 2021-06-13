@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1574E32676ECFD0022C628 /* SettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1574E22676ECFD0022C628 /* SettingsSectionView.swift */; };
 		7D2027C325F7296000B33C57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2027C225F7296000B33C57 /* Constants.swift */; };
 		7D27273C265B741800CEA32E /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27273B265B741800CEA32E /* UserDefaultExtension.swift */; };
 		7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D1574E22676ECFD0022C628 /* SettingsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionView.swift; sourceTree = "<group>"; };
 		7D2027C225F7296000B33C57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7D27273B265B741800CEA32E /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAdaptaitonData.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				7DD780BC263FB92700732C58 /* CatTowerCell.swift */,
 				7DD780BD263FB92700732C58 /* CatTowerCell.xib */,
 				7D90496526608C6000A061E2 /* SettingsTableViewCells.swift */,
+				7D1574E22676ECFD0022C628 /* SettingsSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				7D87DA4825F751380011ABDA /* TouchEventManager.swift in Sources */,
 				7D27273C265B741800CEA32E /* UserDefaultExtension.swift in Sources */,
 				7D2027C325F7296000B33C57 /* Constants.swift in Sources */,
+				7D1574E32676ECFD0022C628 /* SettingsSectionView.swift in Sources */,
 				7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */,
 				7D94828D265CD05C008BAC01 /* UserDataManager.swift in Sources */,
 				7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */,

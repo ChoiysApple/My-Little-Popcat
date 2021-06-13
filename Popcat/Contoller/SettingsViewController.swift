@@ -48,14 +48,12 @@ extension SettingsViewController: UITableViewDataSource {
         switch section {
         case .volume: return VolumeOption.allCases.count
         case .About: return AboutOption.allCases.count
-            
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 //        guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
-        
         
 //        switch section {
 //        case .volume:
