@@ -83,7 +83,7 @@ class SettingsDiscolsureCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
-        self.contentView.backgroundColor = UIColor.systemGray6
+        self.backgroundColor = .systemGray6
         self.textLabel?.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
         
         self.accessoryType = .disclosureIndicator
