@@ -16,8 +16,6 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.register(SettingsVolumeCell.self, forCellReuseIdentifier: cellId)
 
         tableView.tableFooterView = UIView()
         
@@ -53,22 +51,15 @@ extension SettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
+        guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
         
-//        switch section {
-//        case .volume:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-//            return cell
-//        case .About:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-//            cell.textLabel?.text = AboutOption(rawValue: indexPath.row)!.description
-//            cell.textLabel?.textColor = .black
-//            cell.backgroundColor = .systemGray6
-//            return cell
-//        }
-        
+        switch section {
+        case .volume:
+            return VolumeOption.volume.cell
+        case .About:
+            return AboutOption(rawValue: indexPath.row)?.cell ?? UITableViewCell()
+        }
 
-        return SettingsVolumeCell()
     }
     
 }
@@ -101,6 +92,6 @@ extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
-        return 40
+        return 70
     }
 }

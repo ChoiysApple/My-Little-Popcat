@@ -34,6 +34,12 @@ enum VolumeOption: Int, CaseIterable {
         case .volume: return "Volume"
         }
     }
+    
+    var cell: UITableViewCell {
+        switch self {
+        case .volume: return SettingsVolumeCell()
+        }
+    }
 }
 
 enum AboutOption: Int, CaseIterable {
@@ -44,6 +50,20 @@ enum AboutOption: Int, CaseIterable {
         switch self {
         case .version: return "App Version"
         case .developer: return "Developer Info"
+        }
+    }
+    
+    var cell: UITableViewCell {
+        switch self {
+        case .version:
+            let cell = SettingsInfoOnlyCell()
+            cell.textLabel?.text = self.description
+            cell.subLabel.text = "1.2.4"
+            return cell
+        case .developer:
+            let cell = SettingsDiscolsureCell()
+            cell.textLabel?.text = self.description
+            return cell
         }
     }
 }

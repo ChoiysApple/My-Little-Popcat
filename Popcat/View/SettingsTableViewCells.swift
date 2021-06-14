@@ -51,12 +51,26 @@ class SettingsVolumeCell: UITableViewCell {
 //MARK: Info Cell
 class SettingsInfoOnlyCell: UITableViewCell {
     
+    let subLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
+        label.textColor = .systemGray
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
         self.textLabel?.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
         self.textLabel?.textColor = .systemGray
+        self.contentView.backgroundColor = UIColor.systemGray6
+        
+        addSubview(subLabel)
+        subLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        subLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
     }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -69,8 +83,11 @@ class SettingsDiscolsureCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
+        self.contentView.backgroundColor = UIColor.systemGray6
         self.textLabel?.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
+        
         self.accessoryType = .disclosureIndicator
+        self.accessoryView?.backgroundColor = .systemGray6
     }
     
     required init?(coder aDecoder: NSCoder) {

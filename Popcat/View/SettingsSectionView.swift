@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: - header view
 public func tableViewSectionHeaderView(description: String) -> UIView {
@@ -38,10 +39,9 @@ public func tableViewSectionFooterView(description: String) -> UIView {
 
     let contentView = UIView()
     contentView.addSubview(descriptionLabel)
-    descriptionLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
     descriptionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -15).isActive = true
     descriptionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15).isActive = true
-    descriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+    descriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
     
     return contentView
 }
