@@ -55,6 +55,7 @@ class SettingsInfoOnlyCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext", size: UIFont.labelFontSize)
         label.textColor = .systemGray
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     

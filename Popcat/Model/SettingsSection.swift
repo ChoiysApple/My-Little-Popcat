@@ -48,7 +48,7 @@ enum AboutOption: Int, CaseIterable {
     
     var description: String {
         switch self {
-        case .version: return "App Version"
+        case .version: return "Version"
         case .developer: return "Developer Info"
         }
     }
@@ -58,7 +58,7 @@ enum AboutOption: Int, CaseIterable {
         case .version:
             let cell = SettingsInfoOnlyCell()
             cell.textLabel?.text = self.description
-            cell.subLabel.text = "1.2.4"
+            cell.subLabel.text = currentVersion
             return cell
         case .developer:
             let cell = SettingsDiscolsureCell()

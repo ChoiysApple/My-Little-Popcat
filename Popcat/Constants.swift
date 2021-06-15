@@ -30,3 +30,11 @@ struct UserDataKey {
     
     static let background = "background"
 }
+
+var currentVersion: String {
+    guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return "unidentified" }
+    let versionAndBuild: String = "\(version)"
+    
+    return versionAndBuild
+}
+
