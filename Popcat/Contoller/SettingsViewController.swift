@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView()
+        tableView.allowsSelection = true
         
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
@@ -29,7 +30,7 @@ class SettingsViewController: UIViewController {
 
 }
 
-//MARK: -UITableViewDataSource
+//MARK:- UITableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     
     // Section
@@ -64,6 +65,7 @@ extension SettingsViewController: UITableViewDataSource {
     
 }
 
+//MARK: TableView Header/Footer options
 extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -93,5 +95,20 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
         return 70
+    }
+}
+
+//MARK: Interaction
+extension SettingsViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let section = SettingsSection(rawValue: indexPath.section) else { return }
+        
+        if section == .About {
+            if AboutOption.init(rawValue: indexPath.row) == .developer {
+                //TODO: Open bottom sheet
+                print("go to developer page")
+            }
+        }
     }
 }

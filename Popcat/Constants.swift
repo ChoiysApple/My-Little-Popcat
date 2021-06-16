@@ -33,8 +33,8 @@ struct UserDataKey {
 
 var currentVersion: String {
     guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return "unidentified" }
-    let versionAndBuild: String = "\(version)"
+    let currentVersion: String = "\(version)"
     
-    return versionAndBuild
+    return currentVersion
 }
 
