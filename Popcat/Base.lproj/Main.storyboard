@@ -405,6 +405,53 @@
             </objects>
             <point key="canvasLocation" x="2649.2307692307691" y="96.682464454976298"/>
         </scene>
+        <!--Developer Info View Controller-->
+        <scene sceneID="gWs-7x-5rk">
+            <objects>
+                <viewController storyboardIdentifier="DeveloperView" id="0wx-Dx-kVH" customClass="DeveloperInfoViewController" customModule="Popcat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNj-ei-Lon">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op5-z6-Jad">
+                                <rect key="frame" x="126.66666666666669" y="64" width="137" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ChoiysApple">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S51-wB-07e">
+                                <rect key="frame" x="110.66666666666669" y="102" width="169" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Visit GitHub page for more">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZKz-kT-syM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="op5-z6-Jad" firstAttribute="top" secondItem="ZKz-kT-syM" secondAttribute="top" constant="20" id="5I3-cu-eA9"/>
+                            <constraint firstItem="op5-z6-Jad" firstAttribute="centerX" secondItem="DNj-ei-Lon" secondAttribute="centerX" id="V7S-yb-xju"/>
+                            <constraint firstItem="S51-wB-07e" firstAttribute="top" secondItem="op5-z6-Jad" secondAttribute="bottom" constant="5" id="gad-hz-xv8"/>
+                            <constraint firstItem="S51-wB-07e" firstAttribute="centerX" secondItem="DNj-ei-Lon" secondAttribute="centerX" id="zLx-hy-p8T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOa-Cx-b3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3551" y="97"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="aab-R3-I41">
             <objects>

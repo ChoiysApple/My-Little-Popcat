@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialBottomSheet
 
 class SettingsViewController: UIViewController {
     
@@ -106,9 +107,19 @@ extension SettingsViewController {
         
         if section == .About {
             if AboutOption.init(rawValue: indexPath.row) == .developer {
-                //TODO: Open bottom sheet
-                print("go to developer page")
+                openBottomSheet()
+                tableView.cellForRow(at: indexPath)?.isSelected = false
             }
         }
     }
+    
+    // Open bottom sheet
+    private func openBottomSheet() {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "DeveloperView") as! DeveloperInfoViewController
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
+        bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height / 3)
+        present(bottomSheet, animated: true, completion: nil)
+    }
 }
+
+

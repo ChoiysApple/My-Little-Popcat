@@ -11,6 +11,7 @@ struct Identifier {
     static let settingSegue = "mainToSettings"
     static let mainViewController = "MainViewController"
     static let SettingsTableViewCell = "SettingsCell"
+    static let DeveloperPageViewController = "DeveloperView"
 }
 
 struct UserDataKey {
