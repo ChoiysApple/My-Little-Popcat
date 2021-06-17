@@ -33,6 +33,11 @@ struct UserDataKey {
     static let background = "background"
 }
 
+struct DeveloperInfo {
+    static let name = "Daegun Choi"
+    static let description = "Visit GitHub for more"
+}
+
 var currentVersion: String {
     guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return "unidentified" }
     let currentVersion: String = "\(version)"
