@@ -30,4 +30,11 @@ enum DeveloperInfoSection: Int, CaseIterable {
         case .testflight: return "testflight_logo"
         }
     }
+    
+    var pageURL: String {
+        switch self {
+        case .github: return "https://github.com/ChoiysApple/My-Little-Popcat"
+        case .testflight: return "https://testflight.apple.com/join/HJakiRWd"
+        }
+    }
 }
