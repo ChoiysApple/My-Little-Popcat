@@ -3,23 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7AC868AF86CB603C807988 /* Pods_Popcat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74B011B80FF9519A7D851EF /* Pods_Popcat.framework */; };
+		7D1574E32676ECFD0022C628 /* SettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1574E22676ECFD0022C628 /* SettingsSectionView.swift */; };
 		7D2027C325F7296000B33C57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2027C225F7296000B33C57 /* Constants.swift */; };
 		7D27273C265B741800CEA32E /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27273B265B741800CEA32E /* UserDefaultExtension.swift */; };
 		7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */; };
+		7D2ECD9A2672FEEF00A58B56 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */; };
+		7D542AF3267AD33000A6F31D /* DeveloperInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */; };
 		7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CF925F5FD54006C9469 /* AppDelegate.swift */; };
 		7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */; };
 		7D795CFE25F5FD54006C9469 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFD25F5FD54006C9469 /* MainViewController.swift */; };
 		7D795D0125F5FD54006C9469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795CFF25F5FD54006C9469 /* Main.storyboard */; };
 		7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0225F5FD54006C9469 /* Assets.xcassets */; };
 		7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */; };
+		7D852C7D2679C41400CA7B40 /* DeveloperInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D852C7C2679C41400CA7B40 /* DeveloperInfoViewController.swift */; };
 		7D87DA4825F751380011ABDA /* TouchEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* TouchEventManager.swift */; };
 		7D8E1A3B265788DE00C590B7 /* AssetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E1A3A265788DE00C590B7 /* AssetData.swift */; };
-		7D90496726608C6000A061E2 /* SettingsVolumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90496526608C6000A061E2 /* SettingsVolumeCell.swift */; };
-		7D90496826608C6000A061E2 /* SettingsVolumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D90496626608C6000A061E2 /* SettingsVolumeCell.xib */; };
+		7D90496726608C6000A061E2 /* SettingsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90496526608C6000A061E2 /* SettingsTableViewCells.swift */; };
 		7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */; };
 		7D94828D265CD05C008BAC01 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94828C265CD05C008BAC01 /* UserDataManager.swift */; };
 		7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB1416C263FC24600205D48 /* SettingsViewController.swift */; };
@@ -28,9 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E81B038F471D58320F6459B /* Pods-Popcat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popcat.debug.xcconfig"; path = "Target Support Files/Pods-Popcat/Pods-Popcat.debug.xcconfig"; sourceTree = "<group>"; };
+		7D1574E22676ECFD0022C628 /* SettingsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionView.swift; sourceTree = "<group>"; };
 		7D2027C225F7296000B33C57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7D27273B265B741800CEA32E /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAdaptaitonData.swift; sourceTree = "<group>"; };
+		7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoSection.swift; sourceTree = "<group>"; };
 		7D795CF625F5FD53006C9469 /* Popcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D795CF925F5FD54006C9469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,15 +47,17 @@
 		7D795D0225F5FD54006C9469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D795D0525F5FD54006C9469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D795D0725F5FD54006C9469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D852C7C2679C41400CA7B40 /* DeveloperInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoViewController.swift; sourceTree = "<group>"; };
 		7D87DA4725F751380011ABDA /* TouchEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEventManager.swift; sourceTree = "<group>"; };
 		7D8E1A3A265788DE00C590B7 /* AssetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetData.swift; sourceTree = "<group>"; };
-		7D90496526608C6000A061E2 /* SettingsVolumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVolumeCell.swift; sourceTree = "<group>"; };
-		7D90496626608C6000A061E2 /* SettingsVolumeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVolumeCell.xib; sourceTree = "<group>"; };
+		7D90496526608C6000A061E2 /* SettingsTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCells.swift; sourceTree = "<group>"; };
 		7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTowerVeiwController.swift; sourceTree = "<group>"; };
 		7D94828C265CD05C008BAC01 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		7DB1416C263FC24600205D48 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7DD780BC263FB92700732C58 /* CatTowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTowerCell.swift; sourceTree = "<group>"; };
 		7DD780BD263FB92700732C58 /* CatTowerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatTowerCell.xib; sourceTree = "<group>"; };
+		A74B011B80FF9519A7D851EF /* Pods_Popcat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popcat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEB7E37ACAED75868C34E4B /* Pods-Popcat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popcat.release.xcconfig"; path = "Target Support Files/Pods-Popcat/Pods-Popcat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,19 +65,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7AC868AF86CB603C807988 /* Pods_Popcat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3B06EFD9101099920601AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A74B011B80FF9519A7D851EF /* Pods_Popcat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D5F5117265E014B00B4C143 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */,
 				7D27273B265B741800CEA32E /* UserDefaultExtension.swift */,
 				7D8E1A3A265788DE00C590B7 /* AssetData.swift */,
 				7D94828C265CD05C008BAC01 /* UserDataManager.swift */,
 				7D87DA4725F751380011ABDA /* TouchEventManager.swift */,
+				7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */,
+				7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,6 +99,8 @@
 			children = (
 				7D795CF825F5FD53006C9469 /* Popcat */,
 				7D795CF725F5FD53006C9469 /* Products */,
+				9936FF80F15BD431966E2C07 /* Pods */,
+				5D3B06EFD9101099920601AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +125,6 @@
 				7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */,
 				7D795D0725F5FD54006C9469 /* Info.plist */,
 				7D2027C225F7296000B33C57 /* Constants.swift */,
-				7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */,
 			);
 			path = Popcat;
 			sourceTree = "<group>";
@@ -111,8 +134,8 @@
 			children = (
 				7DD780BC263FB92700732C58 /* CatTowerCell.swift */,
 				7DD780BD263FB92700732C58 /* CatTowerCell.xib */,
-				7D90496526608C6000A061E2 /* SettingsVolumeCell.swift */,
-				7D90496626608C6000A061E2 /* SettingsVolumeCell.xib */,
+				7D90496526608C6000A061E2 /* SettingsTableViewCells.swift */,
+				7D1574E22676ECFD0022C628 /* SettingsSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,10 +144,20 @@
 			isa = PBXGroup;
 			children = (
 				7D795CFD25F5FD54006C9469 /* MainViewController.swift */,
-				7DB1416C263FC24600205D48 /* SettingsViewController.swift */,
 				7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */,
+				7DB1416C263FC24600205D48 /* SettingsViewController.swift */,
+				7D852C7C2679C41400CA7B40 /* DeveloperInfoViewController.swift */,
 			);
 			path = Contoller;
+			sourceTree = "<group>";
+		};
+		9936FF80F15BD431966E2C07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E81B038F471D58320F6459B /* Pods-Popcat.debug.xcconfig */,
+				FDEB7E37ACAED75868C34E4B /* Pods-Popcat.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D795D0A25F5FD54006C9469 /* Build configuration list for PBXNativeTarget "Popcat" */;
 			buildPhases = (
+				54DF590B26ED162EA3C2DEDC /* [CP] Check Pods Manifest.lock */,
 				7D795CF225F5FD53006C9469 /* Sources */,
 				7D795CF325F5FD53006C9469 /* Frameworks */,
 				7D795CF425F5FD53006C9469 /* Resources */,
+				97755B39526496B0C3A78D88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */,
-				7D90496826608C6000A061E2 /* SettingsVolumeCell.xib in Resources */,
 				7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */,
 				7DD780BF263FB92700732C58 /* CatTowerCell.xib in Resources */,
 				7D795D0125F5FD54006C9469 /* Main.storyboard in Resources */,
@@ -194,21 +228,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54DF590B26ED162EA3C2DEDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Popcat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97755B39526496B0C3A78D88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Popcat/Pods-Popcat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Popcat/Pods-Popcat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Popcat/Pods-Popcat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D795CF225F5FD53006C9469 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2ECD9A2672FEEF00A58B56 /* SettingsSection.swift in Sources */,
 				7D795CFE25F5FD54006C9469 /* MainViewController.swift in Sources */,
 				7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */,
 				7D8E1A3B265788DE00C590B7 /* AssetData.swift in Sources */,
-				7D90496726608C6000A061E2 /* SettingsVolumeCell.swift in Sources */,
+				7D90496726608C6000A061E2 /* SettingsTableViewCells.swift in Sources */,
 				7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */,
 				7D87DA4825F751380011ABDA /* TouchEventManager.swift in Sources */,
+				7D852C7D2679C41400CA7B40 /* DeveloperInfoViewController.swift in Sources */,
 				7D27273C265B741800CEA32E /* UserDefaultExtension.swift in Sources */,
 				7D2027C325F7296000B33C57 /* Constants.swift in Sources */,
+				7D1574E32676ECFD0022C628 /* SettingsSectionView.swift in Sources */,
 				7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */,
 				7D94828D265CD05C008BAC01 /* UserDataManager.swift in Sources */,
+				7D542AF3267AD33000A6F31D /* DeveloperInfoSection.swift in Sources */,
 				7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */,
 				7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */,
 				7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */,
@@ -355,12 +435,13 @@
 		};
 		7D795D0B25F5FD54006C9469 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E81B038F471D58320F6459B /* Pods-Popcat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZW6466CHF4;
 				INFOPLIST_FILE = Popcat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -368,7 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.choiysapple.MyPopcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -379,12 +460,13 @@
 		};
 		7D795D0C25F5FD54006C9469 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDEB7E37ACAED75868C34E4B /* Pods-Popcat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZW6466CHF4;
 				INFOPLIST_FILE = Popcat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -392,7 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.choiysapple.MyPopcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

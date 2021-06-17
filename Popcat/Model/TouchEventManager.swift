@@ -18,18 +18,22 @@ class TouchEventManager {
     
     var delegate: touchEventDelegate?
     private var popSoundEffect: AVAudioPlayer?
-    private var popSoundSource: String?
     
-    func setAudioSource(audioSource: String) {
-        popSoundSource = audioSource
+    var popSoundSource: String?
+    var popSoundVolume: Float
+    
+    init(source: String, volume: Float) {
+        self.popSoundSource = source
+        self.popSoundVolume = volume
     }
     
+    
     func touchDownAction() {
-        
         // play sound
         let popSound = NSDataAsset(name: popSoundSource ?? defaultAssetData.audioSourceName)?.data
         do {
             popSoundEffect = try AVAudioPlayer(data: popSound!)
+            popSoundEffect?.setVolume(popSoundVolume, fadeDuration: 0)
             popSoundEffect?.play()
             
         } catch {

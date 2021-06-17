@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialBottomSheet
 
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     private let cellId = Identifier.SettingsTableViewCell
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(SettingsVolumeCell.self, forCellReuseIdentifier: cellId)
+
         tableView.tableFooterView = UIView()
+        tableView.allowsSelection = true
         
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
@@ -30,33 +31,96 @@ class SettingsViewController: UIViewController {
 
 }
 
+//MARK:- UITableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     
     // Section
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return SettingsSection.allCases.count
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Volume"
-    }
-    
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "  "
-    }
-    
     
     // Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let section = SettingsSection(rawValue: section) else {
+            return 0
+        }
+        
+        switch section {
+        case .volume: return VolumeOption.allCases.count
+        case .About: return AboutOption.allCases.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath) as! SettingsVolumeCell
         
-        return cell
+        guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
+        
+        switch section {
+        case .volume:
+            return VolumeOption.volume.cell
+        case .About:
+            return AboutOption(rawValue: indexPath.row)?.cell ?? UITableViewCell()
+        }
+
     }
     
-    
-    
 }
+
+//MARK: TableView Header/Footer options
+extension SettingsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        guard let description = SettingsSection(rawValue: section)?.headerDescription else {
+            return tableViewSectionHeaderView(description: "")
+        }
+        
+        return tableViewSectionHeaderView(description: description)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        guard let description = SettingsSection(rawValue: section)?.footerDescription else {
+            return tableViewSectionHeaderView(description: "")
+        }
+        
+        return tableViewSectionFooterView(description: description)
+
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return 70
+    }
+}
+
+//MARK: Interaction
+extension SettingsViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let section = SettingsSection(rawValue: indexPath.section) else { return }
+        
+        if section == .About {
+            if AboutOption.init(rawValue: indexPath.row) == .developer {
+                openBottomSheet()
+                tableView.cellForRow(at: indexPath)?.isSelected = false
+            }
+        }
+    }
+    
+    // Open bottom sheet
+    private func openBottomSheet() {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "DeveloperView") as! DeveloperInfoViewController
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
+        bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height: 360)
+        print(self.view.frame.size.height / 2.5)
+        present(bottomSheet, animated: true, completion: nil)
+    }
+}
+
+
