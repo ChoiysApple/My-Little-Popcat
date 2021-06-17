@@ -437,15 +437,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r6g-Nm-PQh">
-                                <rect key="frame" x="25" y="172.66666666666669" width="340" height="587.33333333333326"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="r6g-Nm-PQh">
+                                <rect key="frame" x="25" y="132.66666666666669" width="340" height="627.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="developerCell" textLabel="YIE-Jt-RtW" detailTextLabel="70z-Bm-aDJ" style="IBUITableViewCellStyleSubtitle" id="t0O-Pg-cbm">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="340" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="developerCell" textLabel="YIE-Jt-RtW" detailTextLabel="70z-Bm-aDJ" style="IBUITableViewCellStyleSubtitle" id="t0O-Pg-cbm">
+                                        <rect key="frame" x="0.0" y="49" width="340" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t0O-Pg-cbm" id="WSB-Eh-fBn">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YIE-Jt-RtW">
@@ -480,7 +480,7 @@
                             <constraint firstItem="ZKz-kT-syM" firstAttribute="bottom" secondItem="r6g-Nm-PQh" secondAttribute="bottom" constant="50" id="C1n-0L-y1z"/>
                             <constraint firstItem="r6g-Nm-PQh" firstAttribute="leading" secondItem="ZKz-kT-syM" secondAttribute="leading" constant="25" id="EBZ-yd-qwo"/>
                             <constraint firstItem="op5-z6-Jad" firstAttribute="centerX" secondItem="DNj-ei-Lon" secondAttribute="centerX" id="V7S-yb-xju"/>
-                            <constraint firstItem="r6g-Nm-PQh" firstAttribute="top" secondItem="S51-wB-07e" secondAttribute="bottom" constant="50" id="aaJ-13-gHs"/>
+                            <constraint firstItem="r6g-Nm-PQh" firstAttribute="top" secondItem="S51-wB-07e" secondAttribute="bottom" constant="10" id="aaJ-13-gHs"/>
                             <constraint firstItem="S51-wB-07e" firstAttribute="top" secondItem="op5-z6-Jad" secondAttribute="bottom" constant="5" id="gad-hz-xv8"/>
                             <constraint firstItem="S51-wB-07e" firstAttribute="centerX" secondItem="DNj-ei-Lon" secondAttribute="centerX" id="zLx-hy-p8T"/>
                         </constraints>
