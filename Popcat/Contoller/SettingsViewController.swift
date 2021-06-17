@@ -117,7 +117,7 @@ extension SettingsViewController {
     private func openBottomSheet() {
         let viewController = storyboard?.instantiateViewController(withIdentifier: "DeveloperView") as! DeveloperInfoViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
-        bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height / 3)
+        bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height / 2.5)
         present(bottomSheet, animated: true, completion: nil)
     }
 }

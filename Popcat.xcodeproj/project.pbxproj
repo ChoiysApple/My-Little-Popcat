@@ -13,6 +13,7 @@
 		7D27273C265B741800CEA32E /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27273B265B741800CEA32E /* UserDefaultExtension.swift */; };
 		7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */; };
 		7D2ECD9A2672FEEF00A58B56 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */; };
+		7D542AF3267AD33000A6F31D /* DeveloperInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */; };
 		7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CF925F5FD54006C9469 /* AppDelegate.swift */; };
 		7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */; };
 		7D795CFE25F5FD54006C9469 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFD25F5FD54006C9469 /* MainViewController.swift */; };
@@ -37,6 +38,7 @@
 		7D27273B265B741800CEA32E /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		7D2C6BA3264D0BDC001D445B /* DeviceAdaptaitonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAdaptaitonData.swift; sourceTree = "<group>"; };
 		7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoSection.swift; sourceTree = "<group>"; };
 		7D795CF625F5FD53006C9469 /* Popcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D795CF925F5FD54006C9469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				7D94828C265CD05C008BAC01 /* UserDataManager.swift */,
 				7D87DA4725F751380011ABDA /* TouchEventManager.swift */,
 				7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */,
+				7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				7D1574E32676ECFD0022C628 /* SettingsSectionView.swift in Sources */,
 				7D2C6BA4264D0BDC001D445B /* DeviceAdaptaitonData.swift in Sources */,
 				7D94828D265CD05C008BAC01 /* UserDataManager.swift in Sources */,
+				7D542AF3267AD33000A6F31D /* DeveloperInfoSection.swift in Sources */,
 				7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */,
 				7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */,
 				7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */,

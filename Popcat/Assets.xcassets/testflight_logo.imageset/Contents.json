@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "testflight-128x128_2x.png",
+      "filename" : "testflight.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "testflight-128x128_2x@2x.png",
+      "filename" : "testflight@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "testflight-128x128_2x@3x.png",
+      "filename" : "testflight@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

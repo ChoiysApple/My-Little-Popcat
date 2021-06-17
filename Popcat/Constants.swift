@@ -12,6 +12,7 @@ struct Identifier {
     static let mainViewController = "MainViewController"
     static let SettingsTableViewCell = "SettingsCell"
     static let DeveloperPageViewController = "DeveloperView"
+    static let DeveloperPageCell = "developerCell"
 }
 
 struct UserDataKey {
