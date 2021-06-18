@@ -20,7 +20,6 @@ class DeveloperInfoViewController: UIViewController {
         descriptionLabel.text = DeveloperInfo.description
         
         tableView.isScrollEnabled = false
-        // Do any additional setup after loading the view.
     }
     
 }
@@ -43,6 +42,7 @@ extension DeveloperInfoViewController: UITableViewDataSource {
         cell.imageView?.image = UIImage(named: section.imageSourceName)
         cell.imageView?.layer.cornerRadius = 13
         cell.imageView?.layer.masksToBounds = true
+        cell.backgroundColor = .none
         
         return cell
     }
