@@ -1,11 +1,11 @@
-
 # [<img src="https://user-images.githubusercontent.com/43776784/115346794-9985c780-a1eb-11eb-9639-06257a10aa3b.png" width="40%">](https://testflight.apple.com/join/HJakiRWd)
  pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
  
 
 
-<img src="https://user-images.githubusercontent.com/43776784/111795688-c9029500-890a-11eb-9e7f-fb80b4f75597.gif" width="30%" alt="dice"></img>
-<img src="https://user-images.githubusercontent.com/43776784/118428920-79bec200-b70b-11eb-845b-1e7e4c686865.PNG" width="30%" alt="dice"></img>
+<img src="https://user-images.githubusercontent.com/43776784/111795688-c9029500-890a-11eb-9e7f-fb80b4f75597.gif" width="25%" alt="dice"></img>
+<img src="https://user-images.githubusercontent.com/43776784/118428920-79bec200-b70b-11eb-845b-1e7e4c686865.PNG" width="25%" alt="dice"></img>
+<img src="https://user-images.githubusercontent.com/43776784/122491016-24354800-d01e-11eb-9a29-61644e5bb5be.png" width="25%" alt="dice"></img>
 
 
 
