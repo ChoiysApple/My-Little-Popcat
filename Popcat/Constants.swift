@@ -35,7 +35,7 @@ struct UserDataKey {
 
 struct DeveloperInfo {
     static let name = "Daegun Choi"
-    static let description = "Visit GitHub for more"
+    static let description = "github.com/ChoiysApple"
 }
 
 var currentVersion: String {
