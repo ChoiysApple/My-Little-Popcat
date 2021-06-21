@@ -13,14 +13,17 @@
  
 ### Public test is open
 * Download [beta version using TestFlight](https://testflight.apple.com/join/HJakiRWd)
+<br/>
 
 ### Tech Stack
 * Swift
 * UserDefaults
+<br/>
 
 ### Resource 
 * [Cat image](https://setgis.net/pop_cat_meme.html) `Free Source`
 * [Pop sound Effect](https://orangefreesounds.com/pop-sound-effect/)`[Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)]`
+<br/>
 
 ### Version Release
 * `1.0` Basic feature
@@ -32,7 +35,8 @@
   * 1.2.3 Replace audio file with higher quality and bigger volume, Now popcat sound doesn't stops background music, Fix cat selection cell color, Fix popping sound
           plays every tap screen
 * `1.3` Settings page created
-        
+<br/>
+
 
 ### Frameworks
 * Material Design - [BottomSheet](https://material.io/components/sheets-bottom/ios#using-bottom-sheets) 
