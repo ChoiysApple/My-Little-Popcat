@@ -42,7 +42,7 @@ class CatTowerCell: UICollectionViewCell {
         
         self.cellView.layer.borderColor = UIColor(named: "Color")?.cgColor
         self.cellImage.alpha = 1.0
-        
+        self.isUserInteractionEnabled = true
         
         
     }
