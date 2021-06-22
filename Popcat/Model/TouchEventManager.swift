@@ -22,6 +22,9 @@ class TouchEventManager {
     var popSoundSource: String?
     var popSoundVolume: Float
     
+    // Properties for check cat unlocks
+    let dataManager = UserDataManager()
+    
     init(source: String, volume: Float) {
         self.popSoundSource = source
         self.popSoundVolume = volume
@@ -41,14 +44,30 @@ class TouchEventManager {
         }
         
         // update popcount
-        var storedCount = UserDefaults.standard.integer(forKey: UserDataKey.popCount)
+        var storedCount = dataManager.getPopCount()
         storedCount += 1
         UserDefaults.standard.set(storedCount, forKey: UserDataKey.popCount)
         delegate?.touchDownImage(count: storedCount)
     }
     
     func touchUpAction() {
+        checkNewCatUnlock()
         delegate?.touchUpImage()
+    }
+    
+    private func checkNewCatUnlock() {
+        
+        var unlockData = dataManager.getUnlockData()
+        let storedCount = dataManager.getPopCount()
+        
+        for catAsset in AssetDataList {
+            if unlockData[catAsset.catName] == false && catAsset.unlockThreshold <= storedCount {
+                unlockData.updateValue(true, forKey: catAsset.catName)
+                dataManager.setUnlockData(unlockedCat: unlockData)
+                return
+            }
+        }
+        
     }
     
 }
