@@ -51,8 +51,9 @@ class CatTowerCell: UICollectionViewCell {
     private func setViewDisabled(catData: AssetData) {
         self.cellView.layer.borderWidth = 0.0
         self.cellView.backgroundColor = .systemGray6
-        self.cellName.text = String(catData.unlockThreshold)
-        self.cellImage.image = UIImage(named: "locked_cat")
+        self.cellName.text = "\(catData.unlockThreshold) Taps"
+        self.cellName.alpha = 0.5
+        self.cellImage.image = UIImage(named: "locked_cat")?.withAlignmentRectInsets(UIEdgeInsets(top: -15, left: 15, bottom: 0, right: 15))
         self.cellImage.alpha = 0.5
         self.isUserInteractionEnabled = false
     }

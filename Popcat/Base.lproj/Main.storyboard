@@ -24,6 +24,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="height" id="J9s-ah-3NE"/>
                                 </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-go-8WJ">
                                 <rect key="frame" x="0.0" y="229.66666666666666" width="414" height="56.333333333333343"/>
