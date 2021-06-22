@@ -19,8 +19,10 @@ class CatTowerCell: UICollectionViewCell {
     }
     
     func initCell(catData: AssetData, currentCatName: String) {
+
         self.cellImage.image = UIImage(named: catData.mainImageName)
         self.cellName.text = catData.catName
+        self.cellView.backgroundColor = UIColor(named: "BgColor")
         
         // Make border of CollectionView Cell for selected Cell
         if currentCatName == catData.catName{
@@ -30,11 +32,18 @@ class CatTowerCell: UICollectionViewCell {
         }
         
         self.cellView.layer.borderColor = UIColor(named: "Color")?.cgColor
-
-        //        cell.cellView.layer.borderWidth = 0.0
-        //        cell.cellView.backgroundColor = .systemGray6
-        //        cell.cellName.text = "899/1000"
+        self.cellImage.alpha = 1.0
+        
     }
     
+    //
+    private func setUnlockedView() {
+        self.cellView.layer.borderWidth = 0.0
+        self.cellView.backgroundColor = .systemGray6
+        self.cellName.text = "899/1000"
+        self.cellImage.image = UIImage(named: "locked_cat")
+        self.cellImage.alpha = 0.5
+        self.isUserInteractionEnabled = false
+    }
     
 }
