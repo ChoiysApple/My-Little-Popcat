@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var tutorialView: UIView!
+    
     
     //MARK: touchEventImage
     private var touchDownImageSource: UIImage?
@@ -33,13 +33,21 @@ class MainViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
+        // Only at First launch
         isNotFirstLaunch = dataManager.getIsInitialLaunch()
         if !isNotFirstLaunch {
-            tutorialView.isHidden = false
             dataManager.setIsInitialLaunch(isFirst: true)
             
             dataManager.setCatData(catData: defaultAssetData)
             dataManager.setPopSoundVolume(volume: 1.0)
+            
+            // Initialize unlock cat data
+            var unlockCatData: [String:Bool] = [:]
+            for cat in AssetDataList{
+                unlockCatData.updateValue(false, forKey: cat.catName)
+            }
+            unlockCatData.updateValue(true, forKey: defaultAssetData.catName)
+            dataManager.setUnlockData(unlockedCat: unlockCatData)
         }
     }
     
@@ -59,9 +67,6 @@ extension MainViewController: touchEventDelegate {
         
         if !isNotFirstLaunch {
             isNotFirstLaunch = true
-            DispatchQueue.main.async {
-                self.tutorialView.isHidden = true
-            }
         }
         
         timer.invalidate()

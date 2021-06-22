@@ -30,7 +30,7 @@ struct UserDataKey {
     static let popSound = "pop_sound"
     static let popVolume = "pop_volume"
     
-    static let background = "background"
+    static let unlockedCat = "unlocked_cat"
 }
 
 struct DeveloperInfo {
