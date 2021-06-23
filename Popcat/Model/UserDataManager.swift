@@ -74,4 +74,13 @@ class UserDataManager {
     func getUnlockData() -> [String:Bool]{
         return userDefaults.dictionary(forKey: UserDataKey.unlockedCat) as! [String:Bool]
     }
+    
+    func showAllData() {
+        print("Cat: \(self.getCatData())")
+        print("Count: \(self.getPopCount())")
+        print("Visibility: \(self.getPopVisibility())")
+        print("Is Initial Launch: \(self.getIsInitialLaunch())")
+        print("Volume: \(self.getPopSoundVolume())")
+        print("Unlocked: \(self.getUnlockData())")
+    }
 }

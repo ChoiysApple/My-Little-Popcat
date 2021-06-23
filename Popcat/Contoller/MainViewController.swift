@@ -33,22 +33,7 @@ class MainViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        // Only at First launch
-        isNotFirstLaunch = dataManager.getIsInitialLaunch()
-        if !isNotFirstLaunch {
-            dataManager.setIsInitialLaunch(isFirst: true)
-            
-            dataManager.setCatData(catData: defaultAssetData)
-            dataManager.setPopSoundVolume(volume: 1.0)
-            
-            // Initialize unlock cat data
-            var unlockCatData: [String:Bool] = [:]
-            for cat in AssetDataList{
-                unlockCatData.updateValue(false, forKey: cat.catName)
-            }
-            unlockCatData.updateValue(true, forKey: defaultAssetData.catName)
-            dataManager.setUnlockData(unlockedCat: unlockCatData)
-        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

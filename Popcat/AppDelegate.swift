@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        
+        
         // Get the singleton instance.
        let audioSession = AVAudioSession.sharedInstance()
        do {
@@ -24,6 +26,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        } catch {
            print("Failed to set audio session category.")
        }
+        
+        // Init UserDefault data at First launch
+        let dataManager = UserDataManager()
+        // Only at First launch
+        let isNotFirstLaunch = dataManager.getIsInitialLaunch()
+        if !isNotFirstLaunch {
+            dataManager.setIsInitialLaunch(isFirst: true)
+            
+            dataManager.setCatData(catData: defaultAssetData)
+            dataManager.setPopSoundVolume(volume: 1.0)
+            
+            // Initialize unlock cat data
+            var unlockCatData: [String:Bool] = [:]
+            for cat in AssetDataList{
+                unlockCatData.updateValue(false, forKey: cat.catName)
+            }
+            unlockCatData.updateValue(true, forKey: defaultAssetData.catName)
+            dataManager.setUnlockData(unlockedCat: unlockCatData)
+            
+            dataManager.showAllData()
+        }
        
        // Other post-launch configuration.
        return true
