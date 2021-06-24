@@ -37,6 +37,7 @@
           plays every tap screen
 * `1.3` Settings page created
 * `1.4` Unlocking cat by tapping added (Banner shows when new cat unlocked)
+  * 1.4.1 Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
 <br/>
 
 
