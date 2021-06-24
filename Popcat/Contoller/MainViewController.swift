@@ -49,21 +49,18 @@ class MainViewController: UIViewController {
 //MARK:- touch Event Delegate
 extension MainViewController: touchEventDelegate {
 
-    func touchDownImage(count: Int) {
-        
-        if !isNotFirstLaunch {
-            isNotFirstLaunch = true
-        }
+    func touchDownImage() {
         
         timer.invalidate()
         popcatImage.image = touchUpImageSource
-        countLabel.text = String(count)
+        
         timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
             self.popcatImage.image = self.touchDownImageSource
         }
     }
     
-    func touchUpImage() {
+    func touchUpImage(count: Int) {
+        countLabel.text = String(count)
         timer = Timer.scheduledTimer(withTimeInterval: imageDelay, repeats: false) { timer in
             self.popcatImage.image = self.touchUpImageSource
         }
@@ -106,8 +103,7 @@ extension MainViewController {
     
     // Gesture events
     @IBAction func swipeUpGesture(_ sender: Any) {
-        let currentCount = dataManager.getPopCount()
-        dataManager.setPopCount(popCount: currentCount-1)
+        self.popcatImage.image = self.touchUpImageSource
         performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
     }
 }

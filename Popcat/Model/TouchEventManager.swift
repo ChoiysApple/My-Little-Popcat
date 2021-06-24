@@ -10,8 +10,8 @@ import AVFoundation
 import UIKit
 
 protocol touchEventDelegate {
-    func touchDownImage(count: Int)
-    func touchUpImage()
+    func touchDownImage()
+    func touchUpImage(count: Int)
 }
 
 class TouchEventManager {
@@ -43,16 +43,19 @@ class TouchEventManager {
             fatalError(error.localizedDescription)
         }
         
+
+        delegate?.touchDownImage()
+    }
+    
+    func touchUpAction() {
+        
         // update popcount
         var storedCount = dataManager.getPopCount()
         storedCount += 1
         UserDefaults.standard.set(storedCount, forKey: UserDataKey.popCount)
-        delegate?.touchDownImage(count: storedCount)
-    }
-    
-    func touchUpAction() {
+        
         checkNewCatUnlock()
-        delegate?.touchUpImage()
+        delegate?.touchUpImage(count: storedCount)
     }
     
     private func checkNewCatUnlock() {

@@ -68,7 +68,7 @@ extension CatTowerVeiwController {
             }
         }
         
-        self.dismiss(animated: false)
+        self.dismiss(animated: true)
     }
 }
 
