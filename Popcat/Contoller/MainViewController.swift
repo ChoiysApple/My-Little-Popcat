@@ -68,12 +68,13 @@ extension MainViewController: touchEventDelegate {
     }
     
     // Display BRYXBanner
-    func displayUnlockedBanner(title: String, taps: Int, imageSource: String){
+    func displayUnlockedBanner(catData: AssetData){
         
-        let banner = Banner(title: title, subtitle: "Reached \(taps) taps", image: UIImage(named: imageSource), backgroundColor: UIColor(named: "BgColor")!)
+        let banner = Banner(title: catData.catName, subtitle: "Reached \(catData.unlockThreshold) taps", image: UIImage(named: catData.mainImageName), backgroundColor: UIColor(named: "BgColor")!)
         
         banner.titleLabel.textColor = .black
         banner.detailLabel.textColor = .black
+        //TODO: set label font to anvir
         
         banner.imageView.contentMode = .scaleAspectFit
 

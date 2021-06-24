@@ -12,6 +12,7 @@ import UIKit
 protocol touchEventDelegate {
     func touchDownImage()
     func touchUpImage(count: Int)
+    func displayUnlockedBanner(catData: AssetData)
 }
 
 class TouchEventManager {
@@ -67,6 +68,8 @@ class TouchEventManager {
             if unlockData[catAsset.catName] == false && catAsset.unlockThreshold <= storedCount {
                 unlockData.updateValue(true, forKey: catAsset.catName)
                 dataManager.setUnlockData(unlockedCat: unlockData)
+                
+                delegate?.displayUnlockedBanner(catData: catAsset)
                 return
             }
         }
