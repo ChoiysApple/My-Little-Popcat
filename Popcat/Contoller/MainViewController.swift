@@ -74,7 +74,7 @@ extension MainViewController: touchEventDelegate {
         
         banner.titleLabel.textColor = .black
         banner.detailLabel.textColor = .black
-        //TODO: set label font to anvir
+        
         
         banner.imageView.contentMode = .scaleAspectFit
 

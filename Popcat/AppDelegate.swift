@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Init UserDefault data at First launch
         let dataManager = UserDataManager()
         // Only at First launch
-        let isNotFirstLaunch = dataManager.getIsInitialLaunch()
+        let isNotFirstLaunch = dataManager.getIsNotInitialLaunch()
         if !isNotFirstLaunch {
-            dataManager.setIsInitialLaunch(isFirst: true)
+            dataManager.setIsNotInitialLaunch(isFirst: true)
             
             dataManager.setCatData(catData: defaultAssetData)
             dataManager.setPopSoundVolume(volume: 1.0)
