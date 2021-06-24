@@ -50,7 +50,6 @@ class MainViewController: UIViewController {
 extension MainViewController: touchEventDelegate {
 
     func touchDownImage() {
-        
         timer.invalidate()
         popcatImage.image = touchUpImageSource
         
@@ -72,9 +71,8 @@ extension MainViewController: touchEventDelegate {
         
         let banner = Banner(title: catData.catName, subtitle: "Reached \(catData.unlockThreshold) taps", image: UIImage(named: catData.mainImageName), backgroundColor: UIColor(named: "BgColor")!)
         
-        banner.titleLabel.textColor = .black
-        banner.detailLabel.textColor = .black
-        
+        banner.titleLabel.textColor = UIColor(named: "Color")
+        banner.detailLabel.textColor = UIColor(named: "Color")
         
         banner.imageView.contentMode = .scaleAspectFit
 
