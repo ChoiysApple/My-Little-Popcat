@@ -83,22 +83,11 @@ extension CatTowerVeiwController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CatTowerCell
         let catData = AssetDataList[indexPath.row]
 
-        cell.cellImage.image = UIImage(named: catData.mainImageName)
-        cell.cellName.text = catData.catName
-        
-        // Make border of CollectionView Cell for selected Cell
-        if currentCatName == catData.catName{
-            cell.cellView.layer.borderWidth = 1.5
-        } else {
-            cell.cellView.layer.borderWidth = 0.5
-        }
-        
-        cell.cellView.layer.borderColor = UIColor(named: "Color")?.cgColor
+        cell.initCell(catData: catData, currentCatName: currentCatName)
 
         return cell
     }
     
-
 }
 
 //MARK: CollectionViewFlowLayout

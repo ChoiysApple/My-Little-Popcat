@@ -10,8 +10,9 @@ import AVFoundation
 import UIKit
 
 protocol touchEventDelegate {
-    func touchDownImage(count: Int)
-    func touchUpImage()
+    func touchDownImage()
+    func touchUpImage(count: Int)
+    func displayUnlockedBanner(catData: AssetData)
 }
 
 class TouchEventManager {
@@ -21,6 +22,9 @@ class TouchEventManager {
     
     var popSoundSource: String?
     var popSoundVolume: Float
+    
+    // Properties for check cat unlocks
+    let dataManager = UserDataManager()
     
     init(source: String, volume: Float) {
         self.popSoundSource = source
@@ -40,15 +44,36 @@ class TouchEventManager {
             fatalError(error.localizedDescription)
         }
         
-        // update popcount
-        var storedCount = UserDefaults.standard.integer(forKey: UserDataKey.popCount)
-        storedCount += 1
-        UserDefaults.standard.set(storedCount, forKey: UserDataKey.popCount)
-        delegate?.touchDownImage(count: storedCount)
+
+        delegate?.touchDownImage()
     }
     
     func touchUpAction() {
-        delegate?.touchUpImage()
+        
+        // update popcount
+        var storedCount = dataManager.getPopCount()
+        storedCount += 1
+        UserDefaults.standard.set(storedCount, forKey: UserDataKey.popCount)
+        
+        checkNewCatUnlock()
+        delegate?.touchUpImage(count: storedCount)
+    }
+    
+    private func checkNewCatUnlock() {
+        
+        var unlockData = dataManager.getUnlockData()
+        let storedCount = dataManager.getPopCount()
+        
+        for catAsset in AssetDataList {
+            if unlockData[catAsset.catName] == false && catAsset.unlockThreshold <= storedCount {
+                unlockData.updateValue(true, forKey: catAsset.catName)
+                dataManager.setUnlockData(unlockedCat: unlockData)
+                
+                delegate?.displayUnlockedBanner(catData: catAsset)
+                return
+            }
+        }
+        
     }
     
 }

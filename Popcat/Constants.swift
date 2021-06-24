@@ -30,12 +30,12 @@ struct UserDataKey {
     static let popSound = "pop_sound"
     static let popVolume = "pop_volume"
     
-    static let background = "background"
+    static let unlockedCat = "unlocked_cat"
 }
 
 struct DeveloperInfo {
     static let name = "Daegun Choi"
-    static let description = "Visit GitHub for more"
+    static let description = "github.com/ChoiysApple"
 }
 
 var currentVersion: String {

@@ -37,6 +37,10 @@ class UserDataManager {
         userDefaults.set(volume, forKey: UserDataKey.popVolume)
     }
     
+    func setUnlockData(unlockedCat: [String:Bool]){
+        userDefaults.set(unlockedCat, forKey: UserDataKey.unlockedCat)
+    }
+    
     
     //MARK:- Getters
     func getCatData() -> AssetData {
@@ -65,5 +69,18 @@ class UserDataManager {
     
     func getPopSoundVolume() -> Float{
         return userDefaults.float(forKey: UserDataKey.popVolume)
+    }
+    
+    func getUnlockData() -> [String:Bool]{
+        return userDefaults.dictionary(forKey: UserDataKey.unlockedCat) as! [String:Bool]
+    }
+    
+    func showAllData() {
+        print("Cat: \(self.getCatData())")
+        print("Count: \(self.getPopCount())")
+        print("Visibility: \(self.getPopVisibility())")
+        print("Is Initial Launch: \(self.getIsInitialLaunch())")
+        print("Volume: \(self.getPopSoundVolume())")
+        print("Unlocked: \(self.getUnlockData())")
     }
 }

@@ -1,4 +1,5 @@
 PODS:
+  - BRYXBanner (0.8.4)
   - MaterialComponents/Availability (124.2.0)
   - MaterialComponents/BottomSheet (124.2.0):
     - MaterialComponents/Elevation
@@ -30,15 +31,18 @@ PODS:
     - MaterialComponents/ShadowLayer
 
 DEPENDENCIES:
+  - BRYXBanner
   - MaterialComponents/BottomSheet
 
 SPEC REPOS:
   trunk:
+    - BRYXBanner
     - MaterialComponents
 
 SPEC CHECKSUMS:
+  BRYXBanner: 4fbd266f96ce000e4c6cc9a0558c446bd88d9801
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
 
-PODFILE CHECKSUM: 03dfe97db818d3ffbe607abec6c89e84caa670e4
+PODFILE CHECKSUM: a6bd09f9433dbe870f791bdadc529c0fec963878
 
 COCOAPODS: 1.10.1

@@ -7,13 +7,14 @@
 
 import UIKit
 import AVFoundation
+import BRYXBanner
 
 class MainViewController: UIViewController {
 
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var tutorialView: UIView!
+    
     
     //MARK: touchEventImage
     private var touchDownImageSource: UIImage?
@@ -33,14 +34,7 @@ class MainViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        isNotFirstLaunch = dataManager.getIsInitialLaunch()
-        if !isNotFirstLaunch {
-            tutorialView.isHidden = false
-            dataManager.setIsInitialLaunch(isFirst: true)
-            
-            dataManager.setCatData(catData: defaultAssetData)
-            dataManager.setPopSoundVolume(volume: 1.0)
-        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,27 +49,38 @@ class MainViewController: UIViewController {
 //MARK:- touch Event Delegate
 extension MainViewController: touchEventDelegate {
 
-    func touchDownImage(count: Int) {
-        
-        if !isNotFirstLaunch {
-            isNotFirstLaunch = true
-            DispatchQueue.main.async {
-                self.tutorialView.isHidden = true
-            }
-        }
+    func touchDownImage() {
         
         timer.invalidate()
         popcatImage.image = touchUpImageSource
-        countLabel.text = String(count)
+        
         timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
             self.popcatImage.image = self.touchDownImageSource
         }
     }
     
-    func touchUpImage() {
+    func touchUpImage(count: Int) {
+        countLabel.text = String(count)
         timer = Timer.scheduledTimer(withTimeInterval: imageDelay, repeats: false) { timer in
             self.popcatImage.image = self.touchUpImageSource
         }
+        
+    }
+    
+    // Display BRYXBanner
+    func displayUnlockedBanner(catData: AssetData){
+        
+        let banner = Banner(title: catData.catName, subtitle: "Reached \(catData.unlockThreshold) taps", image: UIImage(named: catData.mainImageName), backgroundColor: UIColor(named: "BgColor")!)
+        
+        banner.titleLabel.textColor = .black
+        banner.detailLabel.textColor = .black
+        //TODO: set label font to anvir
+        
+        banner.imageView.contentMode = .scaleAspectFit
+
+        banner.dismissesOnTap = true
+        banner.dismissesOnSwipe = true
+        banner.show(duration: 2.0)
     }
     
 }
@@ -85,7 +90,6 @@ extension MainViewController {
     
     // touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if let touch = touches.first, touch.view == self.view {
             touchEvent.touchDownAction()
         }
@@ -100,8 +104,7 @@ extension MainViewController {
     
     // Gesture events
     @IBAction func swipeUpGesture(_ sender: Any) {
-        let currentCount = dataManager.getPopCount()
-        dataManager.setPopCount(popCount: currentCount-1)
+        self.popcatImage.image = self.touchUpImageSource
         performSegue(withIdentifier: Identifier.settingSegue, sender: nil)
     }
 }
