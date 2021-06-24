@@ -40,6 +40,6 @@
 <br/>
 
 
-### Frameworks
+### Libraries
 * Material Design - [BottomSheet](https://material.io/components/sheets-bottom/ios#using-bottom-sheets) 
 * [BRYXBanner](https://github.com/bryx-inc/BRYXBanner)
