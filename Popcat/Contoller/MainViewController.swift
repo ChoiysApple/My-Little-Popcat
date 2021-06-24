@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import BRYXBanner
 
 class MainViewController: UIViewController {
 
@@ -66,6 +67,22 @@ extension MainViewController: touchEventDelegate {
         timer = Timer.scheduledTimer(withTimeInterval: imageDelay, repeats: false) { timer in
             self.popcatImage.image = self.touchUpImageSource
         }
+        
+    }
+    
+    // Display BRYXBanner
+    func displayUnlockedBanner(title: String, taps: Int, imageSource: String){
+        
+        let banner = Banner(title: title, subtitle: "Reached \(taps) taps", image: UIImage(named: imageSource), backgroundColor: UIColor(named: "BgColor")!)
+        
+        banner.titleLabel.textColor = .black
+        banner.detailLabel.textColor = .black
+        
+        banner.imageView.contentMode = .scaleAspectFit
+
+        banner.dismissesOnTap = true
+        banner.dismissesOnSwipe = true
+        banner.show(duration: 2.0)
     }
     
 }
@@ -75,7 +92,6 @@ extension MainViewController {
     
     // touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if let touch = touches.first, touch.view == self.view {
             touchEvent.touchDownAction()
         }
