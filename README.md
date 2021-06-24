@@ -36,8 +36,10 @@
   * 1.2.3 Replace audio file with higher quality and bigger volume, Now popcat sound doesn't stops background music, Fix cat selection cell color, Fix popping sound
           plays every tap screen
 * `1.3` Settings page created
+* `1.4` Unlocking cat by tapping added (Banner shows when new cat unlocked)
 <br/>
 
 
 ### Frameworks
 * Material Design - [BottomSheet](https://material.io/components/sheets-bottom/ios#using-bottom-sheets) 
+* [BRYXBanner](https://github.com/bryx-inc/BRYXBanner)
