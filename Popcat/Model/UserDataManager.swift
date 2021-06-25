@@ -99,7 +99,15 @@ class UserDataManager {
         
         if isKeyPresentInUserDefaults(key: UserDataKey.unlockedCat) {
             
-            return userDefaults.dictionary(forKey: UserDataKey.unlockedCat) as! [String:Bool]
+            var unlockCatData = userDefaults.object(forKey: UserDataKey.unlockedCat) as! [String:Bool]
+            
+            // Add new data if there's any new cats
+            for catData in AssetDataList {
+                if unlockCatData[catData.catName] == nil {
+                    unlockCatData[catData.catName] = false
+                }
+            }
+            return unlockCatData
             
         } else {
             

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        // Get the singleton instance.
+        // MARK: Get the singleton instance.
        let audioSession = AVAudioSession.sharedInstance()
        do {
            // Set the audio session category, mode, and options.
@@ -28,12 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        }
         
         
-        
-        // Init UserDefault data at First launch
+        // MARK: Init UserDefault data at First launch
         let dataManager = UserDataManager()
         dataManager.initDataAtFirstLaunch()
-        
-        
         
        
        // Other post-launch configuration.
