@@ -114,6 +114,32 @@ class UserDataManager {
             return unlockCatData
         }
     }
+}
+
+//MARK: - init data & handle new data for additional content
+extension UserDataManager {
+    
+    func initDataAtFirstLaunch() {
+        
+        // Only at First launch
+        let isNotFirstLaunch = self.getIsNotInitialLaunch()
+        if !isNotFirstLaunch {
+            self.setIsNotInitialLaunch(isFirst: true)
+            
+            self.setCatData(catData: defaultAssetData)
+            self.setPopSoundVolume(volume: 1.0)
+            
+            // Initialize unlock cat data
+            var unlockCatData: [String:Bool] = [:]
+            for cat in AssetDataList{
+                unlockCatData.updateValue(false, forKey: cat.catName)
+            }
+            unlockCatData.updateValue(true, forKey: defaultAssetData.catName)
+            self.setUnlockData(unlockedCat: unlockCatData)
+            
+            self.showAllData()
+        }
+    }
     
     func showAllData() {
         print("Cat: \(self.getCatData())")
@@ -123,6 +149,9 @@ class UserDataManager {
         print("Volume: \(self.getPopSoundVolume())")
         print("Unlocked: \(self.getUnlockData())")
     }
+}
+
+extension UserDataManager {
     
     // Check is UserDefaults has data for certain key
     func isKeyPresentInUserDefaults(key: String) -> Bool {
