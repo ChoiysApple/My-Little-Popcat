@@ -98,8 +98,11 @@ class UserDataManager {
     func getUnlockData() -> [String:Bool]{
         
         if isKeyPresentInUserDefaults(key: UserDataKey.unlockedCat) {
+            
             return userDefaults.dictionary(forKey: UserDataKey.unlockedCat) as! [String:Bool]
+            
         } else {
+            
             // Create & set default data
             var unlockCatData: [String:Bool] = [:]
             for cat in AssetDataList{

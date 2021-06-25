@@ -22,8 +22,7 @@ class TouchEventManager {
     
     var popSoundSource: String?
     var popSoundVolume: Float
-    
-    // Properties for check cat unlocks
+
     let dataManager = UserDataManager()
     
     init(source: String, volume: Float) {

@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             dataManager.showAllData()
         }
+        
+        
        
        // Other post-launch configuration.
        return true
