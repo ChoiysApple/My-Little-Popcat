@@ -25,5 +25,3 @@ let AssetDataList = [
 ]
 
 let defaultAssetData = AssetDataList[0]
-
-
