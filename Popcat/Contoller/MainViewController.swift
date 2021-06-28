@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +43,9 @@ class MainViewController: UIViewController {
         
         updateViewSettings()
         touchEvent.delegate = self
+        
+        
+//        getOnboardingViewController(onboardingDataList: OnboardingData.mainView.onboardingDataList).presentFrom(self, animated: true)
     }
 
 }
