@@ -25,11 +25,11 @@ enum OnboardingData: Int, CaseIterable {
 }
 
 let mainViewOnboarding = [
-    OnboardingDataModel(title: "Tap Anywhere", imageName: "popcat_closed", description: "Tap anywhere to get relexed"),
-    OnboardingDataModel(title: "Swipe Up", imageName: "popcat_closed", description: "Swipe Up and Check more cats")
+    OnboardingDataModel(title: "Tap Anywhere", imageName: "tap_gesture", description: "Tap anywhere to get relexed"),
+    OnboardingDataModel(title: "Swipe Up", imageName: "swipe_up", description: "Swipe Up and Check more cats")
 ]
 
 let catTowerViewOnboarding = [
-    OnboardingDataModel(title: "Welcome to Cat Tower", imageName: "popcat_closed", description: "You can try various cats."),
-    OnboardingDataModel(title: "More taps, More cats", imageName: "popcat_closed", description: "More cats will be unlocked as you tap more")
+    OnboardingDataModel(title: "Welcome to Cat Tower", imageName: "cat_tower", description: "You can pick various cats. Here"),
+    OnboardingDataModel(title: "More taps, More cats", imageName: "cat_face", description: "More cats will be unlocked as you tap more")
 ]
