@@ -7,6 +7,7 @@
 
 import Foundation
 import OnboardKit
+import UIKit
 
 func getOnboardingViewController(onboardingDataList: [OnboardingDataModel]) ->  OnboardViewController {
     
@@ -17,17 +18,34 @@ func getOnboardingViewController(onboardingDataList: [OnboardingDataModel]) ->  
         pageItems.append(getOnbaordingView(onboardingData: onboardingData))
     }
     
-    let appearance = OnboardViewController.AppearanceConfiguration(tintColor: UIColor(named: "AccentColor") ?? .blue,
-                                             titleColor: UIColor(named: "Color") ?? .black,
-                                             textColor: UIColor(named: "Color") ?? .black,
-                                             backgroundColor: UIColor(named: "BgColor") ?? .white,
-                                             imageContentMode: .scaleAspectFit,
-                                             titleFont: UIFont.boldSystemFont(ofSize: 32.0),
-                                             textFont: UIFont.boldSystemFont(ofSize: 17.0))
+    let advanceButtonStyling: OnboardViewController.ButtonStyling = { button in
+        button.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+        button.titleLabel?.font = UIFont(name: "AvenirNext-medium", size: 25.0)!
+        button.backgroundColor = UIColor(named: "AccentColor")!
+        button.layer.cornerRadius = 10
+        
+        let widthContraints =  NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 350)
+        let heightContraints = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
+        NSLayoutConstraint.activate([heightContraints,widthContraints])
+    }
+    
+    let appearance = OnboardViewController.AppearanceConfiguration(
+        tintColor: UIColor(named: "AccentColor")!,
+        titleColor: UIColor(named: "Color")!,
+        textColor: UIColor(named: "Color")!,
+        backgroundColor: UIColor(named: "BgColor")!,
+        imageContentMode: .scaleAspectFit,
+        titleFont: UIFont(name: "AvenirNext-medium", size: 32.0)!,
+        textFont: UIFont(name: "Avenir", size: 20.0)!,
+        advanceButtonStyling: advanceButtonStyling
+    )
     
     
+
+    let onboardVC = OnboardViewController(pageItems: pageItems, appearanceConfiguration: appearance)
+    onboardVC.modalPresentationStyle = .fullScreen
     
-    return OnboardViewController(pageItems: pageItems, appearanceConfiguration: appearance)
+    return onboardVC
 }
 
 // Create Onboarding view using OnboardingDataModel
