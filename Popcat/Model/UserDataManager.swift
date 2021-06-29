@@ -33,6 +33,10 @@ class UserDataManager {
         userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
     }
     
+    func setIsNotInitialCatTower(isFirst: Bool) {
+        userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstCatTower)
+    }
+    
     func setPopSoundVolume(volume: Float){
         userDefaults.set(volume, forKey: UserDataKey.popVolume)
     }
@@ -84,6 +88,16 @@ class UserDataManager {
         
         if isKeyPresentInUserDefaults(key: UserDataKey.isNotFirstLaunch){
             return userDefaults.bool(forKey: UserDataKey.isNotFirstLaunch)
+        } else {
+            setIsNotInitialLaunch(isFirst: false)
+            return false
+        }
+    }
+    
+    func getIsNotInitialCatTower() -> Bool {
+        
+        if isKeyPresentInUserDefaults(key: UserDataKey.isNotFirstCatTower){
+            return userDefaults.bool(forKey: UserDataKey.isNotFirstCatTower)
         } else {
             setIsNotInitialLaunch(isFirst: false)
             return false
