@@ -27,6 +27,8 @@
 		7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */; };
 		7D94828D265CD05C008BAC01 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94828C265CD05C008BAC01 /* UserDataManager.swift */; };
 		7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB1416C263FC24600205D48 /* SettingsViewController.swift */; };
+		7DB629E726898C7100341B89 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB629E626898C7100341B89 /* OnboardingDataModel.swift */; };
+		7DB629E9268991F700341B89 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB629E8268991F700341B89 /* OnboardingPageViewController.swift */; };
 		7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD780BC263FB92700732C58 /* CatTowerCell.swift */; };
 		7DD780BF263FB92700732C58 /* CatTowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD780BD263FB92700732C58 /* CatTowerCell.xib */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTowerVeiwController.swift; sourceTree = "<group>"; };
 		7D94828C265CD05C008BAC01 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		7DB1416C263FC24600205D48 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7DB629E626898C7100341B89 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		7DB629E8268991F700341B89 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		7DD780BC263FB92700732C58 /* CatTowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTowerCell.swift; sourceTree = "<group>"; };
 		7DD780BD263FB92700732C58 /* CatTowerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatTowerCell.xib; sourceTree = "<group>"; };
 		A74B011B80FF9519A7D851EF /* Pods_Popcat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popcat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,7 @@
 				7D87DA4725F751380011ABDA /* TouchEventManager.swift */,
 				7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */,
 				7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */,
+				7DB629E626898C7100341B89 /* OnboardingDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 		7DB1416F263FC29100205D48 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				7DB629E8268991F700341B89 /* OnboardingPageViewController.swift */,
 				7D795CFD25F5FD54006C9469 /* MainViewController.swift */,
 				7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */,
 				7DB1416C263FC24600205D48 /* SettingsViewController.swift */,
@@ -277,6 +283,7 @@
 			files = (
 				7D2ECD9A2672FEEF00A58B56 /* SettingsSection.swift in Sources */,
 				7D795CFE25F5FD54006C9469 /* MainViewController.swift in Sources */,
+				7DB629E726898C7100341B89 /* OnboardingDataModel.swift in Sources */,
 				7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */,
 				7D8E1A3B265788DE00C590B7 /* AssetData.swift in Sources */,
 				7D90496726608C6000A061E2 /* SettingsTableViewCells.swift in Sources */,
@@ -292,6 +299,7 @@
 				7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */,
 				7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */,
 				7DB1416D263FC24600205D48 /* SettingsViewController.swift in Sources */,
+				7DB629E9268991F700341B89 /* OnboardingPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

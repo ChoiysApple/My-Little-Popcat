@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        // Get the singleton instance.
+        // MARK: Get the singleton instance.
        let audioSession = AVAudioSession.sharedInstance()
        do {
            // Set the audio session category, mode, and options.
@@ -27,26 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            print("Failed to set audio session category.")
        }
         
-        // Init UserDefault data at First launch
+        
+        // MARK: Init UserDefault data at First launch
         let dataManager = UserDataManager()
-        // Only at First launch
-        let isNotFirstLaunch = dataManager.getIsNotInitialLaunch()
-        if !isNotFirstLaunch {
-            dataManager.setIsNotInitialLaunch(isFirst: true)
-            
-            dataManager.setCatData(catData: defaultAssetData)
-            dataManager.setPopSoundVolume(volume: 1.0)
-            
-            // Initialize unlock cat data
-            var unlockCatData: [String:Bool] = [:]
-            for cat in AssetDataList{
-                unlockCatData.updateValue(false, forKey: cat.catName)
-            }
-            unlockCatData.updateValue(true, forKey: defaultAssetData.catName)
-            dataManager.setUnlockData(unlockedCat: unlockCatData)
-            
-            dataManager.showAllData()
-        }
+        dataManager.initDataAtFirstLaunch()
+        
        
        // Other post-launch configuration.
        return true

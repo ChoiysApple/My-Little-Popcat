@@ -36,6 +36,15 @@ class CatTowerVeiwController: UIViewController {
         currentCatName = dataManager.getCatData().catName
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        if !dataManager.getIsNotInitialCatTower() {
+            dataManager.setIsNotInitialCatTower(isFirst: true)
+            getOnboardingViewController(onboardingDataList: OnboardingData.catTowerView.onboardingDataList).presentFrom(self, animated: true)
+        }
+    }
+    
     // Reload collectionView at orientation Changes
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView.reloadData()

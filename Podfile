@@ -8,5 +8,6 @@ target 'Popcat' do
   # Pods for Popcat
   pod 'MaterialComponents/BottomSheet'
   pod 'BRYXBanner'
+  pod 'OnboardKit'
 
 end

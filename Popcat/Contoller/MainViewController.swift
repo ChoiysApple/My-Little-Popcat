@@ -35,13 +35,22 @@ class MainViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if !dataManager.getIsNotInitialLaunch() {
+            dataManager.setIsNotInitialLaunch(isFirst: true)
+            getOnboardingViewController(onboardingDataList: OnboardingData.mainView.onboardingDataList).presentFrom(self, animated: true)
+        }
+        
         updateViewSettings()
         touchEvent.delegate = self
+        
+        
+        
     }
 
 }

@@ -33,6 +33,10 @@ class UserDataManager {
         userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
     }
     
+    func setIsNotInitialCatTower(isFirst: Bool) {
+        userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstCatTower)
+    }
+    
     func setPopSoundVolume(volume: Float){
         userDefaults.set(volume, forKey: UserDataKey.popVolume)
     }
@@ -90,6 +94,16 @@ class UserDataManager {
         }
     }
     
+    func getIsNotInitialCatTower() -> Bool {
+        
+        if isKeyPresentInUserDefaults(key: UserDataKey.isNotFirstCatTower){
+            return userDefaults.bool(forKey: UserDataKey.isNotFirstCatTower)
+        } else {
+            setIsNotInitialLaunch(isFirst: false)
+            return false
+        }
+    }
+    
     func getPopSoundVolume() -> Float{
         
         return userDefaults.float(forKey: UserDataKey.popVolume)
@@ -98,8 +112,19 @@ class UserDataManager {
     func getUnlockData() -> [String:Bool]{
         
         if isKeyPresentInUserDefaults(key: UserDataKey.unlockedCat) {
-            return userDefaults.dictionary(forKey: UserDataKey.unlockedCat) as! [String:Bool]
+            
+            var unlockCatData = userDefaults.object(forKey: UserDataKey.unlockedCat) as! [String:Bool]
+            
+            // Add new data if there's any new cats
+            for catData in AssetDataList {
+                if unlockCatData[catData.catName] == nil {
+                    unlockCatData[catData.catName] = false
+                }
+            }
+            return unlockCatData
+            
         } else {
+            
             // Create & set default data
             var unlockCatData: [String:Bool] = [:]
             for cat in AssetDataList{
@@ -111,6 +136,32 @@ class UserDataManager {
             return unlockCatData
         }
     }
+}
+
+
+//MARK: - init data & handle new data for additional content
+extension UserDataManager {
+    
+    func initDataAtFirstLaunch() {
+        
+        // Only at First launch
+        let isNotFirstLaunch = self.getIsNotInitialLaunch()
+        if !isNotFirstLaunch {
+            
+            self.setCatData(catData: defaultAssetData)
+            self.setPopSoundVolume(volume: 1.0)
+            
+            // Initialize unlock cat data
+            var unlockCatData: [String:Bool] = [:]
+            for cat in AssetDataList{
+                unlockCatData.updateValue(false, forKey: cat.catName)
+            }
+            unlockCatData.updateValue(true, forKey: defaultAssetData.catName)
+            self.setUnlockData(unlockedCat: unlockCatData)
+            
+            self.showAllData()
+        }
+    }
     
     func showAllData() {
         print("Cat: \(self.getCatData())")
@@ -120,6 +171,9 @@ class UserDataManager {
         print("Volume: \(self.getPopSoundVolume())")
         print("Unlocked: \(self.getUnlockData())")
     }
+}
+
+extension UserDataManager {
     
     // Check is UserDefaults has data for certain key
     func isKeyPresentInUserDefaults(key: String) -> Bool {

@@ -29,20 +29,24 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - OnboardKit (1.5.0)
 
 DEPENDENCIES:
   - BRYXBanner
   - MaterialComponents/BottomSheet
+  - OnboardKit
 
 SPEC REPOS:
   trunk:
     - BRYXBanner
     - MaterialComponents
+    - OnboardKit
 
 SPEC CHECKSUMS:
   BRYXBanner: 4fbd266f96ce000e4c6cc9a0558c446bd88d9801
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  OnboardKit: 73a4e9c9a1ae88afee0514ac3f2bc4f82126b66e
 
-PODFILE CHECKSUM: a6bd09f9433dbe870f791bdadc529c0fec963878
+PODFILE CHECKSUM: a76a97fa2f1af7a1d6b5dfb0c9586ec210ae0212
 
 COCOAPODS: 1.10.1
