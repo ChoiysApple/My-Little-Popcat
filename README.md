@@ -1,7 +1,11 @@
 # [<img src="https://user-images.githubusercontent.com/43776784/115346794-9985c780-a1eb-11eb-9639-06257a10aa3b.png" width="40%">](https://testflight.apple.com/join/HJakiRWd)
  pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
  
+<br/> 
 
+### I'm collectiong images for my popcat app! Plz [join](https://www.notion.so/choiysapple/My-Little-Popcat-273824791e38402788f8be4e97c8ebf7)
+
+<br/>
 
 <img src="https://user-images.githubusercontent.com/43776784/111795688-c9029500-890a-11eb-9e7f-fb80b4f75597.gif" width="25%" alt="dice"></img>
 <img src="https://user-images.githubusercontent.com/43776784/118428920-79bec200-b70b-11eb-845b-1e7e4c686865.PNG" width="25%" alt="dice"></img>
@@ -38,6 +42,8 @@
 * `1.3` Settings page created
 * `1.4` Unlocking cat by tapping added (Banner shows when new cat unlocked)
   * 1.4.1 Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
+  * 1.4.2 New black cat 🐈‍⬛ added, tutorial onboarding added
+
 <br/>
 
 
