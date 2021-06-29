@@ -19,12 +19,12 @@ func getOnboardingViewController(onboardingDataList: [OnboardingDataModel]) ->  
     }
     
     let advanceButtonStyling: OnboardViewController.ButtonStyling = { button in
-        button.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: "AvenirNext-medium", size: 25.0)!
         button.backgroundColor = UIColor(named: "AccentColor")!
         button.layer.cornerRadius = 10
         
-        let widthContraints =  NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 350)
+        let widthContraints =  NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 300)
         let heightContraints = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
         NSLayoutConstraint.activate([heightContraints,widthContraints])
     }
