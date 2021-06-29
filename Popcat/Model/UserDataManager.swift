@@ -138,6 +138,7 @@ class UserDataManager {
     }
 }
 
+
 //MARK: - init data & handle new data for additional content
 extension UserDataManager {
     
@@ -146,7 +147,6 @@ extension UserDataManager {
         // Only at First launch
         let isNotFirstLaunch = self.getIsNotInitialLaunch()
         if !isNotFirstLaunch {
-            self.setIsNotInitialLaunch(isFirst: true)
             
             self.setCatData(catData: defaultAssetData)
             self.setPopSoundVolume(volume: 1.0)
