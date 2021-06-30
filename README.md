@@ -30,6 +30,11 @@
 * [Pop sound Effect](https://orangefreesounds.com/pop-sound-effect/)`[Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)]`
 <br/>
 
+### Cats
+So namy artists allowed to use thier works! Check [here](https://www.notion.so/choiysapple/Art-of-My-Little-Popcat-a2608f680d144b498106fbf013288fcf) to see artists information. If you like some works, try visiting thier instagram or devianart and support them.
+
+<br/>
+
 ### Version Release
 * `1.0` Basic feature
 * `1.1` Settings & tap counter
