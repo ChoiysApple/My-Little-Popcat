@@ -40,8 +40,9 @@ class CatTowerVeiwController: UIViewController {
         super.viewWillAppear(true)
 
         if !dataManager.getIsNotInitialCatTower() {
-            dataManager.setIsNotInitialCatTower(isFirst: true)
             getOnboardingViewController(onboardingDataList: OnboardingData.catTowerView.onboardingDataList).presentFrom(self, animated: true)
+            dataManager.setIsNotInitialCatTower(isFirst: true)
+            dataManager.setIsNotInitialLaunch(isFirst: true)
         }
     }
     

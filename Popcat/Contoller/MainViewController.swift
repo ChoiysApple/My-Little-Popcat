@@ -42,8 +42,8 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if !dataManager.getIsNotInitialLaunch() {
-            dataManager.setIsNotInitialLaunch(isFirst: true)
             getOnboardingViewController(onboardingDataList: OnboardingData.mainView.onboardingDataList).presentFrom(self, animated: true)
+            dataManager.setIsNotInitialLaunch(isFirst: true)
         }
         
         updateViewSettings()
