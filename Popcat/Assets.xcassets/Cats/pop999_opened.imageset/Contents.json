@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bunhiry_closde.png",
+      "filename" : "pop999_opened.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bunhiry_closde@2x.png",
+      "filename" : "pop999_opened@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bunhiry_closde@3x.png",
+      "filename" : "pop999_opened@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

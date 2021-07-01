@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "originalCat_opened.png",
+      "filename" : "bunhiry_opened.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "originalCat_opened@2x.png",
+      "filename" : "bunhiry_opened@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "originalCat_opened@3x.png",
+      "filename" : "bunhiry_opened@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
