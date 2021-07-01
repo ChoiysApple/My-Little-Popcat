@@ -44,12 +44,13 @@ enum VolumeOption: Int, CaseIterable {
 
 enum AboutOption: Int, CaseIterable {
     
-    case version, developer
+    case version, developer, artist
     
     var description: String {
         switch self {
         case .version: return "Version"
         case .developer: return "Developer Info"
+        case .artist: return "Art of My Little Popcat"
         }
     }
     
@@ -61,6 +62,10 @@ enum AboutOption: Int, CaseIterable {
             cell.subLabel.text = currentVersion
             return cell
         case .developer:
+            let cell = SettingsDiscolsureCell()
+            cell.textLabel?.text = self.description
+            return cell
+        case .artist:
             let cell = SettingsDiscolsureCell()
             cell.textLabel?.text = self.description
             return cell
