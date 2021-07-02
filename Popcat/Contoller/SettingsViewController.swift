@@ -109,6 +109,11 @@ extension SettingsViewController {
             if AboutOption.init(rawValue: indexPath.row) == .developer {
                 openBottomSheet()
                 tableView.cellForRow(at: indexPath)?.isSelected = false
+            } else if AboutOption.init(rawValue: indexPath.row) == .artist {
+                if let url = URL(string: "https://www.notion.so/choiysapple/Art-of-My-Little-Popcat-a2608f680d144b498106fbf013288fcf") {
+                    UIApplication.shared.open(url)
+                }
+                tableView.cellForRow(at: indexPath)?.isSelected = false
             }
         }
     }
