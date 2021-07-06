@@ -17,7 +17,7 @@ class DeveloperInfoViewController: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = DeveloperInfo.name
-        descriptionLabel.text = DeveloperInfo.description
+        descriptionLabel.text = DeveloperInfo.description.localized
         
         tableView.isScrollEnabled = false
     }

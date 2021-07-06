@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        let audioSession = AVAudioSession.sharedInstance()
        do {
            // Set the audio session category, mode, and options.
-        try audioSession.setCategory(.ambient, options: .mixWithOthers)
+        try audioSession.setCategory(.ambient, options: .duckOthers)
        } catch {
            print("Failed to set audio session category.")
        }

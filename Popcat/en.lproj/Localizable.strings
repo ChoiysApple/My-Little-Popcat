@@ -1,0 +1,42 @@
+
+/*
+  Localizable.strings
+  Popcat
+
+  Created by Daegeon Choi on 2021/07/05.
+  
+*/
+
+// Onboarding - Main
+"Tap Anywhere" = "Tap Anywhere";
+"Tap anywhere to get relexed" = "Cat will pop when you tap. Be relaxed and healed by tapping more!";
+"Swipe Up" = "Swipe Up";
+"Swipe Up to Check more cats and settings" = "Swipe Up to Check more cats and settings";
+
+// Onboarding - Cat Tower
+"Welcome to Cat Tower" = "Welcome to Cat Tower";
+"You can pick various cats here" = "You can pick various cats here";
+"More taps, More cats" = "More taps, More cats";
+"More cats will be unlocked as you tap more" = "More cats will be unlocked as you tap more";
+
+// Cat Tower
+"Show Pop count" = "Show Pop count";
+"Done" = "Done";
+
+// developer Info
+"Visit GitHub page for more" = "Visit GitHub page for more";
+"Try next version in advanced" = "Try next version in advanced";
+
+// Setting section title
+"Volume" = "Volume";
+"About" = "About";
+
+// Setting - Description
+"Set pop sound Volume" = "Set pop sound Volume";
+"Show participator information" = "Show participator information";
+
+// Setting - About
+"Version" = "Version";
+"Developer Info" = "Developer Info";
+"Art of My Little Popcat" = "Art of My Little Popcat";
+

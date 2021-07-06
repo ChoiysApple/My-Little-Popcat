@@ -20,8 +20,24 @@ struct AssetData: Codable {
 let AssetDataList = [
     AssetData.init(catName: "Pop Cat", closedImageName: "popcat_closed", openedImageName: "popcat_opened", mainImageName: "popcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 0),
     AssetData.init(catName: "Original Cat", closedImageName: "originalcat_closed", openedImageName: "originalcat_opened", mainImageName: "originalcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 100),
-    AssetData.init(catName: "Hood Cat", closedImageName: "hoodcat_closed", openedImageName: "hoodcat_opened", mainImageName: "hoodcat_opened", audioSourceName: "popcat_original_sound", unlockThreshold: 500),
-    AssetData.init(catName: "Black Cat", closedImageName: "blackcat_closed", openedImageName: "blackcat_opened", mainImageName: "blackcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1000)
+    AssetData.init(catName: "Hood Cat", closedImageName: "originalcat_closed", openedImageName: "hoodcat_opened", mainImageName: "hoodcat_opened", audioSourceName: "popcat_original_sound", unlockThreshold: 200),
+    AssetData.init(catName: "Rock Cat", closedImageName: "rockcat_closed", openedImageName: "rockcat_opened", mainImageName: "rockcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 300),
+    AssetData.init(catName: "Tua lek", closedImageName: "Tualek_closed", openedImageName: "Tualek_opened", mainImageName: "Tualek_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 400),
+    AssetData.init(catName: "Cosmic Red", closedImageName: "cosmicRed_closed", openedImageName: "cosmicRed_opened", mainImageName: "cosmicRed_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 500),
+    AssetData.init(catName: "Bubble Pop", closedImageName: "gumcat_closed", openedImageName: "gumcat_opened", mainImageName: "gumcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 600),
+    AssetData.init(catName: "Drool Cat", closedImageName: "droolcat_closed", openedImageName: "droolcat_opened", mainImageName: "droolcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 700),
+    AssetData.init(catName: "Gray Cat", closedImageName: "graycat_closed", openedImageName: "graycat_opened", mainImageName: "graycat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 800),
+    AssetData.init(catName: "Orange Cat", closedImageName: "orangecat_closed", openedImageName: "orangecat_opened", mainImageName: "orangecat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 900),
+    AssetData.init(catName: "Pastel Cat", closedImageName: "pastelcat_closed", openedImageName: "pastelcat_opened", mainImageName: "pastelcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1000),
+    AssetData.init(catName: "Pepi", closedImageName: "pepi_closed", openedImageName: "pepi_opened", mainImageName: "pepi_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1100),
+    AssetData.init(catName: "Pixel Cat", closedImageName: "pixelcat_closed", openedImageName: "pixelcat_opened", mainImageName: "pixelcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1200),
+    AssetData.init(catName: "Pop-999", closedImageName: "pop999_closed", openedImageName: "pop999_opened", mainImageName: "pop999_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1300),
+    AssetData.init(catName: "Star Cat", closedImageName: "starcat_closed", openedImageName: "starcat_opened", mainImageName: "starcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1400),
+    AssetData.init(catName: "Pop Chick", closedImageName: "popchick_closed", openedImageName: "popchick_opened", mainImageName: "popchick_opened", audioSourceName: "popcat_original_sound", unlockThreshold: 1500),
+    AssetData.init(catName: "Cutie Cat", closedImageName: "cutiecat_closed", openedImageName: "cutiecat_opened", mainImageName: "cutiecat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1600),
+    AssetData.init(catName: "Goat Cat", closedImageName: "goatcat_closed", openedImageName: "goatcat_opened", mainImageName: "goatcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 1700),
+
+    AssetData.init(catName: "Hunter", closedImageName: "hunter_closed", openedImageName: "hunter_opened", mainImageName: "hunter_closed", audioSourceName: "hunter_sound", unlockThreshold: 1800)
 ]
 
 let defaultAssetData = AssetDataList[0]

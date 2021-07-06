@@ -13,15 +13,15 @@ enum SettingsSection: Int, CaseIterable {
     
     var headerDescription: String {
         switch self {
-        case .volume: return "Volume"
-        case .About: return "About"
+        case .volume: return "Volume".localized
+        case .About: return "About".localized
         }
     }
     
     var footerDescription: String {
         switch self {
-        case .volume: return "Set pop sound Volume"
-        case .About: return "Show Developer information"
+        case .volume: return "Set pop sound Volume".localized
+        case .About: return "Show participator information".localized
         }
     }
 }
@@ -31,7 +31,7 @@ enum VolumeOption: Int, CaseIterable {
     
     var description: String {
         switch self {
-        case .volume: return "Volume"
+        case .volume: return "Volume".localized
         }
     }
     
@@ -44,12 +44,13 @@ enum VolumeOption: Int, CaseIterable {
 
 enum AboutOption: Int, CaseIterable {
     
-    case version, developer
+    case version, developer, artist
     
     var description: String {
         switch self {
-        case .version: return "Version"
-        case .developer: return "Developer Info"
+        case .version: return "Version".localized
+        case .developer: return "Developer Info".localized
+        case .artist: return "Art of My Little Popcat".localized
         }
     }
     
@@ -61,6 +62,10 @@ enum AboutOption: Int, CaseIterable {
             cell.subLabel.text = currentVersion
             return cell
         case .developer:
+            let cell = SettingsDiscolsureCell()
+            cell.textLabel?.text = self.description
+            return cell
+        case .artist:
             let cell = SettingsDiscolsureCell()
             cell.textLabel?.text = self.description
             return cell

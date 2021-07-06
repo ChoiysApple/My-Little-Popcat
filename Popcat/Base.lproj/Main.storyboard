@@ -127,16 +127,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-R4-Pqr">
                                 <rect key="frame" x="20" y="108.00000000000001" width="374" height="42.666666666666671"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Cat Tower ">
+                                    <fragment content="Cat Tower 🐈">
                                         <attributes>
                                             <color key="NSColor" name="Color"/>
                                             <font key="NSFont" size="40" name="Avenir-Medium"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="🐈">
-                                        <attributes>
-                                            <color key="NSColor" name="Color"/>
-                                            <font key="NSFont" size="40" name="AppleColorEmoji"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -188,7 +183,7 @@
                                 <rect key="frame" x="0.0" y="758.33333333333337" width="414" height="137.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-ii-5Ki">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-ii-5Ki">
                                 <rect key="frame" x="20" y="778.33333333333337" width="374" height="63.666666666666629"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal">
@@ -278,7 +273,9 @@
                     <navigationItem key="navigationItem" id="eiX-zI-yUg"/>
                     <connections>
                         <outlet property="collectionView" destination="Cqj-A6-7E6" id="lno-ST-a32"/>
+                        <outlet property="doneButton" destination="9gh-ii-5Ki" id="TvI-K3-0Rf"/>
                         <outlet property="popCountSwitch" destination="yui-If-X1D" id="wNg-0L-IoD"/>
+                        <outlet property="popcountLabel" destination="Hdz-8s-Ghh" id="Pn0-5h-Dtd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXq-Vd-bFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -495,7 +492,7 @@
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="popcat_closed" width="655" height="655"/>
         <namedColor name="AccentColor">
-            <color red="0.45490196078431372" green="0.28627450980392155" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45500001311302185" green="0.28600001335144043" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
