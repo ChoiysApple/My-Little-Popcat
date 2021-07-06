@@ -110,7 +110,7 @@ extension SettingsViewController {
                 openBottomSheet()
                 tableView.cellForRow(at: indexPath)?.isSelected = false
             } else if AboutOption.init(rawValue: indexPath.row) == .artist {
-                if let url = URL(string: "https://www.notion.so/choiysapple/Art-of-My-Little-Popcat-a2608f680d144b498106fbf013288fcf") {
+                if let url = URL(string: "https://www.notion.so/choiysapple/326c1a6e1fd543c1adebd6ffdc3aeab8?v=d233d2a22a454a0ea178a5c6dcee3de6") {
                     UIApplication.shared.open(url)
                 }
                 tableView.cellForRow(at: indexPath)?.isSelected = false
