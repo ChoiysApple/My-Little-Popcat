@@ -31,7 +31,7 @@
 <br/>
 
 ### Collaborators
-* So namy artists allowed to use thier works! Check [here](https://www.notion.so/choiysapple/Art-of-My-Little-Popcat-a2608f680d144b498106fbf013288fcf) to see artists information. If you like some works, try visiting thier instagram or devianart and support them.
+* So namy artists allowed to use thier works! Check [here](https://www.notion.so/choiysapple/326c1a6e1fd543c1adebd6ffdc3aeab8?v=d233d2a22a454a0ea178a5c6dcee3de6) to see artists information. If you like some works, try visiting thier instagram or devianart and support them.
 * Graphic works: [@andald](https://github.com/aldalddl)
 
 <br/>
@@ -49,6 +49,7 @@
 * `1.4` Unlocking cat by tapping added (Banner shows when new cat unlocked)
   * 1.4.1 Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
   * 1.4.2 New black cat 🐈‍⬛ added, tutorial onboarding added
+* `1.5` App Localization (Korean), Add "Art of My Little Popcat"(Link to Artist page) on Settings, Change image of Original Cat & Hood Cat, Add 16 more cats
 
 <br/>
 
