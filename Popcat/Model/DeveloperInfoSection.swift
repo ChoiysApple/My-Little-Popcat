@@ -19,8 +19,8 @@ enum DeveloperInfoSection: Int, CaseIterable {
     
     var subtitle: String {
         switch self {
-        case .github: return "Visit GitHub page for more"
-        case .testflight: return "Try next version in advanced"
+        case .github: return "Visit GitHub page for more".localized
+        case .testflight: return "Try next version in advanced".localized
         }
     }
     

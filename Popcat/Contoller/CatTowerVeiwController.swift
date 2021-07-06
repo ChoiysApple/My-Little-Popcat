@@ -12,6 +12,8 @@ class CatTowerVeiwController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var popCountSwitch: UISwitch!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var popcountLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
     
     // Variables for imageView
     private var selectedCatData: AssetData?
@@ -28,6 +30,10 @@ class CatTowerVeiwController: UIViewController {
         // Initialize Pop Count switch state
         let switchState = dataManager.getPopVisibility()
         popCountSwitch.setOn(switchState, animated: false)
+        
+        
+        popcountLabel.text = "Show Pop count".localized
+        doneButton.setTitle("완료", for: .normal)
         
         // CollectionView Settings
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
