@@ -15,6 +15,7 @@ class CatTowerVeiwController: UIViewController {
     @IBOutlet weak var popcountLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
+    
     // Variables for imageView
     private var selectedCatData: AssetData?
     private var currentCatName = ""
@@ -31,10 +32,10 @@ class CatTowerVeiwController: UIViewController {
         let switchState = dataManager.getPopVisibility()
         popCountSwitch.setOn(switchState, animated: false)
         
-        
         popcountLabel.text = "Show Pop count".localized
-        doneButton.setTitle("완료", for: .normal)
+        doneButton.setAttributedTitle(NSAttributedString(string: "Done".localized), for: .normal)
         
+
         // CollectionView Settings
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         setupFlowLayout()
@@ -50,6 +51,8 @@ class CatTowerVeiwController: UIViewController {
             dataManager.setIsNotInitialCatTower(isFirst: true)
             dataManager.setIsNotInitialLaunch(isFirst: true)
         }
+        
+
     }
     
     // Reload collectionView at orientation Changes
