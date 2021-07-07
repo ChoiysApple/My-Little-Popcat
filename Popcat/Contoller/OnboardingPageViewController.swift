@@ -23,6 +23,7 @@ func getOnboardingViewController(onboardingDataList: [OnboardingDataModel]) ->  
         button.titleLabel?.font = UIFont(name: "AvenirNext-medium", size: 25.0)!
         button.backgroundColor = UIColor(named: "AccentColor")!
         button.layer.cornerRadius = 10
+        button.setTitle("Next".localized, for: .normal)
         
         let widthContraints =  NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 300)
         let heightContraints = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
