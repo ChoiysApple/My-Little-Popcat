@@ -1,9 +1,6 @@
 # [<img src="https://user-images.githubusercontent.com/43776784/115346794-9985c780-a1eb-11eb-9639-06257a10aa3b.png" width="40%">](https://testflight.apple.com/join/HJakiRWd)
  pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
- 
-<br/> 
 
-### I'm collectiong images for my popcat app! Plz [join](https://www.notion.so/choiysapple/My-Little-Popcat-273824791e38402788f8be4e97c8ebf7)
 
 <br/>
 
@@ -15,28 +12,34 @@
 
  
  
-### Public test is open
-* Download [beta version using TestFlight](https://testflight.apple.com/join/HJakiRWd)
+## Public test is open
+* Download [beta version on TestFlight](https://testflight.apple.com/join/HJakiRWd)
 <br/>
 
-### Tech Stack
+## Tech Stack
 * Swift
 * UserDefaults
 * UIKit
 <br/>
 
-### Resource 
-* [Cat image](https://setgis.net/pop_cat_meme.html) `Free Source`
-* [Pop sound Effect](https://orangefreesounds.com/pop-sound-effect/)`[Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)]`
+## Platform
+* iOS 13.0+
 <br/>
 
-### Collaborators
+## Resource 
+* [Default Cat image](https://setgis.net/pop_cat_meme.html) `Free Source`
+* [Pop sound Effect](https://orangefreesounds.com/pop-sound-effect/) `[Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)]`
+* [locked cat image](https://www.flaticon.com/free-icon/black-cat_3504413) `Icon made by iconixar from www.flaticon.com`
+* [Icons used for Onboarding](https://www.flaticon.com/collections/MjAwNTYxMjU=) `Icon made by Smashicons, DinosoftLabs, Free Pick, Pixel Perfect from www.flaticon.com`
+<br/>
+
+## Art Collaborators
 * So namy artists allowed to use thier works! Check [here](https://www.notion.so/choiysapple/326c1a6e1fd543c1adebd6ffdc3aeab8?v=d233d2a22a454a0ea178a5c6dcee3de6) to see artists information. If you like some works, try visiting thier instagram or devianart and support them.
 * Graphic works: [@andald](https://github.com/aldalddl)
 
 <br/>
 
-### Version Release
+## Version Release
 * `1.0` Basic feature
 * `1.1` Settings & tap counter
   * 1.1.1 Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
@@ -54,7 +57,7 @@
 <br/>
 
 
-### Libraries
+## Libraries
 * Material Design - [BottomSheet](https://material.io/components/sheets-bottom/ios#using-bottom-sheets) 
 * [BRYXBanner](https://github.com/bryx-inc/BRYXBanner)
 * [OnboardKit](https://github.com/NikolaKirev/OnboardKit)
