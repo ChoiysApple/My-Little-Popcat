@@ -1,4 +1,4 @@
-# [<img src="https://user-images.githubusercontent.com/43776784/115346794-9985c780-a1eb-11eb-9639-06257a10aa3b.png" width="40%">](https://testflight.apple.com/join/HJakiRWd)
+# [<img src="https://user-images.githubusercontent.com/43776784/124888859-73fda280-e011-11eb-8aa6-b8b4c8ef0d5a.png" width="100%">](https://testflight.apple.com/join/HJakiRWd)
  pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
 
 
