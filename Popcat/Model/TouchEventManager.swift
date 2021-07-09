@@ -69,7 +69,7 @@ class TouchEventManager {
                 dataManager.setUnlockData(unlockedCat: unlockData)
                 
                 delegate?.displayUnlockedBanner(catData: catAsset)
-                return
+                
             }
         }
         

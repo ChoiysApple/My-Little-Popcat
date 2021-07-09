@@ -14,6 +14,7 @@ class CatTowerVeiwController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var popcountLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     
     // Variables for imageView
@@ -34,7 +35,7 @@ class CatTowerVeiwController: UIViewController {
         
         popcountLabel.text = "Show Pop count".localized
         doneButton.setAttributedTitle(NSAttributedString(string: "Done".localized), for: .normal)
-        
+        titleLabel.text = "Cat Tower 🐈".localized
 
         // CollectionView Settings
         collectionView.register(UINib(nibName: "CatTowerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
