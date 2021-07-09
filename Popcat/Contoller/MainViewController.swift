@@ -62,7 +62,7 @@ extension MainViewController: touchEventDelegate {
         timer.invalidate()
         popcatImage.image = touchUpImageSource
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: false) { timer in
             self.popcatImage.image = self.touchDownImageSource
         }
     }
