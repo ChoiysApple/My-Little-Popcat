@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     private let dataManager = UserDataManager()
     
     // Timer related
-    private let imageDelay = 0.15
+    private let imageDelay = 0.08
     private var timer = Timer()
     private var isNotFirstLaunch = true
     
