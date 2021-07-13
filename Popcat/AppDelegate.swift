@@ -28,10 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        }
         
         
+        
         // MARK: Init UserDefault data at First launch
         let dataManager = UserDataManager()
         dataManager.initDataAtFirstLaunch()
-        
        
        // Other post-launch configuration.
        return true

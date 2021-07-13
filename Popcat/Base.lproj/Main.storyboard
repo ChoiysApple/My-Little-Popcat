@@ -276,6 +276,7 @@
                         <outlet property="doneButton" destination="9gh-ii-5Ki" id="TvI-K3-0Rf"/>
                         <outlet property="popCountSwitch" destination="yui-If-X1D" id="wNg-0L-IoD"/>
                         <outlet property="popcountLabel" destination="Hdz-8s-Ghh" id="Pn0-5h-Dtd"/>
+                        <outlet property="titleLabel" destination="N5W-R4-Pqr" id="SWe-p0-byF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXq-Vd-bFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -372,6 +373,7 @@
                     <navigationItem key="navigationItem" id="S7Z-Ez-tmB"/>
                     <connections>
                         <outlet property="tableView" destination="sqX-HE-jA8" id="Slv-ve-Y8C"/>
+                        <outlet property="titleLabel" destination="Xj7-i8-fqT" id="wan-QK-fQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4y-iG-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

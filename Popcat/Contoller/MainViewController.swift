@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     private let dataManager = UserDataManager()
     
     // Timer related
-    private let imageDelay = 0.15
+    private let imageDelay = 0.08
     private var timer = Timer()
     private var isNotFirstLaunch = true
     
@@ -62,7 +62,7 @@ extension MainViewController: touchEventDelegate {
         timer.invalidate()
         popcatImage.image = touchUpImageSource
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: false) { timer in
             self.popcatImage.image = self.touchDownImageSource
         }
     }

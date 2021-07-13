@@ -13,11 +13,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let cellId = Identifier.SettingsTableViewCell
+    @IBOutlet weak var titleLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.attributedText = NSAttributedString(string: "Settings ⚙".localized)
+        
         tableView.tableFooterView = UIView()
         tableView.allowsSelection = true
         
