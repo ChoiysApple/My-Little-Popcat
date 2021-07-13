@@ -16,6 +16,7 @@
 		7D2DBF8F2692EBCC0006C756 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DBF8E2692EBCC0006C756 /* StringExtension.swift */; };
 		7D2ECD9A2672FEEF00A58B56 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */; };
 		7D542AF3267AD33000A6F31D /* DeveloperInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */; };
+		7D766E13269D306E00884C52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D766E15269D306E00884C52 /* InfoPlist.strings */; };
 		7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CF925F5FD54006C9469 /* AppDelegate.swift */; };
 		7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */; };
 		7D795CFE25F5FD54006C9469 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFD25F5FD54006C9469 /* MainViewController.swift */; };
@@ -48,6 +49,8 @@
 		7D2DBF8E2692EBCC0006C756 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 		7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoSection.swift; sourceTree = "<group>"; };
+		7D766E14269D306E00884C52 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D766E16269D307200884C52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D795CF625F5FD53006C9469 /* Popcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D795CF925F5FD54006C9469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 				7D795D0725F5FD54006C9469 /* Info.plist */,
 				7D2027C225F7296000B33C57 /* Constants.swift */,
 				7D2DBF8A2692EAE40006C756 /* Localizable.strings */,
+				7D766E15269D306E00884C52 /* InfoPlist.strings */,
 			);
 			path = Popcat;
 			sourceTree = "<group>";
@@ -236,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D2DBF882692EAE40006C756 /* Localizable.strings in Resources */,
+				7D766E13269D306E00884C52 /* InfoPlist.strings in Resources */,
 				7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */,
 				7D795D0325F5FD54006C9469 /* Assets.xcassets in Resources */,
 				7DD780BF263FB92700732C58 /* CatTowerCell.xib in Resources */,
@@ -325,6 +330,15 @@
 				7D2DBF8D2692EB230006C756 /* ko */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		7D766E15269D306E00884C52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D766E14269D306E00884C52 /* ko */,
+				7D766E16269D307200884C52 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		7D795CFF25F5FD54006C9469 /* Main.storyboard */ = {
