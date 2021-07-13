@@ -40,6 +40,8 @@ let AssetDataList = [
     AssetData.init(catName: "Goat Cat", closedImageName: "goatcat_closed", openedImageName: "goatcat_opened", mainImageName: "goatcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 4000),
     
     AssetData.init(catName: "Ony the Cat", closedImageName: "ony_closed", openedImageName: "ony_opened", mainImageName: "ony_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 4500),
+    
+    AssetData.init(catName: "Catto", closedImageName: "catto_closed", openedImageName: "catto_opened", mainImageName: "catto_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 4700),
 
     AssetData.init(catName: "Orange Cat", closedImageName: "orangecat_closed", openedImageName: "orangecat_opened", mainImageName: "orangecat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 5000),
     AssetData.init(catName: "Pastel Cat", closedImageName: "pastelcat_closed", openedImageName: "pastelcat_opened", mainImageName: "pastelcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 5500),
