@@ -30,11 +30,11 @@ class CatTowerCell: UICollectionViewCell {
         }
 
         self.cellImage.image = UIImage(named: catData.mainImageName)
-        self.cellName.text = catData.catName
+        self.cellName.text = catData.catName.localized
         self.cellView.backgroundColor = UIColor(named: "BgColor")
         
         // Make border of CollectionView Cell for selected Cell
-        if currentCatName == catData.catName{
+        if currentCatName == catData.catName.localized {
             self.cellView.layer.borderWidth = 2.0
         } else {
             self.cellView.layer.borderWidth = 0.75
