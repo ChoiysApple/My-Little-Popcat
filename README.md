@@ -10,10 +10,12 @@
 
 
 
+
  
- 
-## Public test is open
-* Download [beta version on TestFlight](https://testflight.apple.com/join/HJakiRWd)
+## Public beta is open
+[ <img src="https://user-images.githubusercontent.com/43776784/125545484-11474758-6313-4ddb-b96a-4a11113b1958.png" width="25%" alt="dice"></img>
+](https://testflight.apple.com/join/HJakiRWd)
+
 <br/>
 
 ## Tech Stack
