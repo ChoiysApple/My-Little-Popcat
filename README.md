@@ -1,5 +1,6 @@
-# [<img src="https://user-images.githubusercontent.com/43776784/124892504-e7ed7a00-e014-11eb-9822-7acc46ca55a0.png" width="100%">](https://testflight.apple.com/join/HJakiRWd)
+# [<img src="https://user-images.githubusercontent.com/43776784/125898627-16cde4f0-5566-4ba0-bfa0-81889307f734.png" width="100%">](https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4-%EB%A6%AC%ED%8B%80-%ED%8C%9D%EC%BA%A3/id1558128186?itsct=apps_box_link&itscg=30200)
  pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
+
 
 
 <br/>
