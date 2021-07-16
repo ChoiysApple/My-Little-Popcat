@@ -38,7 +38,7 @@
 
 ## Art Collaborators
 * So namy artists allowed to use thier works! Check [here](https://www.notion.so/choiysapple/326c1a6e1fd543c1adebd6ffdc3aeab8?v=d233d2a22a454a0ea178a5c6dcee3de6) to see artists information. If you like some works, try visiting thier instagram or devianart and support them.
-* Graphic works: [@andald](https://github.com/aldalddl)
+* Graphic works: [Minji Kang](https://github.com/aldalddl)
 
 <br/>
 
