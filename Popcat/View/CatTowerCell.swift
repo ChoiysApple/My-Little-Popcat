@@ -35,7 +35,7 @@ class CatTowerCell: UICollectionViewCell {
         
         // Make border of CollectionView Cell for selected Cell
         if currentCatName == catData.catName.localized {
-            self.cellView.layer.borderWidth = 2.0
+            self.cellView.layer.borderWidth = 2.5
         } else {
             self.cellView.layer.borderWidth = 0.75
         }
