@@ -45,25 +45,19 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fix-rz-S2t">
-                                <rect key="frame" x="80" y="630" width="254" height="97"/>
+                                <rect key="frame" x="54.666666666666657" y="630" width="304.66666666666674" height="147.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipe_up_main" translatesAutoresizingMaskIntoConstraints="NO" id="9HS-PI-4ts">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="147.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9HS-PI-4ts" secondAttribute="height" id="Spq-OV-3nY"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-Xt-BqO" userLabel="Swipe up!">
-                                        <rect key="frame" x="107" y="26.000000000000004" width="147" height="45.333333333333343"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Swipe up!">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="33" name="Avenir-Medium"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Swipe up!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-Xt-BqO" userLabel="Swipe up!">
+                                        <rect key="frame" x="157.66666666666669" y="51.333333333333371" width="147" height="45.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="33"/>
+                                        <color key="textColor" name="Color"/>
+                                        <color key="highlightedColor" name="Color"/>
                                     </label>
                                 </subviews>
                             </stackView>
@@ -72,7 +66,7 @@
                         <color key="backgroundColor" name="BgColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Fix-rz-S2t" firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="width" id="0QX-CZ-tJq"/>
+                            <constraint firstItem="Fix-rz-S2t" firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="width" multiplier="1.2" id="0QX-CZ-tJq"/>
                             <constraint firstAttribute="bottom" secondItem="Dr2-Yn-Uf5" secondAttribute="bottom" constant="-20" id="1zG-kl-ghQ">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
@@ -130,6 +124,7 @@
                     <connections>
                         <outlet property="countLabel" destination="ayo-go-8WJ" id="Tt3-Oj-NjD"/>
                         <outlet property="guideLabel" destination="MAe-Xt-BqO" id="OHR-UJ-eVT"/>
+                        <outlet property="guideView" destination="Fix-rz-S2t" id="q2f-zb-q84"/>
                         <outlet property="popcatImage" destination="Dr2-Yn-Uf5" id="9Gq-39-jEH"/>
                         <segue destination="2ZR-lF-THp" kind="presentation" identifier="mainToSettings" modalPresentationStyle="fullScreen" id="gJe-gH-66X"/>
                     </connections>
