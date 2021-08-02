@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var guideLabel: UILabel!
     
     
     //MARK: touchEventImage
@@ -34,7 +35,7 @@ class MainViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        
+        guideLabel.attributedText = NSAttributedString(string: "Swipe up!".localized)
         
     }
     
