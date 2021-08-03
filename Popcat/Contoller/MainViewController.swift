@@ -14,6 +14,9 @@ class MainViewController: UIViewController {
     //MARK: IBOutlet
     @IBOutlet weak var popcatImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var guideLabel: UILabel!
+    @IBOutlet weak var guideView: UIStackView!
+
     
     
     //MARK: touchEventImage
@@ -27,7 +30,6 @@ class MainViewController: UIViewController {
     // Timer related
     private let imageDelay = 0.08
     private var timer = Timer()
-    private var isNotFirstLaunch = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,22 +37,28 @@ class MainViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
+        // Display onboarding
         if !dataManager.getIsNotInitialLaunch() {
             getOnboardingViewController(onboardingDataList: OnboardingData.mainView.onboardingDataList).presentFrom(self, animated: true)
-            dataManager.setIsNotInitialLaunch(isFirst: true)
+            dataManager.setIsNotInitialLaunch(isNotFirst: true)
+        }
+    
+        // Guide label settings
+        if dataManager.getIsNotInitialCatTower() {
+            guideView.isHidden = true
+        } else {
+            guideLabel.attributedText = NSAttributedString(string: "Swipe up!".localized)
+            guideView.isHidden = false
         }
         
         updateViewSettings()
         touchEvent.delegate = self
-        
-        
-        
+
     }
 
 }
@@ -121,20 +129,24 @@ extension MainViewController {
     
     // apply current settings
     func updateViewSettings() {
+        
+        // count label settings
         countLabel.isHidden = !dataManager.getPopVisibility()
         countLabel.text = String(dataManager.getPopCount())
+
         
         let catData = dataManager.getCatData()
         touchUpImageSource = UIImage(named: catData.closedImageName)
         touchDownImageSource = UIImage(named: catData.openedImageName)
         popcatImage.image = touchUpImageSource
-        
+    
         let popSoundVolume = dataManager.getPopSoundVolume()
         
         touchEvent = TouchEventManager(source: catData.audioSourceName, volume: popSoundVolume)
         timer.invalidate()
+        
+        
     }
-    
     
 }
 

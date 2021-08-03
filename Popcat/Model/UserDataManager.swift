@@ -29,12 +29,12 @@ class UserDataManager {
         userDefaults.set(popVisibility, forKey: UserDataKey.popCountVisibility)
     }
 
-    func setIsNotInitialLaunch(isFirst: Bool) {
-        userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstLaunch)
+    func setIsNotInitialLaunch(isNotFirst: Bool) {
+        userDefaults.set(isNotFirst, forKey: UserDataKey.isNotFirstLaunch)
     }
     
-    func setIsNotInitialCatTower(isFirst: Bool) {
-        userDefaults.set(isFirst, forKey: UserDataKey.isNotFirstCatTower)
+    func setIsNotInitialCatTower(isNotFirst: Bool) {
+        userDefaults.set(isNotFirst, forKey: UserDataKey.isNotFirstCatTower)
     }
     
     func setPopSoundVolume(volume: Float){
@@ -89,7 +89,7 @@ class UserDataManager {
         if isKeyPresentInUserDefaults(key: UserDataKey.isNotFirstLaunch){
             return userDefaults.bool(forKey: UserDataKey.isNotFirstLaunch)
         } else {
-            setIsNotInitialLaunch(isFirst: false)
+            setIsNotInitialLaunch(isNotFirst: false)
             return false
         }
     }
@@ -99,7 +99,7 @@ class UserDataManager {
         if isKeyPresentInUserDefaults(key: UserDataKey.isNotFirstCatTower){
             return userDefaults.bool(forKey: UserDataKey.isNotFirstCatTower)
         } else {
-            setIsNotInitialLaunch(isFirst: false)
+            setIsNotInitialCatTower(isNotFirst: false)
             return false
         }
     }
