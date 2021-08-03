@@ -45,19 +45,19 @@
 ## Version Release
 * `1.0` Basic feature
 * `1.1` Settings & tap counter
-  * 1.1.1 Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
+  * ___1.1.1___ Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
 * `1.2` Cat Tower - More cats are available
-  * 1.2.1 Fix UI issue for iPad and 4-inch Display, Vary UI for Device and Orientation
-  * 1.2.2 Fix screen rotating issue on iPhone,Fix cat image distorting issue
-  * 1.2.3 Replace audio file with higher quality and bigger volume, Now popcat sound doesn't stops background music, Fix cat selection cell color, Fix popping sound
+  * ___1.2.1___ Fix UI issue for iPad and 4-inch Display, Vary UI for Device and Orientation
+  * ___1.2.2___ Fix screen rotating issue on iPhone,Fix cat image distorting issue
+  * ___1.2.3___ Replace audio file with higher quality and bigger volume, Now popcat sound doesn't stops background music, Fix cat selection cell color, Fix popping sound
           plays every tap screen
 * `1.3` Settings page created
 * `1.4` Unlocking cat by tapping added (Banner shows when new cat unlocked)
-  * 1.4.1 Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
-  * 1.4.2 New black cat 🐈‍⬛ added, tutorial onboarding added
+  * ___1.4.1___ Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
+  * ___1.4.2___ New black cat 🐈‍⬛ added, tutorial onboarding added
 * `1.5` App Localization (Korean), Add "Art of My Little Popcat"(Link to Artist page) on Settings, Change image of Original Cat & Hood Cat, Add 16 more cats
-  * 1.5.1 New cat added, Complete Korean Localization, Adjust image delay
-  * 1.5.2 Guide added for main screen, Fix Cat Tower UI Issue, Improve Cat Tower selected cell UI
+  * ___1.5.1___ New cat added, Complete Korean Localization, Adjust image delay
+  * ___1.5.2___ Guide added for main screen, Fix Cat Tower UI Issue, Improve Cat Tower selected cell UI
 
 <br/>
 
