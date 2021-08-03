@@ -1,5 +1,6 @@
-# [<img src="https://user-images.githubusercontent.com/43776784/124892504-e7ed7a00-e014-11eb-9822-7acc46ca55a0.png" width="100%">](https://testflight.apple.com/join/HJakiRWd)
+# [<img src="https://user-images.githubusercontent.com/43776784/125898627-16cde4f0-5566-4ba0-bfa0-81889307f734.png" width="100%">](https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4-%EB%A6%AC%ED%8B%80-%ED%8C%9D%EC%BA%A3/id1558128186?itsct=apps_box_link&itscg=30200)
  pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop
+
 
 
 <br/>
@@ -10,10 +11,12 @@
 
 
 
+
  
- 
-## Public test is open
-* Download [beta version on TestFlight](https://testflight.apple.com/join/HJakiRWd)
+## Public beta is open
+[ <img src="https://user-images.githubusercontent.com/43776784/125545484-11474758-6313-4ddb-b96a-4a11113b1958.png" width="25%" alt="dice"></img>
+](https://testflight.apple.com/join/HJakiRWd)
+
 <br/>
 
 ## Tech Stack
@@ -35,24 +38,26 @@
 
 ## Art Collaborators
 * So namy artists allowed to use thier works! Check [here](https://www.notion.so/choiysapple/326c1a6e1fd543c1adebd6ffdc3aeab8?v=d233d2a22a454a0ea178a5c6dcee3de6) to see artists information. If you like some works, try visiting thier instagram or devianart and support them.
-* Graphic works: [@andald](https://github.com/aldalddl)
+* Graphic works: [Minji Kang](https://github.com/aldalddl)
 
 <br/>
 
 ## Version Release
 * `1.0` Basic feature
 * `1.1` Settings & tap counter
-  * 1.1.1 Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
+  * ___1.1.1___ Fix autochanging coutlabel size, Fix UI on iPad Landscape orientation
 * `1.2` Cat Tower - More cats are available
-  * 1.2.1 Fix UI issue for iPad and 4-inch Display, Vary UI for Device and Orientation
-  * 1.2.2 Fix screen rotating issue on iPhone,Fix cat image distorting issue
-  * 1.2.3 Replace audio file with higher quality and bigger volume, Now popcat sound doesn't stops background music, Fix cat selection cell color, Fix popping sound
+  * ___1.2.1___ Fix UI issue for iPad and 4-inch Display, Vary UI for Device and Orientation
+  * ___1.2.2___ Fix screen rotating issue on iPhone,Fix cat image distorting issue
+  * ___1.2.3___ Replace audio file with higher quality and bigger volume, Now popcat sound doesn't stops background music, Fix cat selection cell color, Fix popping sound
           plays every tap screen
 * `1.3` Settings page created
 * `1.4` Unlocking cat by tapping added (Banner shows when new cat unlocked)
-  * 1.4.1 Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
-  * 1.4.2 New black cat 🐈‍⬛ added, tutorial onboarding added
+  * ___1.4.1___ Fix app crashing issue if app is updated (not initial or re installed), Change banner text color in Dark Mode
+  * ___1.4.2___ New black cat 🐈‍⬛ added, tutorial onboarding added
 * `1.5` App Localization (Korean), Add "Art of My Little Popcat"(Link to Artist page) on Settings, Change image of Original Cat & Hood Cat, Add 16 more cats
+  * ___1.5.1___ New cat added, Complete Korean Localization, Adjust image delay
+  * ___1.5.2___ Guide added for main screen, Fix Cat Tower UI Issue, Improve Cat Tower selected cell UI
 
 <br/>
 
