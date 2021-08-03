@@ -45,28 +45,31 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fix-rz-S2t">
-                                <rect key="frame" x="54.666666666666657" y="630" width="304.66666666666674" height="147.66666666666663"/>
+                                <rect key="frame" x="54.666666666666657" y="630" width="304.66666666666674" height="98.333333333333371"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipe_up_main" translatesAutoresizingMaskIntoConstraints="NO" id="9HS-PI-4ts">
-                                        <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="147.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="98.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9HS-PI-4ts" secondAttribute="height" id="Spq-OV-3nY"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Swipe up!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-Xt-BqO" userLabel="Swipe up!">
-                                        <rect key="frame" x="157.66666666666669" y="51.333333333333371" width="147" height="45.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Swipe up!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-Xt-BqO" userLabel="Swipe up!">
+                                        <rect key="frame" x="108.33333333333333" y="26.333333333333371" width="196.33333333333337" height="45.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="33"/>
                                         <color key="textColor" name="Color"/>
                                         <color key="highlightedColor" name="Color"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="MAe-Xt-BqO" firstAttribute="width" secondItem="9HS-PI-4ts" secondAttribute="width" multiplier="2" id="FHq-pf-zCy"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Fix-rz-S2t" firstAttribute="width" secondItem="Dr2-Yn-Uf5" secondAttribute="width" multiplier="1.2" id="0QX-CZ-tJq"/>
+                            <constraint firstItem="Fix-rz-S2t" firstAttribute="width" relation="lessThanOrEqual" secondItem="Dr2-Yn-Uf5" secondAttribute="width" multiplier="1.2" id="0QX-CZ-tJq"/>
                             <constraint firstAttribute="bottom" secondItem="Dr2-Yn-Uf5" secondAttribute="bottom" constant="-20" id="1zG-kl-ghQ">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
