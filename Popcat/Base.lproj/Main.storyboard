@@ -54,7 +54,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Swipe up!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-Xt-BqO" userLabel="Swipe up!">
-                                        <rect key="frame" x="108.33333333333333" y="26.333333333333371" width="196.33333333333337" height="45.333333333333343"/>
+                                        <rect key="frame" x="108.33333333333333" y="26.333333333333375" width="196.33333333333337" height="45.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="33"/>
                                         <color key="textColor" name="Color"/>
                                         <color key="highlightedColor" name="Color"/>
@@ -79,6 +79,7 @@
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICr-ao-fQY"/>
                             <constraint firstItem="ayo-go-8WJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="IGU-FY-knl"/>
                             <constraint firstItem="Fix-rz-S2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Llf-E9-Ub7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fix-rz-S2t" secondAttribute="bottom" constant="20" id="NM4-Bj-tZp"/>
                             <constraint firstItem="Dr2-Yn-Uf5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="QSd-bn-B7i">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
