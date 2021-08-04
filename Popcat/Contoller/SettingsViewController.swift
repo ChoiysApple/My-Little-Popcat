@@ -49,8 +49,9 @@ extension SettingsViewController: UITableViewDataSource {
         }
         
         switch section {
-        case .volume: return VolumeOption.allCases.count
+        case .Volume: return VolumeOption.allCases.count
         case .About: return AboutOption.allCases.count
+        case .Guide: return GuideOption.allCases.count
         }
     }
     
@@ -59,10 +60,12 @@ extension SettingsViewController: UITableViewDataSource {
         guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
         
         switch section {
-        case .volume:
+        case .Volume:
             return VolumeOption.volume.cell
         case .About:
             return AboutOption(rawValue: indexPath.row)?.cell ?? UITableViewCell()
+        case .Guide:
+            return GuideOption(rawValue: indexPath.row)?.cell ?? UITableViewCell()
         }
 
     }
@@ -116,6 +119,15 @@ extension SettingsViewController {
                 if let url = URL(string: "https://www.notion.so/choiysapple/326c1a6e1fd543c1adebd6ffdc3aeab8?v=d233d2a22a454a0ea178a5c6dcee3de6") {
                     UIApplication.shared.open(url)
                 }
+                tableView.cellForRow(at: indexPath)?.isSelected = false
+            }
+        } else if section == .Guide {
+            if GuideOption.init(rawValue: indexPath.row) == .main {
+                getOnboardingViewController(onboardingDataList: OnboardingData.mainView.onboardingDataList).presentFrom(self, animated: true)
+
+                tableView.cellForRow(at: indexPath)?.isSelected = false
+            } else if GuideOption.init(rawValue: indexPath.row) == .catTower {
+                getOnboardingViewController(onboardingDataList: OnboardingData.catTowerView.onboardingDataList).presentFrom(self, animated: true)
                 tableView.cellForRow(at: indexPath)?.isSelected = false
             }
         }
