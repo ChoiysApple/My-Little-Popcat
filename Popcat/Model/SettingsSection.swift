@@ -9,18 +9,20 @@ import Foundation
 import UIKit
 
 enum SettingsSection: Int, CaseIterable {
-    case volume, About
+    case Volume,Guide, About
     
     var headerDescription: String {
         switch self {
-        case .volume: return "Volume".localized
+        case .Volume: return "Volume".localized
+        case .Guide: return "Tutorial".localized
         case .About: return "About".localized
         }
     }
     
     var footerDescription: String {
         switch self {
-        case .volume: return "Set pop sound Volume".localized
+        case .Volume: return "Set pop sound Volume".localized
+        case .Guide: return "Show tutorial again".localized
         case .About: return "Show participator information".localized
         }
     }
@@ -38,6 +40,30 @@ enum VolumeOption: Int, CaseIterable {
     var cell: UITableViewCell {
         switch self {
         case .volume: return SettingsVolumeCell()
+        }
+    }
+}
+
+enum GuideOption: Int, CaseIterable {
+    case main, catTower
+    
+    var description: String {
+        switch self {
+        case .main: return "Open main screen tutorial".localized
+        case .catTower: return "Open Cat Tower tutorial".localized
+        }
+    }
+    
+    var cell: UITableViewCell {
+        switch self {
+        case .main:
+            let cell = SettingsDiscolsureCell()
+            cell.textLabel?.text = self.description
+            return cell
+        case .catTower:
+            let cell = SettingsDiscolsureCell()
+            cell.textLabel?.text = self.description
+            return cell
         }
     }
 }

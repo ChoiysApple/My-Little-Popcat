@@ -7,13 +7,17 @@
   
 */
 
-// Onboarding - Main
+//   +-------------+
+//   | Onboardings |
+//   +-------------+
+
+// Main
 "Tap Anywhere" = "아무곳이나 탭하세요";
 "Tap anywhere to get relexed" = "화면 아무 곳이나 탭하면 고양이가 반응합니다! 많이 탭하고 귀여운 고양이 보면서 힐링하세요";
 "Swipe Up" = "위로 스와이프";
 "Swipe Up to Check more cats and settings" = "위로 스와이프하면 다른 고양이들을 만나볼 수 있습니다";
 
-// Onboarding - Cat Tower
+// Cat Tower
 "Welcome to Cat Tower" = "캣타워에 오신 걸 환영합니다!";
 "You can pick various cats here" = "이곳에서 수많은 고양이들을 만나볼 수 있습니다.";
 "More taps, More cats" = "많은 탭, 많은 고양이";
@@ -22,28 +26,36 @@
 "Next" = "다음";
 
 
+//   +-----------------+
+//   | View Controller |
+//   +-----------------+
 
+// Guide view on Main
 "Swipe up!" = "위로 스와이프!";
-
-
 
 // Cat Tower
 "Show Pop count" = "탭 횟수 표시";
 "Done" = "완료";
 
-// developer Info
-"Visit GitHub page for more" = "더 많은 정보는 GitHub 페이지를 방문하세요";
-"Try next version in advanced" = "다음 버전을 미리 만나보세요";
 
-// Setting section title
+//   +---------------+
+//   | Settings View |
+//   +---------------+
+
+// Volume
 "Volume" = "음량";
-"About" = "정보";
-
-// Setting - Description
 "Set pop sound Volume" = "팝 소리 크기를 설정합니다";
 "Show participator information" = "앱 개발에 참여자 정보를 표시합니다";
 
-// Setting - About
+// Tutorial
+"Tutorial" = "튜토리얼";
+"Open main screen tutorial" = "메인화면 튜토리얼 다시보기";
+"Open Cat Tower tutorial" = "캣타워 튜토리얼 다시보기";
+"Show tutorial again" = "앱 사용법을 다시 볼 수 있습니다";
+
+// About
+"About" = "정보";
+
 "Version" = "버전";
 "Developer Info" = "개발자 정보";
 "Art of My Little Popcat" = "고양이를 그려주신 작가분들";
@@ -51,8 +63,15 @@
 "Cat Tower 🐈" = "캣 타워 🐈";
 "Settings ⚙" = "설정";
 
+// developer Info
+"Visit GitHub page for more" = "더 많은 정보는 GitHub 페이지를 방문하세요";
+"Try next version in advanced" = "다음 버전을 미리 만나보세요";
 
-//cats
+
+//   +-----------+
+//   | Cat Names |
+//   +-----------+
+
 "Pop Cat" = "팝 캣";
 "Original Cat" = "오리지널 캣";
 "Hood Cat" = "후드 캣";
