@@ -57,7 +57,9 @@
   * ___1.4.2___ New black cat 🐈‍⬛ added, tutorial onboarding added
 * `1.5` App Localization (Korean), Add "Art of My Little Popcat"(Link to Artist page) on Settings, Change image of Original Cat & Hood Cat, Add 16 more cats
   * ___1.5.1___ New cat added, Complete Korean Localization, Adjust image delay
-  * ___1.5.2___ Guide added for main screen, Fix Cat Tower UI Issue, Improve Cat Tower selected cell UI
+  * ___1.5.2___ Fix Cat Tower UI Issue, Improve Cat Tower selected cell UI
+  * ___1.5.3___ Guide added for main screen Fix, Improve Cat Tower selected cell UI
+  * ___1.5.4___ Add [Luna Cat](https://choiysapple.notion.site/uzulie_-b018ff6ccee94e7596aa67ed05f81c09)
 
 <br/>
 
