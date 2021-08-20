@@ -35,6 +35,8 @@ let AssetDataList = [
     AssetData.init(catName: "Drool Cat", closedImageName: "droolcat_closed", openedImageName: "droolcat_opened", mainImageName: "droolcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 2500),
     AssetData.init(catName: "White Cat", closedImageName: "whitecat_closed", openedImageName: "whitecat_opened", mainImageName: "whitecat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 3000),
     
+    AssetData.init(catName: "Luna Cat", closedImageName: "lunacat_closed", openedImageName: "lunacat_opened", mainImageName: "lunacat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 3200),
+    
     AssetData.init(catName: "Ozzy", closedImageName: "ozzy_closed", openedImageName: "ozzy_opened", mainImageName: "ozzy_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 3500),
 
     AssetData.init(catName: "Goat Cat", closedImageName: "goatcat_closed", openedImageName: "goatcat_opened", mainImageName: "goatcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 4000),
@@ -46,7 +48,7 @@ let AssetDataList = [
     AssetData.init(catName: "Orange Cat", closedImageName: "orangecat_closed", openedImageName: "orangecat_opened", mainImageName: "orangecat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 5000),
     AssetData.init(catName: "Pastel Cat", closedImageName: "pastelcat_closed", openedImageName: "pastelcat_opened", mainImageName: "pastelcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 5500),
     
-    AssetData.init(catName: "Luna Cat", closedImageName: "lunacat_closed", openedImageName: "lunacat_opened", mainImageName: "lunacat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 5700),
+
     
     AssetData.init(catName: "Pepi", closedImageName: "pepi_closed", openedImageName: "pepi_opened", mainImageName: "pepi_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 6000),
     AssetData.init(catName: "Pixel Cat", closedImageName: "pixelcat_closed", openedImageName: "pixelcat_opened", mainImageName: "pixelcat_closed", audioSourceName: "popcat_original_sound", unlockThreshold: 6500),
