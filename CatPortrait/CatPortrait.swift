@@ -44,7 +44,10 @@ struct CatPortraitEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack {
+            Circle().accentColor(.blue)
+            
+        }
     }
 }
 
@@ -63,7 +66,16 @@ struct CatPortrait: Widget {
 
 struct CatPortrait_Previews: PreviewProvider {
     static var previews: some View {
-        CatPortraitEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group {
+            CatPortraitEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            
+            CatPortraitEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            
+            CatPortraitEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+
+        }
     }
 }
