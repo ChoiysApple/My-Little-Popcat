@@ -32,6 +32,7 @@
 		7D795D0625F5FD54006C9469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0425F5FD54006C9469 /* LaunchScreen.storyboard */; };
 		7D852C7D2679C41400CA7B40 /* DeveloperInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D852C7C2679C41400CA7B40 /* DeveloperInfoViewController.swift */; };
 		7D87DA4825F751380011ABDA /* TouchEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87DA4725F751380011ABDA /* TouchEventManager.swift */; };
+		7D8D93CB26F8566200C2D78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D795D0225F5FD54006C9469 /* Assets.xcassets */; };
 		7D8E1A3B265788DE00C590B7 /* AssetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E1A3A265788DE00C590B7 /* AssetData.swift */; };
 		7D90496726608C6000A061E2 /* SettingsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90496526608C6000A061E2 /* SettingsTableViewCells.swift */; };
 		7D94516F26008CD300668BB1 /* CatTowerVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94516E26008CD300668BB1 /* CatTowerVeiwController.swift */; };
@@ -324,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8D93CB26F8566200C2D78B /* Assets.xcassets in Resources */,
 				7D445E0526F09706007B679F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

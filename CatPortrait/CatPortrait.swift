@@ -45,7 +45,7 @@ struct CatPortraitEntryView : View {
 
     var body: some View {
         VStack {
-            Circle().accentColor(.blue)
+            Image("popcat_closed")
             
         }
     }
