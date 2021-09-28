@@ -46,6 +46,10 @@ struct CatPortraitEntryView : View {
     var body: some View {
         VStack {
             Image("popcat_closed")
+                .resizable(resizingMode: .stretch)
+                .padding(.all, 5.0)
+                .scaledToFit()
+                
             
         }
     }
