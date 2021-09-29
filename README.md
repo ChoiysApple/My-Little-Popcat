@@ -60,6 +60,7 @@
   * ___1.5.2___ Fix Cat Tower UI Issue, Improve Cat Tower selected cell UI
   * ___1.5.3___ Guide added for main screen Fix, Improve Cat Tower selected cell UI
   * ___1.5.4___ Add [Luna Cat](https://choiysapple.notion.site/uzulie_-b018ff6ccee94e7596aa67ed05f81c09)
+* `1.6` Widget
 
 <br/>
 
