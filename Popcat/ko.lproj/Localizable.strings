@@ -68,6 +68,14 @@
 "Try next version in advanced" = "다음 버전을 미리 만나보세요";
 
 
+//   +--------+
+//   | Widget |
+//   +--------+
+
+"Cat Portrait" = "고양이 초상화";
+"Cat invaded outside of your app!" = "고양이가 앱 밖으로 나왔다!";
+
+
 //   +-----------+
 //   | Cat Names |
 //   +-----------+

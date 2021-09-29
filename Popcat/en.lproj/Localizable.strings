@@ -69,6 +69,13 @@
 "Try next version in advanced" = "Try next version in advanced";
 
 
+//   +--------+
+//   | Widget |
+//   +--------+
+
+"Cat Portrait" = "Cat Portrait";
+"Cat invaded outside of your app!" = "Cat invaded outside of your app!";
+
 //   +-----------+
 //   | Cat Names |
 //   +-----------+

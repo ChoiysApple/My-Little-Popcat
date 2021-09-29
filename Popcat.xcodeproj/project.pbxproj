@@ -42,6 +42,7 @@
 		7DB629E9268991F700341B89 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB629E8268991F700341B89 /* OnboardingPageViewController.swift */; };
 		7DD780BE263FB92700732C58 /* CatTowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD780BC263FB92700732C58 /* CatTowerCell.swift */; };
 		7DD780BF263FB92700732C58 /* CatTowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD780BD263FB92700732C58 /* CatTowerCell.xib */; };
+		7DDDB0E127045D4A00868C38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2027C225F7296000B33C57 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -394,6 +395,7 @@
 			files = (
 				7D445E0726F09706007B679F /* CatPortrait.intentdefinition in Sources */,
 				7D445E0226F09705007B679F /* CatPortrait.swift in Sources */,
+				7DDDB0E127045D4A00868C38 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +658,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.4;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.choiysapple.MyPopcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -682,7 +684,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.4;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.choiysapple.MyPopcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

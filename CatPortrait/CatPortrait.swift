@@ -40,11 +40,14 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
+//MARK: - Body
 struct CatPortraitEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
+        ZStack {
+            
+            
             Image("popcat_closed")
                 .resizable(resizingMode: .stretch)
                 .padding(.all, 5.0)
@@ -52,9 +55,10 @@ struct CatPortraitEntryView : View {
                 
             
         }
-    }
+            }
 }
 
+//MARK: - Main
 @main
 struct CatPortrait: Widget {
     let kind: String = "CatPortrait"
@@ -63,8 +67,8 @@ struct CatPortrait: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             CatPortraitEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Cat Portrait")
+        .description("Cat invaded outside of your app!")
     }
 }
 
