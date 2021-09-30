@@ -47,15 +47,14 @@ struct CatPortraitEntryView : View {
     var body: some View {
         ZStack {
             
-            
             Image("popcat_closed")
                 .resizable(resizingMode: .stretch)
                 .padding(.all, 5.0)
                 .scaledToFit()
                 
             
-        }
-            }
+        }.foregroundColor(Color("BgColor"))
+    }
 }
 
 //MARK: - Main
@@ -67,8 +66,8 @@ struct CatPortrait: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             CatPortraitEntryView(entry: entry)
         }
-        .configurationDisplayName("Cat Portrait")
-        .description("Cat invaded outside of your app!")
+        .configurationDisplayName("Cat Portrait".localized)
+        .description("Cat invaded outside of your app!".localized)
     }
 }
 

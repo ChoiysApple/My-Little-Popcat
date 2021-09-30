@@ -15,6 +15,7 @@
 		7D2DBF882692EAE40006C756 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D2DBF8A2692EAE40006C756 /* Localizable.strings */; };
 		7D2DBF8F2692EBCC0006C756 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DBF8E2692EBCC0006C756 /* StringExtension.swift */; };
 		7D2ECD9A2672FEEF00A58B56 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2ECD992672FEEF00A58B56 /* SettingsSection.swift */; };
+		7D433BE12705425500B0AC90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DBF8E2692EBCC0006C756 /* StringExtension.swift */; };
 		7D445DFD26F09705007B679F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D445DFC26F09705007B679F /* WidgetKit.framework */; };
 		7D445DFF26F09705007B679F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D445DFE26F09705007B679F /* SwiftUI.framework */; };
 		7D445E0226F09705007B679F /* CatPortrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D445E0126F09705007B679F /* CatPortrait.swift */; };
@@ -393,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D433BE12705425500B0AC90 /* StringExtension.swift in Sources */,
 				7D445E0726F09706007B679F /* CatPortrait.intentdefinition in Sources */,
 				7D445E0226F09705007B679F /* CatPortrait.swift in Sources */,
 				7DDDB0E127045D4A00868C38 /* Constants.swift in Sources */,
@@ -650,7 +652,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZW6466CHF4;
 				INFOPLIST_FILE = Popcat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -676,7 +678,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZW6466CHF4;
 				INFOPLIST_FILE = Popcat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
