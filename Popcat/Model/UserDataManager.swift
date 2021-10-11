@@ -14,7 +14,7 @@ class UserDataManager {
     //MARK:- Setters
     func setCatData(catData: AssetData?) {
         do {
-            try userDefaults.setObject(catData, forKey: UserDataKey.currentCatData)
+            try userDefaults.set(catData, forKey: UserDataKey.currentCatData)
         } catch {
             print("\(String(describing: self)): \(error.localizedDescription)")
         }

@@ -24,6 +24,9 @@
 		7D445E0826F09706007B679F /* CatPortrait.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7D445E0326F09705007B679F /* CatPortrait.intentdefinition */; };
 		7D445E0B26F09706007B679F /* CatPortraitExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D445DFB26F09705007B679F /* CatPortraitExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7D542AF3267AD33000A6F31D /* DeveloperInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D542AF2267AD33000A6F31D /* DeveloperInfoSection.swift */; };
+		7D704FF3271FB3BA007888A1 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94828C265CD05C008BAC01 /* UserDataManager.swift */; };
+		7D704FF4271FB3CD007888A1 /* AssetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E1A3A265788DE00C590B7 /* AssetData.swift */; };
+		7D704FF5271FB42D007888A1 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27273B265B741800CEA32E /* UserDefaultExtension.swift */; };
 		7D766E13269D306E00884C52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D766E15269D306E00884C52 /* InfoPlist.strings */; };
 		7D795CFA25F5FD54006C9469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CF925F5FD54006C9469 /* AppDelegate.swift */; };
 		7D795CFC25F5FD54006C9469 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D795CFB25F5FD54006C9469 /* SceneDelegate.swift */; };
@@ -394,9 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D704FF5271FB42D007888A1 /* UserDefaultExtension.swift in Sources */,
 				7D433BE12705425500B0AC90 /* StringExtension.swift in Sources */,
 				7D445E0726F09706007B679F /* CatPortrait.intentdefinition in Sources */,
+				7D704FF3271FB3BA007888A1 /* UserDataManager.swift in Sources */,
 				7D445E0226F09705007B679F /* CatPortrait.swift in Sources */,
+				7D704FF4271FB3CD007888A1 /* AssetData.swift in Sources */,
 				7DDDB0E127045D4A00868C38 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
